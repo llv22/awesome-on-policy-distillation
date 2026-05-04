@@ -41,7 +41,8 @@ As of 2026, OPD is a standard post-training primitive at Alibaba (Qwen3), Xiaomi
 - [Technical Reports and Industrial Recipes](#technical-reports-and-industrial-recipes)
 - [Frameworks, Tools, and Implementations](#frameworks-tools-and-implementations)
   - [Training Frameworks](#training-frameworks)
-  - [Code, Tutorials, and Guides](#code-tutorials-and-guides)
+  - [Implementations](#implementations)
+  - [Essays, Blog Posts, and Walkthroughs](#essays-blog-posts-and-walkthroughs)
 - [Acknowledgments](#acknowledgments)
 - [Contributing](#contributing)
 - [Citation](#citation)
@@ -313,14 +314,17 @@ Production training pipelines that use OPD as a post-training stage.
 | AReaL | OPD and KDRL implementation over student-sampled trajectories with teacher log-prob guidance | [docs](https://github.com/inclusionAI/AReaL/blob/main/docs/en/algorithms/distillation.md) |
 | SpecForge | Open-source training framework for speculative draft models with EAGLE-3 support, target-draft decoupling, and hybrid parallelism | [paper](https://arxiv.org/abs/2603.18567), [repo](https://github.com/sgl-project/SpecForge) |
 
-### Code, Tutorials, and Guides
+### Implementations
 
 - [OPSD](https://github.com/siyan-zhao/OPSD) — Official code for Self-Distilled Reasoner / OPSD.
-- [Thinking Machines: On-Policy Distillation](https://thinkingmachines.ai/blog/on-policy-distillation/) — Best single-article introduction. Covers concepts, intuition, and practical use cases.
-- [Unlocking On-Policy Distillation for Any Model Family (GOLD)](https://huggingface.co/spaces/HuggingFaceH4/on-policy-distillation) — Cross-tokenizer OPD walkthrough with TRL code.
 - [SCOPE](https://github.com/machine981/SCOPE) — Official implementation of SCOPE's dual-path OPD: student-PPL-weighted MLE for correct rollouts, teacher-PPL-weighted KL for incorrect.
 - [CaOPD](https://github.com/SalesforceAIResearch/CaOPD) — Official implementation of CaOPD: K student rollouts → empirical success rate → confidence target replacement → standard reverse-KL OPD.
 - [OPSD-OnPolicyDistillation](https://github.com/HJSang/OPSD_OnPolicyDistillation) — verl-based OPD implementation with separate-teacher distillation, agent-loop rollouts, and memory-efficient teacher/student execution.
+
+### Essays, Blog Posts, and Walkthroughs
+
+- [Thinking Machines: On-Policy Distillation](https://thinkingmachines.ai/blog/on-policy-distillation/) (2025) — Best single-article introduction. Covers concepts, intuition, and practical use cases.
+- [Unlocking On-Policy Distillation for Any Model Family (GOLD)](https://huggingface.co/spaces/HuggingFaceH4/on-policy-distillation) (2025) — Cross-tokenizer OPD walkthrough with TRL code.
 - [On SFT, RL, and on-policy distillation](https://x.com/willccbb/status/2050038277454143918) (2026) — Will Brown's essay framing OPD via the SFT-vs-RL compounding argument and gradient geometry (sparse/dense × biased/unbiased × concentrated/diffuse), with directions toward an optimal teacher on the reward-vs-KL Pareto curve.
 
 ## Acknowledgments
