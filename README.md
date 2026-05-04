@@ -321,6 +321,7 @@ Production training pipelines that use OPD as a post-training stage.
 - [SCOPE](https://github.com/machine981/SCOPE) — Official implementation of SCOPE's dual-path OPD: student-PPL-weighted MLE for correct rollouts, teacher-PPL-weighted KL for incorrect.
 - [CaOPD](https://github.com/SalesforceAIResearch/CaOPD) — Official implementation of CaOPD: K student rollouts → empirical success rate → confidence target replacement → standard reverse-KL OPD.
 - [OPSD-OnPolicyDistillation](https://github.com/HJSang/OPSD_OnPolicyDistillation) — verl-based OPD implementation with separate-teacher distillation, agent-loop rollouts, and memory-efficient teacher/student execution.
+- [On SFT, RL, and on-policy distillation](https://x.com/willccbb/status/2050038277454143918) (2026) — Will Brown's essay framing OPD via the SFT-vs-RL compounding argument and gradient geometry (sparse/dense × biased/unbiased × concentrated/diffuse), with directions toward an optimal teacher on the reward-vs-KL Pareto curve.
 
 ## Acknowledgments
 
@@ -350,4 +351,4 @@ If you find this resource useful, please cite it as:
 
 ---
 
-*Last updated: 2026-05-01. Coverage: core OPD papers, adjacent work (including speculative-decoding draft-model training and self-play / iterative bootstrapping), surveys, technical reports, and tooling through April 2026.*
+*Last updated: 2026-05-04. Coverage: core OPD papers, adjacent work (including speculative-decoding draft-model training and self-play / iterative bootstrapping), surveys, technical reports, and tooling through April 2026.*
