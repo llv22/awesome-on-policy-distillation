@@ -89,7 +89,7 @@ The fastest path to understanding the field:
 
 | Teacher Type | Papers |
 |---|---|
-| External white-box | MiniLLM, GKD, Veto, Entropy-Aware OPD, ExOPD, REOPOLD, PACED, Prefix OPD, Revisiting OPD, Rethinking OPD, Lightning OPD |
+| External white-box | MiniLLM, GKD, Veto, Entropy-Aware OPD, ExOPD, REOPOLD, PACED, Prefix OPD, Revisiting OPD, Rethinking OPD, Lightning OPD, Uni-OPD |
 | External black-box | Black-Box OPD / GAD, OVD |
 | Self-teacher with privileged context | OPSD, SDFT, SDPO, OPSDC, GATES, pi-Distill, RLSD, SDZero |
 | Context-conditioned | OPCD, OEL |
@@ -133,6 +133,7 @@ The ~21 papers that define on-policy distillation for LLMs.
 - [Rethinking On-Policy Distillation of Large Language Models: Phenomenology, Mechanism, and Recipe](https://arxiv.org/abs/2604.13016) (2026) — Mechanistic analysis of OPD dynamics; identifies compatible thinking patterns and novel teacher capability as success conditions; proposes off-policy cold start and teacher-aligned prompt selection for recovery.
 - [The Illusion of Certainty: Decoupling Capability and Calibration in On-Policy Distillation](https://arxiv.org/abs/2604.16830) (2026) — Theoretical analysis of OPD-induced overconfidence (information asymmetry, entropy collapse, selection bias); CaOPD replaces confidence targets with student-grounded empirical success rates to decouple capability from calibration.
 - [Demystifying OPD: Length Inflation and Stabilization Strategies for Large Language Models](https://arxiv.org/abs/2604.08527) (2026) — Diagnoses repetition-driven length inflation in iterative OPD; Stable-OPD adds divergence constraints and a rollout-mixture anchor with golden data.
+- [Uni-OPD: Unifying On-Policy Distillation with a Dual-Perspective Recipe](https://arxiv.org/abs/2605.03677) (2026) — Identifies insufficient state exploration and unreliable teacher supervision as OPD bottlenecks; pairs offline difficulty-aware plus online correctness-aware data balancing with an outcome-guided margin calibration that keeps token-level teacher scores order-consistent with outcome reward across LLM and MLLM settings.
 
 ### Self-Distillation
 
@@ -356,4 +357,4 @@ If you find this resource useful, please cite it as:
 
 ---
 
-*Last updated: 2026-05-05. Coverage: core OPD papers, adjacent work (including speculative-decoding draft-model training and self-play / iterative bootstrapping), surveys, technical reports, and tooling through April 2026.*
+*Last updated: 2026-05-06. Coverage: core OPD papers, adjacent work (including speculative-decoding draft-model training and self-play / iterative bootstrapping), surveys, technical reports, and tooling through April 2026.*
