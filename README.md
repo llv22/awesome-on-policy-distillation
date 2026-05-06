@@ -251,6 +251,7 @@ Papers that are not canonical OPD but matter for understanding or deploying it.
 - [CORD: Bridging the Audio–Text Reasoning Gap via Weighted On-policy Cross-modal Distillation](https://arxiv.org/abs/2601.16547) (2026) — Audio-conditioned student rollouts; text-conditioned same model as in-model teacher; importance-weighted reverse KL on early/critical tokens plus GRPO at sequence level.
 - [Skill-SD: Skill-Conditioned Self-Distillation for Multi-turn LLM Agents](https://arxiv.org/abs/2604.10674) (2026) — Student rolls out under plain prompt; same model under skill-augmented prompt serves as token-level self-teacher for multi-turn agent training.
 - [CoPD: Co-Evolving Policy Distillation](https://arxiv.org/abs/2604.27083) (2026) — Parallel expert training with bidirectional OPD where experts co-evolve as mutual teachers during RLVR; integrates text, image, and video reasoning while avoiding both mixed-RLVR inter-capability divergence and sequential-MOPD behavioral gaps.
+- [PRISM: Beyond SFT-to-RL — Pre-alignment via Black-Box On-Policy Distillation for Multimodal RL](https://arxiv.org/abs/2604.28123) (2026) — Inserts a black-box OPD distribution-alignment stage between SFT and RLVR for VLMs; MoE discriminator with disentangled perception and reasoning experts provides response-level adversarial corrective signals on student rollouts without teacher logits.
 
 ### Speculative Decoding (Draft-Model Training)
 
@@ -355,4 +356,4 @@ If you find this resource useful, please cite it as:
 
 ---
 
-*Last updated: 2026-05-04. Coverage: core OPD papers, adjacent work (including speculative-decoding draft-model training and self-play / iterative bootstrapping), surveys, technical reports, and tooling through April 2026.*
+*Last updated: 2026-05-05. Coverage: core OPD papers, adjacent work (including speculative-decoding draft-model training and self-play / iterative bootstrapping), surveys, technical reports, and tooling through April 2026.*
