@@ -147,6 +147,7 @@ The ~21 papers that define on-policy distillation for LLMs.
 - [RLSD: Self-Distilled RLVR](https://arxiv.org/abs/2604.03128) (2026) — Repurposes self-distillation as token-level credit assignment within GRPO; proves OPSD-style distribution matching under information asymmetry induces irreducible privileged information leakage.
 - [SDZero: Self-Revision Turns Binary Rewards into Dense Supervision](https://arxiv.org/abs/2604.12002) (2026) — Generator-reviser dual-role self-distillation requiring only binary rewards; the reviser converts outcome-level feedback into token-level supervision on student rollouts without any external teacher or demonstrations.
 - [OPSDL: On-Policy Self-Distillation for Long-Context Language Models](https://arxiv.org/abs/2604.17535) (2026) — Long-context self-distillation: short-context distribution of the same model serves as a co-evolving token-level reverse-KL teacher for student rollouts under long context.
+- [OPSD Compresses What RLVR Teaches: A Post-RL Compaction Stage for Reasoning Models](https://arxiv.org/abs/2605.06188) (2026) — Splits OPSD by rollout correctness on thinking-enabled math: correct-only training preserves accuracy and shortens responses, incorrect-only training damages accuracy, indicating the hindsight self-teacher reveals redundancy more reliably than missing reasoning steps; proposes SFT → RLVR → OPSD as a post-RL compaction stage.
 
 ### Context and Experience Internalization
 
@@ -357,4 +358,4 @@ If you find this resource useful, please cite it as:
 
 ---
 
-*Last updated: 2026-05-06. Coverage: core OPD papers, adjacent work (including speculative-decoding draft-model training and self-play / iterative bootstrapping), surveys, technical reports, and tooling through April 2026.*
+*Last updated: 2026-05-07. Coverage: core OPD papers, adjacent work (including speculative-decoding draft-model training and self-play / iterative bootstrapping), surveys, technical reports, and tooling through April 2026.*
