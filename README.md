@@ -62,26 +62,26 @@ As of 2026, OPD is a standard post-training primitive at Alibaba (Qwen3), Xiaomi
 
 The fastest path to understanding the field:
 
-0. **Survey** — [OPD Survey](https://arxiv.org/abs/2604.00626) [![arXiv](https://img.shields.io/badge/arXiv-2604.00626-B31B1B.svg)](https://arxiv.org/abs/2604.00626).
+0. **Survey** — [OPD Survey](https://arxiv.org/abs/2604.00626) [![arXiv](https://img.shields.io/badge/arXiv-2604.00626-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.00626).
    Comprehensive map of the field: taxonomy, methods, and open problems.
-1. **Foundations** — [MiniLLM](https://arxiv.org/abs/2306.08543) [![arXiv](https://img.shields.io/badge/arXiv-2306.08543-B31B1B.svg)](https://arxiv.org/abs/2306.08543) and [GKD](https://arxiv.org/abs/2306.13649) [![arXiv](https://img.shields.io/badge/arXiv-2306.13649-B31B1B.svg)](https://arxiv.org/abs/2306.13649).
+1. **Foundations** — [MiniLLM](https://arxiv.org/abs/2306.08543) [![arXiv](https://img.shields.io/badge/arXiv-2306.08543-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2306.08543) and [GKD](https://arxiv.org/abs/2306.13649) [![arXiv](https://img.shields.io/badge/arXiv-2306.13649-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2306.13649).
    You will understand the basic student-rollout + teacher-supervision loop.
 2. **Practical intuition** — [Thinking Machines blog](https://thinkingmachines.ai/blog/on-policy-distillation/).
    The clearest end-to-end explanation of why and when to use OPD.
-3. **Limitations of vanilla OPD** — [Black-Box OPD](https://arxiv.org/abs/2511.10643) [![arXiv](https://img.shields.io/badge/arXiv-2511.10643-B31B1B.svg)](https://arxiv.org/abs/2511.10643), [Veto](https://arxiv.org/abs/2601.07155) [![arXiv](https://img.shields.io/badge/arXiv-2601.07155-B31B1B.svg)](https://arxiv.org/abs/2601.07155), [Entropy-Aware OPD](https://arxiv.org/abs/2603.07079) [![arXiv](https://img.shields.io/badge/arXiv-2603.07079-B31B1B.svg)](https://arxiv.org/abs/2603.07079), [Revisiting OPD](https://arxiv.org/abs/2603.25562) [![arXiv](https://img.shields.io/badge/arXiv-2603.25562-B31B1B.svg)](https://arxiv.org/abs/2603.25562).
+3. **Limitations of vanilla OPD** — [Black-Box OPD](https://arxiv.org/abs/2511.10643) [![arXiv](https://img.shields.io/badge/arXiv-2511.10643-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2511.10643), [Veto](https://arxiv.org/abs/2601.07155) [![arXiv](https://img.shields.io/badge/arXiv-2601.07155-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.07155), [Entropy-Aware OPD](https://arxiv.org/abs/2603.07079) [![arXiv](https://img.shields.io/badge/arXiv-2603.07079-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.07079), [Revisiting OPD](https://arxiv.org/abs/2603.25562) [![arXiv](https://img.shields.io/badge/arXiv-2603.25562-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.25562).
    You will learn what breaks: instability, diversity collapse, no-logit settings, sampled-token failure modes.
-4. **Self-distillation** — [OPSD](https://arxiv.org/abs/2601.18734) [![arXiv](https://img.shields.io/badge/arXiv-2601.18734-B31B1B.svg)](https://arxiv.org/abs/2601.18734), [SDFT](https://arxiv.org/abs/2601.19897) [![arXiv](https://img.shields.io/badge/arXiv-2601.19897-B31B1B.svg)](https://arxiv.org/abs/2601.19897), [SDPO](https://arxiv.org/abs/2601.20802) [![arXiv](https://img.shields.io/badge/arXiv-2601.20802-B31B1B.svg)](https://arxiv.org/abs/2601.20802).
+4. **Self-distillation** — [OPSD](https://arxiv.org/abs/2601.18734) [![arXiv](https://img.shields.io/badge/arXiv-2601.18734-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.18734), [SDFT](https://arxiv.org/abs/2601.19897) [![arXiv](https://img.shields.io/badge/arXiv-2601.19897-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.19897), [SDPO](https://arxiv.org/abs/2601.20802) [![arXiv](https://img.shields.io/badge/arXiv-2601.20802-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.20802).
    Drop the external teacher entirely.
-5. **Context and experience** — [OPCD](https://arxiv.org/abs/2602.12275) [![arXiv](https://img.shields.io/badge/arXiv-2602.12275-B31B1B.svg)](https://arxiv.org/abs/2602.12275) and [OEL](https://arxiv.org/abs/2603.16856) [![arXiv](https://img.shields.io/badge/arXiv-2603.16856-B31B1B.svg)](https://arxiv.org/abs/2603.16856).
+5. **Context and experience** — [OPCD](https://arxiv.org/abs/2602.12275) [![arXiv](https://img.shields.io/badge/arXiv-2602.12275-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.12275) and [OEL](https://arxiv.org/abs/2603.16856) [![arXiv](https://img.shields.io/badge/arXiv-2603.16856-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.16856).
    Distill prompts, traces, and deployment experience into weights.
-6. **2026 efficiency frontier** — [Prefix OPD](https://arxiv.org/abs/2602.15260) [![arXiv](https://img.shields.io/badge/arXiv-2602.15260-B31B1B.svg)](https://arxiv.org/abs/2602.15260), [OVD](https://arxiv.org/abs/2601.21968) [![arXiv](https://img.shields.io/badge/arXiv-2601.21968-B31B1B.svg)](https://arxiv.org/abs/2601.21968), [PACED](https://arxiv.org/abs/2603.11178) [![arXiv](https://img.shields.io/badge/arXiv-2603.11178-B31B1B.svg)](https://arxiv.org/abs/2603.11178), [REOPOLD](https://arxiv.org/abs/2603.11137) [![arXiv](https://img.shields.io/badge/arXiv-2603.11137-B31B1B.svg)](https://arxiv.org/abs/2603.11137).
+6. **2026 efficiency frontier** — [Prefix OPD](https://arxiv.org/abs/2602.15260) [![arXiv](https://img.shields.io/badge/arXiv-2602.15260-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.15260), [OVD](https://arxiv.org/abs/2601.21968) [![arXiv](https://img.shields.io/badge/arXiv-2601.21968-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.21968), [PACED](https://arxiv.org/abs/2603.11178) [![arXiv](https://img.shields.io/badge/arXiv-2603.11178-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.11178), [REOPOLD](https://arxiv.org/abs/2603.11137) [![arXiv](https://img.shields.io/badge/arXiv-2603.11137-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.11137).
    Cut compute 2x-47x.
-7. **Industrial patterns** — [Qwen3](https://arxiv.org/abs/2505.09388) [![arXiv](https://img.shields.io/badge/arXiv-2505.09388-B31B1B.svg)](https://arxiv.org/abs/2505.09388), [MiMo-V2-Flash](https://arxiv.org/abs/2601.02780) [![arXiv](https://img.shields.io/badge/arXiv-2601.02780-B31B1B.svg)](https://arxiv.org/abs/2601.02780), [GLM-5](https://arxiv.org/abs/2602.15763) [![arXiv](https://img.shields.io/badge/arXiv-2602.15763-B31B1B.svg)](https://arxiv.org/abs/2602.15763).
+7. **Industrial patterns** — [Qwen3](https://arxiv.org/abs/2505.09388) [![arXiv](https://img.shields.io/badge/arXiv-2505.09388-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.09388), [MiMo-V2-Flash](https://arxiv.org/abs/2601.02780) [![arXiv](https://img.shields.io/badge/arXiv-2601.02780-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.02780), [GLM-5](https://arxiv.org/abs/2602.15763) [![arXiv](https://img.shields.io/badge/arXiv-2602.15763-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.15763).
    How labs deploy OPD in production.
 
 ## Surveys
 
-- **A Survey of On-Policy Distillation for Large Language Models** [![arXiv](https://img.shields.io/badge/arXiv-2604.00626-B31B1B.svg)](https://arxiv.org/abs/2604.00626)
+- **A Survey of On-Policy Distillation for Large Language Models** [![arXiv](https://img.shields.io/badge/arXiv-2604.00626-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.00626)
   - *(2026)* First dedicated OPD survey; organizes methods by feedback signal, teacher access mode, and loss scope.
 
 ## Taxonomy
@@ -115,84 +115,84 @@ The ~21 papers that define on-policy distillation for LLMs.
 
 ### Foundations
 
-- **MiniLLM: On-Policy Distillation of Large Language Models** [![arXiv](https://img.shields.io/badge/arXiv-2306.08543-B31B1B.svg)](https://arxiv.org/abs/2306.08543)
+- **MiniLLM: On-Policy Distillation of Large Language Models** [![arXiv](https://img.shields.io/badge/arXiv-2306.08543-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2306.08543)
   - *(2023)* Reverse-KL framing for generative LMs; the paper that named the field.
-- **GKD: On-Policy Distillation of Language Models: Learning from Self-Generated Mistakes** [![arXiv](https://img.shields.io/badge/arXiv-2306.13649-B31B1B.svg)](https://arxiv.org/abs/2306.13649)
+- **GKD: On-Policy Distillation of Language Models: Learning from Self-Generated Mistakes** [![arXiv](https://img.shields.io/badge/arXiv-2306.13649-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2306.13649)
   - *(2023)* Unifying formulation spanning on-/off-policy mixtures with flexible divergences.
 
 ### Gap-Bridging
 
-- **Speculative Knowledge Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2410.11325-B31B1B.svg)](https://arxiv.org/abs/2410.11325)
+- **Speculative Knowledge Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2410.11325-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2410.11325)
   - *(2024)* Interleaved teacher/student sampling to mitigate poor student rollout quality.
-- **Black-Box On-Policy Distillation of Large Language Models** [![arXiv](https://img.shields.io/badge/arXiv-2511.10643-B31B1B.svg)](https://arxiv.org/abs/2511.10643)
+- **Black-Box On-Policy Distillation of Large Language Models** [![arXiv](https://img.shields.io/badge/arXiv-2511.10643-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2511.10643)
   - *(2025)* GAD: black-box OPD via discriminator-based reward on student rollouts; no teacher logits needed.
 
 ### Stability and Objective Design
 
-- **Veto: Stable On-Policy Distillation through Adaptive Target Reformulation** [![arXiv](https://img.shields.io/badge/arXiv-2601.07155-B31B1B.svg)](https://arxiv.org/abs/2601.07155)
+- **Veto: Stable On-Policy Distillation through Adaptive Target Reformulation** [![arXiv](https://img.shields.io/badge/arXiv-2601.07155-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.07155)
   - *(2026)* Intermediate target distribution in logit space to stabilize training.
-- **Entropy-Aware On-Policy Distillation of Language Models** [![arXiv](https://img.shields.io/badge/arXiv-2603.07079-B31B1B.svg)](https://arxiv.org/abs/2603.07079)
+- **Entropy-Aware On-Policy Distillation of Language Models** [![arXiv](https://img.shields.io/badge/arXiv-2603.07079-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.07079)
   - *(2026)* Forward-KL on high-entropy teacher tokens to preserve output diversity.
-- **ExOPD: Learning beyond Teacher via Generalized On-Policy Distillation with Reward Extrapolation** [![arXiv](https://img.shields.io/badge/arXiv-2602.12125-B31B1B.svg)](https://arxiv.org/abs/2602.12125)
+- **ExOPD: Learning beyond Teacher via Generalized On-Policy Distillation with Reward Extrapolation** [![arXiv](https://img.shields.io/badge/arXiv-2602.12125-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.12125)
   - *(2026)* Casts OPD as dense KL-constrained RL; reward scaling enables teacher-surpassing behavior.
-- **REOPOLD: Scaling Reasoning Efficiently via Relaxed On-Policy Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2603.11137-B31B1B.svg)](https://arxiv.org/abs/2603.11137)
+- **REOPOLD: Scaling Reasoning Efficiently via Relaxed On-Policy Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2603.11137-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.11137)
   - *(2026)* Relaxes strict imitation with reward clipping, entropy-based dynamic sampling, and explore-to-refine training.
-- **PACED: Distillation at the Frontier of Student Competence** [![arXiv](https://img.shields.io/badge/arXiv-2603.11178-B31B1B.svg)](https://arxiv.org/abs/2603.11178)
+- **PACED: Distillation at the Frontier of Student Competence** [![arXiv](https://img.shields.io/badge/arXiv-2603.11178-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.11178)
   - *(2026)* Pass-rate weighting focuses learning on the student's competence frontier.
-- **Revisiting On-Policy Distillation: Empirical Failure Modes and Simple Fixes** [![arXiv](https://img.shields.io/badge/arXiv-2603.25562-B31B1B.svg)](https://arxiv.org/abs/2603.25562)
+- **Revisiting On-Policy Distillation: Empirical Failure Modes and Simple Fixes** [![arXiv](https://img.shields.io/badge/arXiv-2603.25562-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.25562)
   - *(2026)* Truncated reverse-KL with teacher top-K local support matching; fixes imbalanced signals, unreliable teacher guidance, and tokenizer mismatch in sampled-token OPD.
-- **Rethinking On-Policy Distillation of Large Language Models: Phenomenology, Mechanism, and Recipe** [![arXiv](https://img.shields.io/badge/arXiv-2604.13016-B31B1B.svg)](https://arxiv.org/abs/2604.13016)
+- **Rethinking On-Policy Distillation of Large Language Models: Phenomenology, Mechanism, and Recipe** [![arXiv](https://img.shields.io/badge/arXiv-2604.13016-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.13016)
   - *(2026)* Mechanistic analysis of OPD dynamics; identifies compatible thinking patterns and novel teacher capability as success conditions; proposes off-policy cold start and teacher-aligned prompt selection for recovery.
-- **The Illusion of Certainty: Decoupling Capability and Calibration in On-Policy Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2604.16830-B31B1B.svg)](https://arxiv.org/abs/2604.16830)
+- **The Illusion of Certainty: Decoupling Capability and Calibration in On-Policy Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2604.16830-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.16830)
   - *(2026)* Theoretical analysis of OPD-induced overconfidence (information asymmetry, entropy collapse, selection bias); CaOPD replaces confidence targets with student-grounded empirical success rates to decouple capability from calibration.
-- **Demystifying OPD: Length Inflation and Stabilization Strategies for Large Language Models** [![arXiv](https://img.shields.io/badge/arXiv-2604.08527-B31B1B.svg)](https://arxiv.org/abs/2604.08527)
+- **Demystifying OPD: Length Inflation and Stabilization Strategies for Large Language Models** [![arXiv](https://img.shields.io/badge/arXiv-2604.08527-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.08527)
   - *(2026)* Diagnoses repetition-driven length inflation in iterative OPD; Stable-OPD adds divergence constraints and a rollout-mixture anchor with golden data.
-- **Uni-OPD: Unifying On-Policy Distillation with a Dual-Perspective Recipe** [![arXiv](https://img.shields.io/badge/arXiv-2605.03677-B31B1B.svg)](https://arxiv.org/abs/2605.03677)
+- **Uni-OPD: Unifying On-Policy Distillation with a Dual-Perspective Recipe** [![arXiv](https://img.shields.io/badge/arXiv-2605.03677-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.03677)
   - *(2026)* Identifies insufficient state exploration and unreliable teacher supervision as OPD bottlenecks; pairs offline difficulty-aware plus online correctness-aware data balancing with an outcome-guided margin calibration that keeps token-level teacher scores order-consistent with outcome reward across LLM and MLLM settings.
 
 ### Self-Distillation
 
-- **OPSD: Self-Distilled Reasoner** [![arXiv](https://img.shields.io/badge/arXiv-2601.18734-B31B1B.svg)](https://arxiv.org/abs/2601.18734)
+- **OPSD: Self-Distilled Reasoner** [![arXiv](https://img.shields.io/badge/arXiv-2601.18734-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.18734)
   - *(2026)* Single model as both teacher and student via privileged information; no external teacher required.
-- **SDFT: Self-Distillation Enables Continual Learning** [![arXiv](https://img.shields.io/badge/arXiv-2601.19897-B31B1B.svg)](https://arxiv.org/abs/2601.19897)
+- **SDFT: Self-Distillation Enables Continual Learning** [![arXiv](https://img.shields.io/badge/arXiv-2601.19897-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.19897)
   - *(2026)* Demonstration-conditioned self-teaching for continual learning with less forgetting.
-- **SDPO: Reinforcement Learning via Self-Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2601.20802-B31B1B.svg)](https://arxiv.org/abs/2601.20802)
+- **SDPO: Reinforcement Learning via Self-Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2601.20802-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.20802)
   - *(2026)* Converts textual feedback into dense self-teacher signals for RL-like training.
-- **Why Does Self-Distillation (Sometimes) Degrade the Reasoning Capability of LLMs?** [![arXiv](https://img.shields.io/badge/arXiv-2603.24472-B31B1B.svg)](https://arxiv.org/abs/2603.24472)
+- **Why Does Self-Distillation (Sometimes) Degrade the Reasoning Capability of LLMs?** [![arXiv](https://img.shields.io/badge/arXiv-2603.24472-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.24472)
   - *(2026)* Traces self-distillation failures to suppression of epistemic verbalization; task coverage determines whether conciseness helps or hurts.
-- **OPSDC: On-Policy Self-Distillation for Reasoning Compression** [![arXiv](https://img.shields.io/badge/arXiv-2603.05433-B31B1B.svg)](https://arxiv.org/abs/2603.05433)
+- **OPSDC: On-Policy Self-Distillation for Reasoning Compression** [![arXiv](https://img.shields.io/badge/arXiv-2603.05433-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.05433)
   - *(2026)* Compresses verbose reasoning using concise privileged self-teachers.
-- **GATES: Self-Distillation under Privileged Context with Consensus Gating** [![arXiv](https://img.shields.io/badge/arXiv-2602.20574-B31B1B.svg)](https://arxiv.org/abs/2602.20574)
+- **GATES: Self-Distillation under Privileged Context with Consensus Gating** [![arXiv](https://img.shields.io/badge/arXiv-2602.20574-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.20574)
   - *(2026)* Consensus-gated asymmetric-context self-distillation without labels or rewards.
-- **HDPO: Hybrid Distillation Policy Optimization via Privileged Self-Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2603.23871-B31B1B.svg)](https://arxiv.org/abs/2603.23871)
+- **HDPO: Hybrid Distillation Policy Optimization via Privileged Self-Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2603.23871-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.23871)
   - *(2026)* Privileged self-distillation targeting cliff prompts where RL gradients vanish; provably recovers the KL-regularized optimal policy.
-- **RLSD: Self-Distilled RLVR** [![arXiv](https://img.shields.io/badge/arXiv-2604.03128-B31B1B.svg)](https://arxiv.org/abs/2604.03128)
+- **RLSD: Self-Distilled RLVR** [![arXiv](https://img.shields.io/badge/arXiv-2604.03128-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.03128)
   - *(2026)* Repurposes self-distillation as token-level credit assignment within GRPO; proves OPSD-style distribution matching under information asymmetry induces irreducible privileged information leakage.
-- **SDZero: Self-Revision Turns Binary Rewards into Dense Supervision** [![arXiv](https://img.shields.io/badge/arXiv-2604.12002-B31B1B.svg)](https://arxiv.org/abs/2604.12002)
+- **SDZero: Self-Revision Turns Binary Rewards into Dense Supervision** [![arXiv](https://img.shields.io/badge/arXiv-2604.12002-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.12002)
   - *(2026)* Generator-reviser dual-role self-distillation requiring only binary rewards; the reviser converts outcome-level feedback into token-level supervision on student rollouts without any external teacher or demonstrations.
-- **OPSDL: On-Policy Self-Distillation for Long-Context Language Models** [![arXiv](https://img.shields.io/badge/arXiv-2604.17535-B31B1B.svg)](https://arxiv.org/abs/2604.17535)
+- **OPSDL: On-Policy Self-Distillation for Long-Context Language Models** [![arXiv](https://img.shields.io/badge/arXiv-2604.17535-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.17535)
   - *(2026)* Long-context self-distillation: short-context distribution of the same model serves as a co-evolving token-level reverse-KL teacher for student rollouts under long context.
-- **OPSD Compresses What RLVR Teaches: A Post-RL Compaction Stage for Reasoning Models** [![arXiv](https://img.shields.io/badge/arXiv-2605.06188-B31B1B.svg)](https://arxiv.org/abs/2605.06188)
+- **OPSD Compresses What RLVR Teaches: A Post-RL Compaction Stage for Reasoning Models** [![arXiv](https://img.shields.io/badge/arXiv-2605.06188-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.06188)
   - *(2026)* Splits OPSD by rollout correctness on thinking-enabled math: correct-only training preserves accuracy and shortens responses, incorrect-only training damages accuracy, indicating the hindsight self-teacher reveals redundancy more reliably than missing reasoning steps; proposes SFT → RLVR → OPSD as a post-RL compaction stage.
 
 ### Context and Experience Internalization
 
-- **OPCD: On-Policy Context Distillation for Language Models** [![arXiv](https://img.shields.io/badge/arXiv-2602.12275-B31B1B.svg)](https://arxiv.org/abs/2602.12275)
+- **OPCD: On-Policy Context Distillation for Language Models** [![arXiv](https://img.shields.io/badge/arXiv-2602.12275-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.12275)
   - *(2026)* Context-conditioned teacher on student rollouts; distills system prompts and experiential knowledge.
-- **OEL: Online Experiential Learning for Language Models** [![arXiv](https://img.shields.io/badge/arXiv-2603.16856-B31B1B.svg)](https://arxiv.org/abs/2603.16856)
+- **OEL: Online Experiential Learning for Language Models** [![arXiv](https://img.shields.io/badge/arXiv-2603.16856-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.16856)
   - *(2026)* Deployment loop using OPCD for consolidating interaction traces into weights.
-- **Aligning Language Models from User Interactions** [![arXiv](https://img.shields.io/badge/arXiv-2603.12273-B31B1B.svg)](https://arxiv.org/abs/2603.12273)
+- **Aligning Language Models from User Interactions** [![arXiv](https://img.shields.io/badge/arXiv-2603.12273-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.12273)
   - *(2026)* Hindsight self-distillation from user follow-ups: student rolls out under the original prompt; same model conditioned on the user's follow-up serves as the token-level reverse-KL teacher.
 
 ### Efficiency Variants
 
-- **Prefix OPD: Fast and Effective On-policy Distillation from Reasoning Prefixes** [![arXiv](https://img.shields.io/badge/arXiv-2602.15260-B31B1B.svg)](https://arxiv.org/abs/2602.15260)
+- **Prefix OPD: Fast and Effective On-policy Distillation from Reasoning Prefixes** [![arXiv](https://img.shields.io/badge/arXiv-2602.15260-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.15260)
   - *(2026)* Distills only reasoning prefixes, cutting training FLOPs 2x-47x.
-- **OVD: On-policy Verbal Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2601.21968-B31B1B.svg)](https://arxiv.org/abs/2601.21968)
+- **OVD: On-policy Verbal Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2601.21968-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.21968)
   - *(2026)* Trajectory-level verbal scoring instead of token-level logit matching; reduces memory and relaxes alignment requirements.
-- **pi-Distill: Privileged Information Distillation for Language Models** [![arXiv](https://img.shields.io/badge/arXiv-2602.04942-B31B1B.svg)](https://arxiv.org/abs/2602.04942)
+- **pi-Distill: Privileged Information Distillation for Language Models** [![arXiv](https://img.shields.io/badge/arXiv-2602.04942-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.04942)
   - *(2026)* Training-time privileged information in agentic settings where only actions are observable.
-- **Lightning OPD: Efficient Post-Training for Large Reasoning Models with Offline On-Policy Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2604.13010-B31B1B.svg)](https://arxiv.org/abs/2604.13010)
+- **Lightning OPD: Efficient Post-Training for Large Reasoning Models with Offline On-Policy Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2604.13010-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.13010)
   - *(2026)* Precomputes teacher log-probs once over SFT rollouts to eliminate the live-teacher server; 4x speedup via a teacher-consistency condition.
 - **[Nitrobrew: Communication- and Memory-Efficient On-Policy Distillation](https://blog.tilderesearch.com/blog/nitrobrew)**
   - *(2026)* Systems-level OPD optimizations from Tilde Research: hidden-state teacher→student transport (~60x less bandwidth), tile-wise online divergence kernel (~37x less memory), and an SVD-compressed variant; 1.5-3x end-to-end throughput.
@@ -203,195 +203,195 @@ Papers that are not canonical OPD but matter for understanding or deploying it.
 
 ### Cross-Tokenizer and Model-Family Enablers
 
-- **ULD: Towards Cross-Tokenizer Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2402.12030-B31B1B.svg)](https://arxiv.org/abs/2402.12030)
+- **ULD: Towards Cross-Tokenizer Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2402.12030-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2402.12030)
   - *(2024)* Universal Logit Distillation; foundational enabler for cross-family OPD.
-- **Multi-Level OT for Universal Cross-Tokenizer KD** [![arXiv](https://img.shields.io/badge/arXiv-2412.14528-B31B1B.svg)](https://arxiv.org/abs/2412.14528)
+- **Multi-Level OT for Universal Cross-Tokenizer KD** [![arXiv](https://img.shields.io/badge/arXiv-2412.14528-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2412.14528)
   - *(2024)* Token- and sequence-level optimal transport for cross-tokenizer KD.
-- **CDM: Enhancing Cross-Tokenizer KD with Contextual Dynamical Mapping** [![arXiv](https://img.shields.io/badge/arXiv-2502.11104-B31B1B.svg)](https://arxiv.org/abs/2502.11104)
+- **CDM: Enhancing Cross-Tokenizer KD with Contextual Dynamical Mapping** [![arXiv](https://img.shields.io/badge/arXiv-2502.11104-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2502.11104)
   - *(2025)* Contextual dynamic mapping for vocabulary alignment.
-- **Universal Cross-Tokenizer Distillation via Approximate Likelihood Matching** [![arXiv](https://img.shields.io/badge/arXiv-2503.20083-B31B1B.svg)](https://arxiv.org/abs/2503.20083)
+- **Universal Cross-Tokenizer Distillation via Approximate Likelihood Matching** [![arXiv](https://img.shields.io/badge/arXiv-2503.20083-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.20083)
   - *(2025)* Approximate likelihood matching across fundamentally different tokenizers.
-- **Cross-Tokenizer Likelihood Scoring Algorithms** [![arXiv](https://img.shields.io/badge/arXiv-2512.14954-B31B1B.svg)](https://arxiv.org/abs/2512.14954)
+- **Cross-Tokenizer Likelihood Scoring Algorithms** [![arXiv](https://img.shields.io/badge/arXiv-2512.14954-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2512.14954)
   - *(2025)* Exact and approximate sequence likelihood scoring across BPE vocabularies.
-- **DSKD: A Dual-Space Framework for General KD** [![arXiv](https://img.shields.io/badge/arXiv-2504.11426-B31B1B.svg)](https://arxiv.org/abs/2504.11426)
+- **DSKD: A Dual-Space Framework for General KD** [![arXiv](https://img.shields.io/badge/arXiv-2504.11426-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2504.11426)
   - *(2025)* Unifies output spaces; supports on- and off-policy KD between any two LLMs.
 - **[GOLD: Unlocking On-Policy Distillation for Any Model Family](https://huggingface.co/spaces/HuggingFaceH4/on-policy-distillation)**
   - *(2025)* Cross-tokenizer OPD with TRL integration.
-- **CTPD: Cross Tokenizer Preference Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2601.11865-B31B1B.svg)](https://arxiv.org/abs/2601.11865)
+- **CTPD: Cross Tokenizer Preference Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2601.11865-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.11865)
   - *(2026)* Aligned-span projection maps teacher and student tokens to shared character spans; teacher-anchored DPO with cross-tokenizer importance sampling for white-box preference transfer.
-- **DWA-KD: Dual-Space Weighting and Time-Warped Alignment for Cross-Tokenizer Knowledge Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2602.21669-B31B1B.svg)](https://arxiv.org/abs/2602.21669)
+- **DWA-KD: Dual-Space Weighting and Time-Warped Alignment for Cross-Tokenizer Knowledge Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2602.21669-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.21669)
   - *(2026)* Dual-space token weighting plus Soft-DTW differentiable sequence alignment for cross-family teacher-student transfer.
-- **Cross-Tokenizer LLM Distillation through a Byte-Level Interface** [![arXiv](https://img.shields.io/badge/arXiv-2604.07466-B31B1B.svg)](https://arxiv.org/abs/2604.07466)
+- **Cross-Tokenizer LLM Distillation through a Byte-Level Interface** [![arXiv](https://img.shields.io/badge/arXiv-2604.07466-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.07466)
   - *(2026)* Converts teacher distributions to byte-level probabilities; adds a byte-level decoder to the student to enable distillation across mismatched tokenizers.
 
 ### Mismatch Mitigation and Student Quality
 
-- **DistiLLM** [![arXiv](https://img.shields.io/badge/arXiv-2402.03898-B31B1B.svg)](https://arxiv.org/abs/2402.03898)
+- **DistiLLM** [![arXiv](https://img.shields.io/badge/arXiv-2402.03898-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2402.03898)
   - *(2024)* Skew-KL with adaptive off-policy use of student-generated outputs.
-- **Exploring and Enhancing Distribution Transfer in KD** [![arXiv](https://img.shields.io/badge/arXiv-2409.12512-B31B1B.svg)](https://arxiv.org/abs/2409.12512)
+- **Exploring and Enhancing Distribution Transfer in KD** [![arXiv](https://img.shields.io/badge/arXiv-2409.12512-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2409.12512)
   - *(2024)* Analyzes reverse-KL with student-generated output; proposes OKD.
-- **FIRST: Efficient Trustworthy Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2408.12168-B31B1B.svg)](https://arxiv.org/abs/2408.12168)
+- **FIRST: Efficient Trustworthy Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2408.12168-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2408.12168)
   - *(2024)* Teacher recalibration for trustworthy offline KD.
-- **Multi-Granularity Semantic Revision** [![arXiv](https://img.shields.io/badge/arXiv-2407.10068-B31B1B.svg)](https://arxiv.org/abs/2407.10068)
+- **Multi-Granularity Semantic Revision** [![arXiv](https://img.shields.io/badge/arXiv-2407.10068-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2407.10068)
   - *(2024)* Sequence correction for low-quality student-generated outputs.
-- **Warmup-Distill** [![arXiv](https://img.shields.io/badge/arXiv-2502.11766-B31B1B.svg)](https://arxiv.org/abs/2502.11766)
+- **Warmup-Distill** [![arXiv](https://img.shields.io/badge/arXiv-2502.11766-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2502.11766)
   - *(2025)* Bridges distribution mismatch before distillation begins.
-- **TAID: Temporally Adaptive Interpolated Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2501.16937-B31B1B.svg)](https://arxiv.org/abs/2501.16937)
+- **TAID: Temporally Adaptive Interpolated Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2501.16937-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2501.16937)
   - *(2025)* Addresses teacher-student mismatch via adaptive interpolation.
-- **DistiLLM-2** [![arXiv](https://img.shields.io/badge/arXiv-2503.07067-B31B1B.svg)](https://arxiv.org/abs/2503.07067)
+- **DistiLLM-2** [![arXiv](https://img.shields.io/badge/arXiv-2503.07067-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.07067)
   - *(2025)* Contrastive extension; student-generated outputs collected per epoch.
-- **SpecKD: Speculative Decoding for Effective KD** [![arXiv](https://img.shields.io/badge/arXiv-2510.24021-B31B1B.svg)](https://arxiv.org/abs/2510.24021)
+- **SpecKD: Speculative Decoding for Effective KD** [![arXiv](https://img.shields.io/badge/arXiv-2510.24021-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.24021)
   - *(2025)* Speculative-decoding-inspired selective token-level losses.
-- **Knowledge Distillation with Training Wheels** [![arXiv](https://img.shields.io/badge/arXiv-2502.17717-B31B1B.svg)](https://arxiv.org/abs/2502.17717)
+- **Knowledge Distillation with Training Wheels** [![arXiv](https://img.shields.io/badge/arXiv-2502.17717-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2502.17717)
   - *(2025)* Entropy-regularized value optimization with on-/off-policy demonstrations.
-- **Revealing the Power of Post-Training via KD** [![arXiv](https://img.shields.io/badge/arXiv-2509.26497-B31B1B.svg)](https://arxiv.org/abs/2509.26497)
+- **Revealing the Power of Post-Training via KD** [![arXiv](https://img.shields.io/badge/arXiv-2509.26497-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.26497)
   - *(2025)* Offline on-policy KD: student generates, then teacher labels.
-- **TSD-KD: Explain in Your Own Words** [![arXiv](https://img.shields.io/badge/arXiv-2603.13260-B31B1B.svg)](https://arxiv.org/abs/2603.13260)
+- **TSD-KD: Explain in Your Own Words** [![arXiv](https://img.shields.io/badge/arXiv-2603.13260-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.13260)
   - *(2026)* Student proposes candidates, teacher reranks, selective token distillation.
-- **SSD: Embarrassingly Simple Self-Distillation Improves Code Generation** [![arXiv](https://img.shields.io/badge/arXiv-2604.01193-B31B1B.svg)](https://arxiv.org/abs/2604.01193)
+- **SSD: Embarrassingly Simple Self-Distillation Improves Code Generation** [![arXiv](https://img.shields.io/badge/arXiv-2604.01193-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.01193)
   - *(2026)* Temperature-shifted self-sampling plus SFT with no teacher or verifier; identifies precision-exploration conflict in token distributions.
-- **AdaSwitch: Balancing Exploration and Guidance in KD via Adaptive Switching** [![arXiv](https://img.shields.io/badge/arXiv-2510.07842-B31B1B.svg)](https://arxiv.org/abs/2510.07842)
+- **AdaSwitch: Balancing Exploration and Guidance in KD via Adaptive Switching** [![arXiv](https://img.shields.io/badge/arXiv-2510.07842-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.07842)
   - *(2025)* Adaptively switches between on-policy student rollouts and off-policy teacher data using a context-aware divergence threshold.
-- **DDT: Towards On-Policy SFT via Distribution Discriminant Theory** [![arXiv](https://img.shields.io/badge/arXiv-2602.12222-B31B1B.svg)](https://arxiv.org/abs/2602.12222)
+- **DDT: Towards On-Policy SFT via Distribution Discriminant Theory** [![arXiv](https://img.shields.io/badge/arXiv-2602.12222-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.12222)
   - *(2026)* In-Distribution Finetuning and Hinted Decoding realign training data to the student's evolving distribution; matches offline RL at SFT cost.
-- **DASD: Distribution-Aligned Sequence Distillation for Superior Long-CoT Reasoning** [![arXiv](https://img.shields.io/badge/arXiv-2601.09088-B31B1B.svg)](https://arxiv.org/abs/2601.09088)
+- **DASD: Distribution-Aligned Sequence Distillation for Superior Long-CoT Reasoning** [![arXiv](https://img.shields.io/badge/arXiv-2601.09088-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.09088)
   - *(2026)* On-policy correction pipeline addressing distribution mismatch, capacity misalignment, and exposure bias in sequence-level CoT distillation.
-- **SCOPE: Signal-Calibrated On-Policy Distillation Enhancement with Dual-Path Adaptive Weighting** [![arXiv](https://img.shields.io/badge/arXiv-2604.10688-B31B1B.svg)](https://arxiv.org/abs/2604.10688)
+- **SCOPE: Signal-Calibrated On-Policy Distillation Enhancement with Dual-Path Adaptive Weighting** [![arXiv](https://img.shields.io/badge/arXiv-2604.10688-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.10688)
   - *(2026)* Routes correct rollouts to student-perplexity-weighted MLE and incorrect ones to teacher-perplexity-weighted KL distillation; per-prompt group-level normalization.
-- **TIP: Token Importance in On-Policy Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2604.14084-B31B1B.svg)](https://arxiv.org/abs/2604.14084)
+- **TIP: Token Importance in On-Policy Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2604.14084-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.14084)
   - *(2026)* Selective token training on high-entropy positions and confidently-wrong low-entropy positions; matches full-token baselines at lower memory.
-- **DP-OPD: Differentially Private On-Policy Distillation for Language Models** [![arXiv](https://img.shields.io/badge/arXiv-2604.04461-B31B1B.svg)](https://arxiv.org/abs/2604.04461)
+- **DP-OPD: Differentially Private On-Policy Distillation for Language Models** [![arXiv](https://img.shields.io/badge/arXiv-2604.04461-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.04461)
   - *(2026)* Standard student-rollout + frozen-teacher OPD with DP-SGD on student updates; first OPD recipe compatible with sample-level differential privacy.
-- **Distillation Traps and Guards: A Calibration Knob for LLM Distillability** [![arXiv](https://img.shields.io/badge/arXiv-2604.18963-B31B1B.svg)](https://arxiv.org/abs/2604.18963)
+- **Distillation Traps and Guards: A Calibration Knob for LLM Distillability** [![arXiv](https://img.shields.io/badge/arXiv-2604.18963-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.18963)
   - *(2026)* Diagnoses tail noise, off-policy instability, and teacher-student gap as KD/OPD failure modes; post-hoc calibrates teachers via RFT to control distillability.
 
 ### Preference, Reward-Guided, and Hybrid RL+KD
 
-- **Direct Preference Knowledge Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2406.19774-B31B1B.svg)](https://arxiv.org/abs/2406.19774)
+- **Direct Preference Knowledge Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2406.19774-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2406.19774)
   - *(2024)* Preference-aware KD combining reverse-KL with implicit reward objectives.
-- **Online Knowledge Distillation with Reward Guidance** [![arXiv](https://img.shields.io/badge/arXiv-2505.18952-B31B1B.svg)](https://arxiv.org/abs/2505.18952)
+- **Online Knowledge Distillation with Reward Guidance** [![arXiv](https://img.shields.io/badge/arXiv-2505.18952-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.18952)
   - *(2025)* Sequential KD via preference optimization; offline and online variants.
-- **KDRL** [![arXiv](https://img.shields.io/badge/arXiv-2506.02208-B31B1B.svg)](https://arxiv.org/abs/2506.02208)
+- **KDRL** [![arXiv](https://img.shields.io/badge/arXiv-2506.02208-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2506.02208)
   - *(2025)* Unified reverse-KL KD with RL in a single post-training objective.
-- **RLTF-SD: Expanding RL via Text Feedback** [![arXiv](https://img.shields.io/badge/arXiv-2602.02482-B31B1B.svg)](https://arxiv.org/abs/2602.02482)
+- **RLTF-SD: Expanding RL via Text Feedback** [![arXiv](https://img.shields.io/badge/arXiv-2602.02482-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.02482)
   - *(2026)* Internalizes text feedback via self-distillation.
-- **RLAD: Reinforcement-aware KD for LLM Reasoning** [![arXiv](https://img.shields.io/badge/arXiv-2602.22495-B31B1B.svg)](https://arxiv.org/abs/2602.22495)
+- **RLAD: Reinforcement-aware KD for LLM Reasoning** [![arXiv](https://img.shields.io/badge/arXiv-2602.22495-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.22495)
   - *(2026)* Trust-region ratio distillation on student rollouts.
-- **Multi-Token Prediction via Self-Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2602.06019-B31B1B.svg)](https://arxiv.org/abs/2602.06019)
+- **Multi-Token Prediction via Self-Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2602.06019-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.06019)
   - *(2026)* Online self-distillation for multi-token prediction and faster inference.
-- **ORPO-Distill: Mixed-Policy Preference Optimization for Cross-Architecture LLM Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2509.25100-B31B1B.svg)](https://arxiv.org/abs/2509.25100)
+- **ORPO-Distill: Mixed-Policy Preference Optimization for Cross-Architecture LLM Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2509.25100-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.25100)
   - *(2025)* Mixed-policy teacher/student preference distillation using student-generated outputs; enables black-box cross-architecture transfer.
-- **SRPO: Unifying Group-Relative and Self-Distillation Policy Optimization via Sample Routing** [![arXiv](https://img.shields.io/badge/arXiv-2604.02288-B31B1B.svg)](https://arxiv.org/abs/2604.02288)
+- **SRPO: Unifying Group-Relative and Self-Distillation Policy Optimization via Sample Routing** [![arXiv](https://img.shields.io/badge/arXiv-2604.02288-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.02288)
   - *(2026)* Routes correct student rollouts to reward-based RL and failed ones to self-distillation; unifies GRPO and SDPO.
-- **KETCHUP: K-Step Return Estimation for Sequential Knowledge Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2504.19024-B31B1B.svg)](https://arxiv.org/abs/2504.19024)
+- **KETCHUP: K-Step Return Estimation for Sequential Knowledge Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2504.19024-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2504.19024)
   - *(2025)* K-step return via Bellman equation replaces high-variance single-step REINFORCE in sequence-level OPD.
-- **Rethinking LLM Distillation: A Constrained MDP Perspective** [![arXiv](https://img.shields.io/badge/arXiv-2509.22921-B31B1B.svg)](https://arxiv.org/abs/2509.22921)
+- **Rethinking LLM Distillation: A Constrained MDP Perspective** [![arXiv](https://img.shields.io/badge/arXiv-2509.22921-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.22921)
   - *(2025)* Maximizes task reward subject to hard KL constraint against the teacher; avoids manual Lagrangian tuning.
-- **RLKD: Distilling LLMs' Reasoning via Reinforcement Learning** [![arXiv](https://img.shields.io/badge/arXiv-2505.16142-B31B1B.svg)](https://arxiv.org/abs/2505.16142)
+- **RLKD: Distilling LLMs' Reasoning via Reinforcement Learning** [![arXiv](https://img.shields.io/badge/arXiv-2505.16142-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.16142)
   - *(2025)* Generative Structure Reward Model captures multi-branch reasoning structure on student rollouts; outperforms SFT-RL pipelines on 0.1% data.
-- **LUFFY: Learning to Reason under Off-Policy Guidance** [![arXiv](https://img.shields.io/badge/arXiv-2504.14945-B31B1B.svg)](https://arxiv.org/abs/2504.14945)
+- **LUFFY: Learning to Reason under Off-Policy Guidance** [![arXiv](https://img.shields.io/badge/arXiv-2504.14945-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2504.14945)
   - *(2025)* Mixed-policy GRPO combining on-policy rollouts with off-policy teacher traces via regularized importance sampling.
-- **BOND: Aligning LLMs with Best-of-N Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2407.14622-B31B1B.svg)](https://arxiv.org/abs/2407.14622)
+- **BOND: Aligning LLMs with Best-of-N Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2407.14622-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2407.14622)
   - *(2024)* RL that mimics best-of-N sampling via Jeffreys-divergence distribution matching; eliminates inference-time BoN cost.
-- **Faster WIND: Accelerating Iterative Best-of-N Distillation for LLM Alignment** [![arXiv](https://img.shields.io/badge/arXiv-2410.20727-B31B1B.svg)](https://arxiv.org/abs/2410.20727)
+- **Faster WIND: Accelerating Iterative Best-of-N Distillation for LLM Alignment** [![arXiv](https://img.shields.io/badge/arXiv-2410.20727-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2410.20727)
   - *(2024)* Game-theoretic framing of iterative BoN as self-play; win-rate dominance optimization with sample-efficiency guarantees (AISTATS 2025).
-- **AlignDistil: Token-Level Language Model Alignment as Adaptive Policy Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2503.02832-B31B1B.svg)](https://arxiv.org/abs/2503.02832)
+- **AlignDistil: Token-Level Language Model Alignment as Adaptive Policy Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2503.02832-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.02832)
   - *(2025)* Casts RLHF as token-level distillation by injecting DPO rewards; contrastive token-adaptive optimization (ACL 2025).
-- **KEPO: Knowledge-Enhanced Preference Optimization for Reinforcement Learning with Reasoning** [![arXiv](https://img.shields.io/badge/arXiv-2602.00400-B31B1B.svg)](https://arxiv.org/abs/2602.00400)
+- **KEPO: Knowledge-Enhanced Preference Optimization for Reinforcement Learning with Reasoning** [![arXiv](https://img.shields.io/badge/arXiv-2602.00400-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.00400)
   - *(2026)* Quality-gated on-policy distillation on high-quality trajectories combined with knowledge-enhanced exploration via teacher hints.
-- **𝒳-KD: General Experiential Knowledge Distillation for Large Language Models** [![arXiv](https://img.shields.io/badge/arXiv-2602.12674-B31B1B.svg)](https://arxiv.org/abs/2602.12674)
+- **𝒳-KD: General Experiential Knowledge Distillation for Large Language Models** [![arXiv](https://img.shields.io/badge/arXiv-2602.12674-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.12674)
   - *(2026)* Jointly models the teacher's reward and performs policy distillation so the student learns inside the teacher's original learning environment.
-- **ExGRPO: Probing to Refine — Reinforcement Distillation of LLMs via Explanatory Inversion** [![arXiv](https://img.shields.io/badge/arXiv-2603.19266-B31B1B.svg)](https://arxiv.org/abs/2603.19266)
+- **ExGRPO: Probing to Refine — Reinforcement Distillation of LLMs via Explanatory Inversion** [![arXiv](https://img.shields.io/badge/arXiv-2603.19266-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.19266)
   - *(2026)* Explanatory probes plus dialogue-structure utility bonus reward coherent reasoning over memorized answers.
-- **HPD: Hybrid Policy Distillation for LLMs** [![arXiv](https://img.shields.io/badge/arXiv-2604.20244-B31B1B.svg)](https://arxiv.org/abs/2604.20244)
+- **HPD: Hybrid Policy Distillation for LLMs** [![arXiv](https://img.shields.io/badge/arXiv-2604.20244-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.20244)
   - *(2026)* Unified reweighted-log-likelihood framework combining forward/reverse KL with off-policy and lightweight on-policy sampling.
-- **NPO: Near-Future Policy Optimization** [![arXiv](https://img.shields.io/badge/arXiv-2604.20733-B31B1B.svg)](https://arxiv.org/abs/2604.20733)
+- **NPO: Near-Future Policy Optimization** [![arXiv](https://img.shields.io/badge/arXiv-2604.20733-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.20733)
   - *(2026)* Uses a later checkpoint of the same policy as the teacher; AutoNPO adaptively triggers the switch to maximize learning signal in RLVR.
 
 ### Self-Play and Iterative Bootstrapping
 
-- **SPIN: Self-Play Fine-Tuning Converts Weak Language Models to Strong Language Models** [![arXiv](https://img.shields.io/badge/arXiv-2401.01335-B31B1B.svg)](https://arxiv.org/abs/2401.01335)
+- **SPIN: Self-Play Fine-Tuning Converts Weak Language Models to Strong Language Models** [![arXiv](https://img.shields.io/badge/arXiv-2401.01335-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2401.01335)
   - *(2024)* Self-play loop where the model distinguishes its own generations from human references; ICML 2024.
-- **Self-Rewarding Language Models** [![arXiv](https://img.shields.io/badge/arXiv-2401.10020-B31B1B.svg)](https://arxiv.org/abs/2401.10020)
+- **Self-Rewarding Language Models** [![arXiv](https://img.shields.io/badge/arXiv-2401.10020-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2401.10020)
   - *(2024)* Iterative DPO with the model as LLM-as-Judge providing self-rewards on its own generations; supervision-equivalent feedback from same-model evaluation.
-- **rStar-Math: Small LLMs Can Master Math Reasoning with Self-Evolved Deep Thinking** [![arXiv](https://img.shields.io/badge/arXiv-2501.04519-B31B1B.svg)](https://arxiv.org/abs/2501.04519)
+- **rStar-Math: Small LLMs Can Master Math Reasoning with Self-Evolved Deep Thinking** [![arXiv](https://img.shields.io/badge/arXiv-2501.04519-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2501.04519)
   - *(2025)* MCTS-guided self-evolution: policy and process reward model co-improve from scratch via code-augmented reasoning.
-- **rStar2-Agent: Agentic Reasoning Technical Report** [![arXiv](https://img.shields.io/badge/arXiv-2508.20722-B31B1B.svg)](https://arxiv.org/abs/2508.20722)
+- **rStar2-Agent: Agentic Reasoning Technical Report** [![arXiv](https://img.shields.io/badge/arXiv-2508.20722-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2508.20722)
   - *(2025)* GRPO with Resample-on-Correct rollouts plus multi-stage SFT→RL recipe for a 14B agentic reasoner.
-- **π-Play: Multi-Agent Self-Play via Privileged Self-Distillation without External Data** [![arXiv](https://img.shields.io/badge/arXiv-2604.14054-B31B1B.svg)](https://arxiv.org/abs/2604.14054)
+- **π-Play: Multi-Agent Self-Play via Privileged Self-Distillation without External Data** [![arXiv](https://img.shields.io/badge/arXiv-2604.14054-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.14054)
   - *(2026)* Examiner generates tasks plus question-construction-paths (QCPs); same-scale teacher uses QCPs as privileged context to densely supervise student rollouts via reverse KL; turns sparse-reward self-play into dense self-distillation.
 
 ### Agent Distillation, Multimodal, and Other Extensions
 
-- **Structured Agent Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2505.13820-B31B1B.svg)](https://arxiv.org/abs/2505.13820)
+- **Structured Agent Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2505.13820-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.13820)
   - *(2025)* Queries teacher online to avoid distribution drift in agent settings.
-- **From Deferral to Learning: Online In-Context KD for LLM Cascades** [![arXiv](https://img.shields.io/badge/arXiv-2509.22984-B31B1B.svg)](https://arxiv.org/abs/2509.22984)
+- **From Deferral to Learning: Online In-Context KD for LLM Cascades** [![arXiv](https://img.shields.io/badge/arXiv-2509.22984-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.22984)
   - *(2025)* Teacher-student cascade with reusable online knowledge store.
-- **AllMem** [![arXiv](https://img.shields.io/badge/arXiv-2602.13680-B31B1B.svg)](https://arxiv.org/abs/2602.13680)
+- **AllMem** [![arXiv](https://img.shields.io/badge/arXiv-2602.13680-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.13680)
   - *(2026)* Offline on-policy distillation for long-context modeling.
-- **Video-OPD** [![arXiv](https://img.shields.io/badge/arXiv-2602.02994-B31B1B.svg)](https://arxiv.org/abs/2602.02994)
+- **Video-OPD** [![arXiv](https://img.shields.io/badge/arXiv-2602.02994-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.02994)
   - *(2026)* OPD for temporal video grounding in multimodal LLMs.
-- **Reinforced Attention Learning** [![arXiv](https://img.shields.io/badge/arXiv-2602.04884-B31B1B.svg)](https://arxiv.org/abs/2602.04884)
+- **Reinforced Attention Learning** [![arXiv](https://img.shields.io/badge/arXiv-2602.04884-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.04884)
   - *(2026)* On-policy attention distillation for multimodal models.
-- **SCoRe: From Correction to Mastery via Reinforced Distillation of LLM Agents** [![arXiv](https://img.shields.io/badge/arXiv-2509.14257-B31B1B.svg)](https://arxiv.org/abs/2509.14257)
+- **SCoRe: From Correction to Mastery via Reinforced Distillation of LLM Agents** [![arXiv](https://img.shields.io/badge/arXiv-2509.14257-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.14257)
   - *(2025)* Student generates agent trajectories; teacher intervenes at first critical error for on-policy corrective distillation.
-- **VOLD: Reasoning Transfer from LLMs to Vision-Language Models via On-Policy Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2510.23497-B31B1B.svg)](https://arxiv.org/abs/2510.23497)
+- **VOLD: Reasoning Transfer from LLMs to Vision-Language Models via On-Policy Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2510.23497-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.23497)
   - *(2025)* Text-only teacher distills reasoning into VLM student via student-generated traces with combined GRPO and OPD.
-- **X-OPD: Cross-Modal On-Policy Distillation for Capability Alignment in Speech LLMs** [![arXiv](https://img.shields.io/badge/arXiv-2603.24596-B31B1B.svg)](https://arxiv.org/abs/2603.24596)
+- **X-OPD: Cross-Modal On-Policy Distillation for Capability Alignment in Speech LLMs** [![arXiv](https://img.shields.io/badge/arXiv-2603.24596-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.24596)
   - *(2026)* Student on-policy rollouts with token-level teacher feedback for cross-modal speech-LLM distillation.
-- **VLA-OPD: Bridging Offline SFT and Online RL for Vision-Language-Action Models via On-Policy Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2603.26666-B31B1B.svg)](https://arxiv.org/abs/2603.26666)
+- **VLA-OPD: Bridging Offline SFT and Online RL for Vision-Language-Action Models via On-Policy Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2603.26666-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.26666)
   - *(2026)* Reverse-KL on-policy distillation bridging offline SFT and online RL for robotic manipulation.
-- **TCOD: Exploring Temporal Curriculum in On-Policy Distillation for Multi-turn Autonomous Agents** [![arXiv](https://img.shields.io/badge/arXiv-2604.24005-B31B1B.svg)](https://arxiv.org/abs/2604.24005)
+- **TCOD: Exploring Temporal Curriculum in On-Policy Distillation for Multi-turn Autonomous Agents** [![arXiv](https://img.shields.io/badge/arXiv-2604.24005-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.24005)
   - *(2026)* Short-to-long trajectory-depth curriculum that mitigates trajectory-level KL instability when accumulated multi-turn errors push student behavior beyond teacher support.
-- **LLM4Teach: Large Language Model as a Policy Teacher for Training Reinforcement Learning Agents** [![arXiv](https://img.shields.io/badge/arXiv-2311.13373-B31B1B.svg)](https://arxiv.org/abs/2311.13373)
+- **LLM4Teach: Large Language Model as a Policy Teacher for Training Reinforcement Learning Agents** [![arXiv](https://img.shields.io/badge/arXiv-2311.13373-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2311.13373)
   - *(2023)* LLM teacher distills into a small RL agent that surpasses the teacher through environment interaction.
-- **RPD: Refined Policy Distillation — From VLA Generalists to RL Experts** [![arXiv](https://img.shields.io/badge/arXiv-2503.05833-B31B1B.svg)](https://arxiv.org/abs/2503.05833)
+- **RPD: Refined Policy Distillation — From VLA Generalists to RL Experts** [![arXiv](https://img.shields.io/badge/arXiv-2503.05833-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.05833)
   - *(2025)* Teacher VLA actions guide the student policy during RL exploration; combines RL with behavioral cloning (IROS 2026).
-- **π-Flow: Policy-Based Few-Step Generation via Imitation Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2510.14974-B31B1B.svg)](https://arxiv.org/abs/2510.14974)
+- **π-Flow: Policy-Based Few-Step Generation via Imitation Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2510.14974-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.14974)
   - *(2025)* Imitation distillation aligns student flow-model policy trajectories with teacher trajectories under standard flow matching loss (ICLR 2026).
-- **Step-Audio-R1 Technical Report** [![arXiv](https://img.shields.io/badge/arXiv-2511.15848-B31B1B.svg)](https://arxiv.org/abs/2511.15848)
+- **Step-Audio-R1 Technical Report** [![arXiv](https://img.shields.io/badge/arXiv-2511.15848-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2511.15848)
   - *(2025)* Modality-Grounded Reasoning Distillation produces audio reasoning chains grounded in acoustic features rather than hallucinated text.
-- **OPD-AVMP: On-Policy Distillation of Language Models for Autonomous Vehicle Motion Planning** [![arXiv](https://img.shields.io/badge/arXiv-2604.07944-B31B1B.svg)](https://arxiv.org/abs/2604.07944)
+- **OPD-AVMP: On-Policy Distillation of Language Models for Autonomous Vehicle Motion Planning** [![arXiv](https://img.shields.io/badge/arXiv-2604.07944-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.07944)
   - *(2026)* Generalized on-policy KD for LLM-based driving planners; 5x compression at near-teacher performance.
-- **CORD: Bridging the Audio–Text Reasoning Gap via Weighted On-policy Cross-modal Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2601.16547-B31B1B.svg)](https://arxiv.org/abs/2601.16547)
+- **CORD: Bridging the Audio–Text Reasoning Gap via Weighted On-policy Cross-modal Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2601.16547-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.16547)
   - *(2026)* Audio-conditioned student rollouts; text-conditioned same model as in-model teacher; importance-weighted reverse KL on early/critical tokens plus GRPO at sequence level.
-- **Skill-SD: Skill-Conditioned Self-Distillation for Multi-turn LLM Agents** [![arXiv](https://img.shields.io/badge/arXiv-2604.10674-B31B1B.svg)](https://arxiv.org/abs/2604.10674)
+- **Skill-SD: Skill-Conditioned Self-Distillation for Multi-turn LLM Agents** [![arXiv](https://img.shields.io/badge/arXiv-2604.10674-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.10674)
   - *(2026)* Student rolls out under plain prompt; same model under skill-augmented prompt serves as token-level self-teacher for multi-turn agent training.
-- **CoPD: Co-Evolving Policy Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2604.27083-B31B1B.svg)](https://arxiv.org/abs/2604.27083)
+- **CoPD: Co-Evolving Policy Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2604.27083-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.27083)
   - *(2026)* Parallel expert training with bidirectional OPD where experts co-evolve as mutual teachers during RLVR; integrates text, image, and video reasoning while avoiding both mixed-RLVR inter-capability divergence and sequential-MOPD behavioral gaps.
-- **PRISM: Beyond SFT-to-RL — Pre-alignment via Black-Box On-Policy Distillation for Multimodal RL** [![arXiv](https://img.shields.io/badge/arXiv-2604.28123-B31B1B.svg)](https://arxiv.org/abs/2604.28123)
+- **PRISM: Beyond SFT-to-RL — Pre-alignment via Black-Box On-Policy Distillation for Multimodal RL** [![arXiv](https://img.shields.io/badge/arXiv-2604.28123-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.28123)
   - *(2026)* Inserts a black-box OPD distribution-alignment stage between SFT and RLVR for VLMs; MoE discriminator with disentangled perception and reasoning experts provides response-level adversarial corrective signals on student rollouts without teacher logits.
 
 ### Speculative Decoding (Draft-Model Training)
 
 Draft-model training for speculative decoding shares OPD's core loop: the draft (student) generates, the target (teacher) verifies, and the draft is updated to match. Included for breadth even though the goal is inference acceleration rather than student capability.
 
-- **Online Speculative Decoding** [![arXiv](https://img.shields.io/badge/arXiv-2310.07177-B31B1B.svg)](https://arxiv.org/abs/2310.07177)
+- **Online Speculative Decoding** [![arXiv](https://img.shields.io/badge/arXiv-2310.07177-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2310.07177)
   - *(2023)* Continuously updates the draft model on observed user queries via knowledge distillation; 1.42x-2.17x latency gains.
-- **DistillSpec: Improving Speculative Decoding via Knowledge Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2310.08461-B31B1B.svg)](https://arxiv.org/abs/2310.08461)
+- **DistillSpec: Improving Speculative Decoding via Knowledge Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2310.08461-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2310.08461)
   - *(2023)* Aligns draft with target via on-policy data and task-tailored divergence; foundational draft-model OPD recipe (ICLR 2024).
-- **HASS: Learning Harmonized Representations for Speculative Sampling** [![arXiv](https://img.shields.io/badge/arXiv-2408.15766-B31B1B.svg)](https://arxiv.org/abs/2408.15766)
+- **HASS: Learning Harmonized Representations for Speculative Sampling** [![arXiv](https://img.shields.io/badge/arXiv-2408.15766-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2408.15766)
   - *(2024)* Harmonized objective and context distillation to fix train-decoding inconsistency in speculative sampling.
-- **Falcon: Faster and Parallel Inference of Large Language Models through Enhanced Semi-Autoregressive Drafting** [![arXiv](https://img.shields.io/badge/arXiv-2412.12639-B31B1B.svg)](https://arxiv.org/abs/2412.12639)
+- **Falcon: Faster and Parallel Inference of Large Language Models through Enhanced Semi-Autoregressive Drafting** [![arXiv](https://img.shields.io/badge/arXiv-2412.12639-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2412.12639)
   - *(2024)* Coupled Sequential Glancing Distillation strengthens inter-token dependencies in semi-autoregressive drafters.
-- **CORAL: Learning Consistent Representations across Multi-step Training with Lighter Speculative Drafter** [![arXiv](https://img.shields.io/badge/arXiv-2502.16880-B31B1B.svg)](https://arxiv.org/abs/2502.16880)
+- **CORAL: Learning Consistent Representations across Multi-step Training with Lighter Speculative Drafter** [![arXiv](https://img.shields.io/badge/arXiv-2502.16880-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2502.16880)
   - *(2025)* Cross-step representation alignment for multi-step drafter training (ACL 2025).
-- **EAGLE-3: Scaling up Inference Acceleration of Large Language Models via Training-Time Test** [![arXiv](https://img.shields.io/badge/arXiv-2503.01840-B31B1B.svg)](https://arxiv.org/abs/2503.01840)
+- **EAGLE-3: Scaling up Inference Acceleration of Large Language Models via Training-Time Test** [![arXiv](https://img.shields.io/badge/arXiv-2503.01840-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.01840)
   - *(2025)* Direct token prediction with multi-layer feature fusion under on-policy training-time test; up to 6.5x speedup.
-- **MASSV: Multimodal Adaptation and Self-Data Distillation for Speculative Decoding of Vision-Language Models** [![arXiv](https://img.shields.io/badge/arXiv-2505.10526-B31B1B.svg)](https://arxiv.org/abs/2505.10526)
+- **MASSV: Multimodal Adaptation and Self-Data Distillation for Speculative Decoding of Vision-Language Models** [![arXiv](https://img.shields.io/badge/arXiv-2505.10526-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.10526)
   - *(2025)* Adapts an SLM into a VLM drafter via self-distilled visual instruction tuning.
-- **DVI: Draft, Verify, and Improve — Toward Training-Aware Speculative Decoding** [![arXiv](https://img.shields.io/badge/arXiv-2510.05421-B31B1B.svg)](https://arxiv.org/abs/2510.05421)
+- **DVI: Draft, Verify, and Improve — Toward Training-Aware Speculative Decoding** [![arXiv](https://img.shields.io/badge/arXiv-2510.05421-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.05421)
   - *(2025)* Self-speculative drafter trained online from verifier decisions via KL→RL schedule with reward-masked cross-entropy.
-- **ReSpec: Towards Optimizing Speculative Decoding in Reinforcement Learning Systems** [![arXiv](https://img.shields.io/badge/arXiv-2510.26475-B31B1B.svg)](https://arxiv.org/abs/2510.26475)
+- **ReSpec: Towards Optimizing Speculative Decoding in Reinforcement Learning Systems** [![arXiv](https://img.shields.io/badge/arXiv-2510.26475-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.26475)
   - *(2025)* Evolves the drafter during RL via reward-weighted distillation on rollouts.
 - **[DREAM-R: Multimodal Speculative Reasoning with RL-Based Refined Drafting, Precise Verification, and Fully Parallel Execution](https://openreview.net/forum?id=CRgWv0kWjF)**
   - *(2026)* Multimodal speculative-reasoning drafter trained for faithfulness to target trajectories with verifier-gated parallel execution.
 
 ### Precursors
 
-- **Autoregressive KD through Imitation Learning** [![arXiv](https://img.shields.io/badge/arXiv-2009.07253-B31B1B.svg)](https://arxiv.org/abs/2009.07253)
+- **Autoregressive KD through Imitation Learning** [![arXiv](https://img.shields.io/badge/arXiv-2009.07253-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2009.07253)
   - *(2020)* Early precursor framing sequence-model KD as imitation learning.
-- **Learning by Distilling Context** [![arXiv](https://img.shields.io/badge/arXiv-2209.15189-B31B1B.svg)](https://arxiv.org/abs/2209.15189)
+- **Learning by Distilling Context** [![arXiv](https://img.shields.io/badge/arXiv-2209.15189-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2209.15189)
   - *(2022)* Context distillation; key precursor to OPCD and OEL.
 
 ## Technical Reports and Industrial Recipes
@@ -400,21 +400,21 @@ Production training pipelines that use OPD as a post-training stage.
 
 | Year | System | OPD Usage | Link |
 |------|--------|-----------|------|
-| 2024 | Gemma 2 | KD as alternative to next-token prediction for the 2B and 9B student models | [![arXiv](https://img.shields.io/badge/arXiv-2408.00118-B31B1B.svg)](https://arxiv.org/abs/2408.00118) |
-| 2025 | Qwen3 | Strong-to-weak; off-policy then on-policy distillation | [![arXiv](https://img.shields.io/badge/arXiv-2505.09388-B31B1B.svg)](https://arxiv.org/abs/2505.09388) |
-| 2025 | Qwen3-Omni | Off-policy then on-policy distillation before GSPO | [![arXiv](https://img.shields.io/badge/arXiv-2509.17765-B31B1B.svg)](https://arxiv.org/abs/2509.17765) |
-| 2025 | GLM-4.5 / 4.6 | Multi-stage post-training with expert model iteration and RL (precursor to GLM-5's explicit OPD) | [![arXiv](https://img.shields.io/badge/arXiv-2508.06471-B31B1B.svg)](https://arxiv.org/abs/2508.06471) |
-| 2025 | HY-MT1.5 | Multi-stage translation: SFT + OPD + RL | [![arXiv](https://img.shields.io/badge/arXiv-2512.24092-B31B1B.svg)](https://arxiv.org/abs/2512.24092) |
-| 2026 | MiMo-V2-Flash | Multi-Teacher OPD (MOPD) as post-training stage | [![arXiv](https://img.shields.io/badge/arXiv-2601.02780-B31B1B.svg)](https://arxiv.org/abs/2601.02780) |
-| 2026 | GLM-5 | On-policy cross-stage distillation to recover earlier skills | [![arXiv](https://img.shields.io/badge/arXiv-2602.15763-B31B1B.svg)](https://arxiv.org/abs/2602.15763) |
-| 2026 | Typhoon-S | Minimal sovereign recipe: SFT + OPD + small-scale RFT | [![arXiv](https://img.shields.io/badge/arXiv-2601.18129-B31B1B.svg)](https://arxiv.org/abs/2601.18129) |
-| 2026 | Nemotron-Cascade 2 | Cascade RL + multi-domain on-policy distillation | [![arXiv](https://img.shields.io/badge/arXiv-2603.19220-B31B1B.svg)](https://arxiv.org/abs/2603.19220) |
-| 2026 | Baichuan-M3 | Three-stage: task RL, offline policy distillation, multi-teacher OPD | [![arXiv](https://img.shields.io/badge/arXiv-2602.06570-B31B1B.svg)](https://arxiv.org/abs/2602.06570) |
+| 2024 | Gemma 2 | KD as alternative to next-token prediction for the 2B and 9B student models | [![arXiv](https://img.shields.io/badge/arXiv-2408.00118-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2408.00118) |
+| 2025 | Qwen3 | Strong-to-weak; off-policy then on-policy distillation | [![arXiv](https://img.shields.io/badge/arXiv-2505.09388-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.09388) |
+| 2025 | Qwen3-Omni | Off-policy then on-policy distillation before GSPO | [![arXiv](https://img.shields.io/badge/arXiv-2509.17765-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.17765) |
+| 2025 | GLM-4.5 / 4.6 | Multi-stage post-training with expert model iteration and RL (precursor to GLM-5's explicit OPD) | [![arXiv](https://img.shields.io/badge/arXiv-2508.06471-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2508.06471) |
+| 2025 | HY-MT1.5 | Multi-stage translation: SFT + OPD + RL | [![arXiv](https://img.shields.io/badge/arXiv-2512.24092-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2512.24092) |
+| 2026 | MiMo-V2-Flash | Multi-Teacher OPD (MOPD) as post-training stage | [![arXiv](https://img.shields.io/badge/arXiv-2601.02780-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.02780) |
+| 2026 | GLM-5 | On-policy cross-stage distillation to recover earlier skills | [![arXiv](https://img.shields.io/badge/arXiv-2602.15763-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.15763) |
+| 2026 | Typhoon-S | Minimal sovereign recipe: SFT + OPD + small-scale RFT | [![arXiv](https://img.shields.io/badge/arXiv-2601.18129-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.18129) |
+| 2026 | Nemotron-Cascade 2 | Cascade RL + multi-domain on-policy distillation | [![arXiv](https://img.shields.io/badge/arXiv-2603.19220-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.19220) |
+| 2026 | Baichuan-M3 | Three-stage: task RL, offline policy distillation, multi-teacher OPD | [![arXiv](https://img.shields.io/badge/arXiv-2602.06570-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.06570) |
 | 2026 | MobileLLM-R1.5 | Final-stage on-policy KD as primary improvement over R1 | model card |
 | 2026 | Nanbeige4-3B-Thinking | OPD preferred over off-policy for math reasoning | [model card](https://huggingface.co/Nanbeige/Nanbeige4-3B-Thinking-2510) |
 | 2026 | DeepSeek-V4 | Two-stage post-training: domain-expert SFT+GRPO, then unified model consolidation via on-policy distillation | [report](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/blob/main/DeepSeek_V4.pdf) |
-| 2026 | Qwen3.5-Omni | Specialist teacher distillation, then privileged-input self-distillation aligning audio-conditioned outputs to text-conditioned responses (labeled OPD by the report) | [![arXiv](https://img.shields.io/badge/arXiv-2604.15804-B31B1B.svg)](https://arxiv.org/abs/2604.15804) |
-| 2026 | HY-Embodied-0.5 | Large-to-small on-policy distillation transfers 32B embodied-reasoning behavior into the 2B edge variant: student rollouts, teacher token-level supervision at the same prefixes | [![arXiv](https://img.shields.io/badge/arXiv-2604.07430-B31B1B.svg)](https://arxiv.org/abs/2604.07430) |
+| 2026 | Qwen3.5-Omni | Specialist teacher distillation, then privileged-input self-distillation aligning audio-conditioned outputs to text-conditioned responses (labeled OPD by the report) | [![arXiv](https://img.shields.io/badge/arXiv-2604.15804-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.15804) |
+| 2026 | HY-Embodied-0.5 | Large-to-small on-policy distillation transfers 32B embodied-reasoning behavior into the 2B edge variant: student rollouts, teacher token-level supervision at the same prefixes | [![arXiv](https://img.shields.io/badge/arXiv-2604.07430-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.07430) |
 
 ## Frameworks, Tools, and Implementations
 
@@ -426,15 +426,15 @@ Production training pipelines that use OPD as a post-training stage.
 | NeMo-RL | Multi-teacher and cross-tokenizer OPD at scale | [docs](https://docs.nvidia.com/nemo/rl/latest/about/algorithms/on-policy-distillation.html), [repo](https://github.com/NVIDIA-NeMo/RL) |
 | veRL | Async on-policy KD trading strict on-policy guarantees for throughput | [docs](https://verl.readthedocs.io/en/latest/advance/async-on-policy-distill.html) |
 | MS-Swift | GKD and OPSD sections in the ModelScope ecosystem | [docs](https://swift.readthedocs.io/en/latest/) |
-| EasyDistill | Comprehensive KD toolkit for black-box and white-box LLM distillation | [![arXiv](https://img.shields.io/badge/arXiv-2505.20888-B31B1B.svg)](https://arxiv.org/abs/2505.20888) |
-| KDFlow | Off-policy, on-policy, and cross-tokenizer distillation via decoupled backends | [![arXiv](https://img.shields.io/badge/arXiv-2603.01875-B31B1B.svg)](https://arxiv.org/abs/2603.01875), [repo](https://github.com/songmzhang/KDFlow) |
+| EasyDistill | Comprehensive KD toolkit for black-box and white-box LLM distillation | [![arXiv](https://img.shields.io/badge/arXiv-2505.20888-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.20888) |
+| KDFlow | Off-policy, on-policy, and cross-tokenizer distillation via decoupled backends | [![arXiv](https://img.shields.io/badge/arXiv-2603.01875-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.01875), [repo](https://github.com/songmzhang/KDFlow) |
 | slime | Unified RL stack supporting on-policy distillation and hindsight hints | [repo](https://github.com/) |
-| OpenClaw-RL | Agentic RL stack with hindsight-guided OPD | [![arXiv](https://img.shields.io/badge/arXiv-2603.10165-B31B1B.svg)](https://arxiv.org/abs/2603.10165) |
+| OpenClaw-RL | Agentic RL stack with hindsight-guided OPD | [![arXiv](https://img.shields.io/badge/arXiv-2603.10165-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.10165) |
 | NexRL | Dedicated on-policy distillation recipes | [repo](https://github.com/nex-agi/NexRL) |
 | SkyRL | OPD examples and blog resources | [repo](https://github.com/NovaSky-AI/SkyRL) |
 | ATLAS | Continual-learning framework using GKD/GRPO from runtime traces | [docs](https://docs.arc.computer/introduction) |
 | AReaL | OPD and KDRL implementation over student-sampled trajectories with teacher log-prob guidance | [docs](https://github.com/inclusionAI/AReaL/blob/main/docs/en/algorithms/distillation.md) |
-| SpecForge | Open-source training framework for speculative draft models with EAGLE-3 support, target-draft decoupling, and hybrid parallelism | [![arXiv](https://img.shields.io/badge/arXiv-2603.18567-B31B1B.svg)](https://arxiv.org/abs/2603.18567), [repo](https://github.com/sgl-project/SpecForge) |
+| SpecForge | Open-source training framework for speculative draft models with EAGLE-3 support, target-draft decoupling, and hybrid parallelism | [![arXiv](https://img.shields.io/badge/arXiv-2603.18567-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.18567), [repo](https://github.com/sgl-project/SpecForge) |
 
 ### Implementations
 
