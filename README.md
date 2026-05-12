@@ -363,6 +363,8 @@ Papers that are not canonical OPD but matter for understanding or deploying it.
   - *(2026)* Inserts a black-box OPD distribution-alignment stage between SFT and RLVR for VLMs; MoE discriminator with disentangled perception and reasoning experts provides response-level adversarial corrective signals on student rollouts without teacher logits.
 - **D-OPSD: On-Policy Self-Distillation for Continuously Tuning Step-Distilled Diffusion Models** [![arXiv](https://img.shields.io/badge/arXiv-2605.05204-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.05204)
   - *(2026)* Ports OPSD from LLMs to few-step T2I diffusion models; same model acts as student (text-only conditioning) and teacher (text+target-image multimodal conditioning), with velocity-MSE distillation on the student's own few-step rollouts to learn new concepts/styles without breaking distilled few-step inference.
+- **Flow-OPD: On-Policy Distillation for Flow Matching Models** [![arXiv](https://img.shields.io/badge/arXiv-2605.08063-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.08063)
+  - *(2026)* Multi-teacher OPD for text-to-image flow matching: per-domain Flow-GRPO experts supply dense reverse-KL trajectory-level supervision on the student's on-policy SDE rollouts via hard task routing, with Manifold Anchor Regularization from a frozen aesthetic teacher preventing the reward hacking typical of scalar-reward joint training.
 
 ### Speculative Decoding (Draft-Model Training)
 
@@ -479,4 +481,4 @@ If you find this resource useful, please cite it as:
 
 ---
 
-*Last updated: 2026-05-10. Coverage: core OPD papers, adjacent work (including speculative-decoding draft-model training and self-play / iterative bootstrapping), surveys, technical reports, and tooling through May 2026.*
+*Last updated: 2026-05-11. Coverage: core OPD papers, adjacent work (including speculative-decoding draft-model training and self-play / iterative bootstrapping), surveys, technical reports, and tooling through May 2026.*
