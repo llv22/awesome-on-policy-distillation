@@ -509,7 +509,7 @@ If you find this resource useful, please cite it as:
 ```bibtex
 @software{awesome-on-policy-distillation,
   title = {{Awesome On-Policy Distillation}},
-  author = {Liu, Chris Yuhao},
+  author = {Liu, Chris Yuhao and others},
   year = {2026},
   doi = {10.5281/zenodo.19411493},
   url = {https://github.com/chrisliu298/awesome-on-policy-distillation},
