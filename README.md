@@ -90,11 +90,11 @@ The fastest path to understanding the field:
 
 | Teacher Type | Papers |
 |---|---|
-| External white-box | MiniLLM, GKD, Veto, Entropy-Aware OPD, ExOPD, REOPOLD, PACED, Prefix OPD, Revisiting OPD, Rethinking OPD, Lightning OPD, Uni-OPD |
-| External black-box | Black-Box OPD / GAD, OVD |
+| External white-box | MiniLLM, GKD, Veto, Entropy-Aware OPD, ExOPD, REOPOLD, PACED, Prefix OPD, Revisiting OPD, Rethinking OPD, Lightning OPD, Uni-OPD, SOD, AOPD, vOPD, NPD, Prune-OPD |
+| External black-box | Black-Box OPD / GAD, OVD, ROPD |
 | Self-teacher with privileged context | OPSD, SDFT, SDPO, OPSDC, GATES, pi-Distill, RLSD, SDZero |
 | Context-conditioned | OPCD, OEL |
-| Multiple / lifecycle teachers | MiMo-V2-Flash MOPD, GLM-5, Qwen3, Baichuan-M3, DeepSeek-V4, CoPD |
+| Multiple / lifecycle teachers | MiMo-V2-Flash MOPD, GLM-5, Qwen3, Baichuan-M3, DeepSeek-V4, CoPD, MAD-OPD, KAT-Coder-V2 |
 
 ### By Primary Goal
 
@@ -105,7 +105,7 @@ The fastest path to understanding the field:
 | Continual learning | SDFT, OPCD, OEL |
 | RL replacement / augmentation | SDPO, RLTF-SD, RLAD, REOPOLD, RLSD, SDZero |
 | Reasoning compression | OPSDC |
-| Black-box distillation | GAD, OVD |
+| Black-box distillation | GAD, OVD, ROPD |
 
 Many papers span multiple categories. The taxonomy is for orientation, not strict partitioning.
 
@@ -126,6 +126,12 @@ The ~21 papers that define on-policy distillation for LLMs.
   - *(2024)* Interleaved teacher/student sampling to mitigate poor student rollout quality.
 - **Black-Box On-Policy Distillation of Large Language Models** [![arXiv](https://img.shields.io/badge/arXiv-2511.10643-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2511.10643)
   - *(2025)* GAD: black-box OPD via discriminator-based reward on student rollouts; no teacher logits needed.
+- **SOD: Step-wise On-policy Distillation for Small Language Model Agents** [![arXiv](https://img.shields.io/badge/arXiv-2605.07725-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.07725)
+  - *(2026)* Step-wise OPD for tool-integrated SLM agents that reweights teacher guidance by step-level student-teacher divergence to avoid tool-induced cascade drift.
+- **MAD-OPD: Breaking the Ceiling in On-Policy Distillation via Multi-Agent Debate** [![arXiv](https://img.shields.io/badge/arXiv-2605.01347-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.01347)
+  - *(2026)* Recasts the OPD teacher as a deliberative collective whose post-debate consensus supplies token-level supervision on student rollouts; extends to agentic tasks via OPAD with step-level sampling and a task-adaptive divergence principle.
+- **ROPD: Rubric-based On-policy Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2605.07396-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.07396)
+  - *(2026)* Black-box OPD that induces prompt-specific semantic rubrics from teacher-student contrasts and uses them to score student rollouts, replacing teacher logits with rubric-based reward.
 
 ### Stability and Objective Design
 
@@ -149,6 +155,10 @@ The ~21 papers that define on-policy distillation for LLMs.
   - *(2026)* Diagnoses repetition-driven length inflation in iterative OPD; Stable-OPD adds divergence constraints and a rollout-mixture anchor with golden data.
 - **Uni-OPD: Unifying On-Policy Distillation with a Dual-Perspective Recipe** [![arXiv](https://img.shields.io/badge/arXiv-2605.03677-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.03677)
   - *(2026)* Identifies insufficient state exploration and unreliable teacher supervision as OPD bottlenecks; pairs offline difficulty-aware plus online correctness-aware data balancing with an outcome-guided margin calibration that keeps token-level teacher scores order-consistent with outcome reward across LLM and MLLM settings.
+- **AOPD: Asymmetric On-Policy Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2605.06387-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.06387)
+  - *(2026)* Diagnoses high variance, vanishing gradients, and exploration bottlenecks in standard OPD; replaces ineffective negative reinforcement with localized teacher-distribution matching in non-positive advantage regions while preserving positive reinforcement.
+- **vOPD: On-Policy Distillation with a Control Variate Baseline** [![arXiv](https://img.shields.io/badge/arXiv-2605.07865-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.07865)
+  - *(2026)* Stabilizes single-sample OPD by subtracting a closed-form per-token reverse-KL value baseline derived from the already-computed forward pass; unbiased lower-variance estimator with no extra critic.
 
 ### Self-Distillation
 
@@ -196,6 +206,10 @@ The ~21 papers that define on-policy distillation for LLMs.
   - *(2026)* Precomputes teacher log-probs once over SFT rollouts to eliminate the live-teacher server; 4x speedup via a teacher-consistency condition.
 - **[Nitrobrew: Communication- and Memory-Efficient On-Policy Distillation](https://blog.tilderesearch.com/blog/nitrobrew)**
   - *(2026)* Systems-level OPD optimizations from Tilde Research: hidden-state teacher→student transport (~60x less bandwidth), tile-wise online divergence kernel (~37x less memory), and an SVD-compressed variant; 1.5-3x end-to-end throughput.
+- **NPD: Near-Policy Distillation via Asynchronous Generation and Selective Packing** [![arXiv](https://img.shields.io/badge/arXiv-2605.05940-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.05940)
+  - *(2026)* Decouples student generation from training and reframes OPD as SFT with sequence packing; sparse student updates plus Δ-IFD sample filtering keep updates inside a proximal learning zone; 8.1× speedup over on-policy baselines.
+- **Prune-OPD: Efficient and Reliable On-Policy Distillation for Long-Horizon Reasoning** [![arXiv](https://img.shields.io/badge/arXiv-2605.07804-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.07804)
+  - *(2026)* Monitors top-k student-teacher overlap to detect prefix drift; monotonically attenuates unreliable rewards and truncates drifted rollouts to reallocate compute toward locally exploitable teacher supervision.
 
 ## Adjacent and Enabling Work
 
@@ -223,6 +237,8 @@ Papers that are not canonical OPD but matter for understanding or deploying it.
   - *(2026)* Dual-space token weighting plus Soft-DTW differentiable sequence alignment for cross-family teacher-student transfer.
 - **Cross-Tokenizer LLM Distillation through a Byte-Level Interface** [![arXiv](https://img.shields.io/badge/arXiv-2604.07466-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.07466)
   - *(2026)* Converts teacher distributions to byte-level probabilities; adds a byte-level decoder to the student to enable distillation across mismatched tokenizers.
+- **SimCT: Recovering Lost Supervision for Cross-Tokenizer On-Policy Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2605.07711-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.07711)
+  - *(2026)* Replaces exact shared-token matching with short multi-token continuations that both tokenizers can realize; keeps the OPD loss form unchanged while recovering teacher signal at vocabulary-mismatched positions.
 
 ### Mismatch Mitigation and Student Quality
 
@@ -320,6 +336,8 @@ Papers that are not canonical OPD but matter for understanding or deploying it.
   - *(2025)* GRPO with Resample-on-Correct rollouts plus multi-stage SFT→RL recipe for a 14B agentic reasoner.
 - **π-Play: Multi-Agent Self-Play via Privileged Self-Distillation without External Data** [![arXiv](https://img.shields.io/badge/arXiv-2604.14054-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.14054)
   - *(2026)* Examiner generates tasks plus question-construction-paths (QCPs); same-scale teacher uses QCPs as privileged context to densely supervise student rollouts via reverse KL; turns sparse-reward self-play into dense self-distillation.
+- **SPHERE: Self-Evolved Preference Optimization for Enhancing Mathematical Reasoning in Small Language Models** [![arXiv](https://img.shields.io/badge/arXiv-2503.04813-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.04813)
+  - *(2025)* PRM/ORM-scored MCTS rollouts plus self-correction yield max-vs-min preference pairs for iterative DPO; bootstraps small reasoning models without external teachers.
 
 ### Agent Distillation, Multimodal, and Other Extensions
 
@@ -365,6 +383,8 @@ Papers that are not canonical OPD but matter for understanding or deploying it.
   - *(2026)* Ports OPSD from LLMs to few-step T2I diffusion models; same model acts as student (text-only conditioning) and teacher (text+target-image multimodal conditioning), with velocity-MSE distillation on the student's own few-step rollouts to learn new concepts/styles without breaking distilled few-step inference.
 - **Flow-OPD: On-Policy Distillation for Flow Matching Models** [![arXiv](https://img.shields.io/badge/arXiv-2605.08063-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.08063)
   - *(2026)* Multi-teacher OPD for text-to-image flow matching: per-domain Flow-GRPO experts supply dense reverse-KL trajectory-level supervision on the student's on-policy SDE rollouts via hard task routing, with Manifold Anchor Regularization from a frozen aesthetic teacher preventing the reward hacking typical of scalar-reward joint training.
+- **VISD: Enhancing Video Reasoning via Structured Self-Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2605.06094-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.06094)
+  - *(2026)* Video-aware judge decomposes reasoning quality into structured dimensions; an EMA teacher conditioned on this privileged feedback supervises student rollouts at the token level, with direction-magnitude decoupling to stably integrate dense supervision with RL.
 
 ### Speculative Decoding (Draft-Model Training)
 
@@ -390,6 +410,18 @@ Draft-model training for speculative decoding shares OPD's core loop: the draft 
   - *(2025)* Evolves the drafter during RL via reward-weighted distillation on rollouts.
 - **[DREAM-R: Multimodal Speculative Reasoning with RL-Based Refined Drafting, Precise Verification, and Fully Parallel Execution](https://openreview.net/forum?id=CRgWv0kWjF)**
   - *(2026)* Multimodal speculative-reasoning drafter trained for faithfulness to target trajectories with verifier-gated parallel execution.
+- **MSD: Speculative Decoding Reimagined for Multimodal Large Language Models** [![arXiv](https://img.shields.io/badge/arXiv-2505.14260-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.14260)
+  - *(2025)* Decouples text and visual tokens in the draft model; two-stage training (text-only then progressively multimodal) lifts MLLM speculative speedups to 2.29–2.46x.
+- **SpecVLM: Fast Speculative Decoding in Vision-Language Models** [![arXiv](https://img.shields.io/badge/arXiv-2509.11815-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.11815)
+  - *(2025)* Elastic visual compressor plus online-logit distillation trains the draft model from on-the-fly teacher logits and features, eliminating offline corpora; 2.5–2.9× end-to-end VLM speedups.
+- **ViSpec: Accelerating Vision-Language Models with Vision-Aware Speculative Decoding** [![arXiv](https://img.shields.io/badge/arXiv-2509.15235-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.15235)
+  - *(2025)* Lightweight vision adaptor compresses image tokens for the draft; trained on target-generated long responses while preventing hidden-state shortcut learning.
+- **Aurora: When RL Meets Adaptive Speculative Training — A Unified Training-Serving System** [![arXiv](https://img.shields.io/badge/arXiv-2602.06932-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.06932)
+  - *(2026)* Online continual draft training: target verifications on draft proposals stream into FKL/RKL fine-tuning of the speculator, then hot-swap back into serving; closes the train-serve loop.
+- **SpecBlock: Block-Iterative Speculative Decoding with Dynamic Tree Drafting** [![arXiv](https://img.shields.io/badge/arXiv-2605.07243-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.07243)
+  - *(2026)* Block-iterative drafter with layer-wise shift for in-block dependence and inheritable hidden states across blocks; valid-prefix masking, co-trained rank head, and cost-aware bandit adaptation from verifier feedback.
+- **SFDD: Flatter Tokens are More Valuable for Speculative Draft Model Training** [![arXiv](https://img.shields.io/badge/arXiv-2601.18902-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.18902)
+  - *(2026)* Sample-level flatness filters EAGLE training data to the most acceptance-valuable samples; 2× training speedup at 50% data with <4% inference-speedup loss.
 
 ### Precursors
 
@@ -419,6 +451,7 @@ Production training pipelines that use OPD as a post-training stage.
 | 2026 | DeepSeek-V4 | Two-stage post-training: domain-expert SFT+GRPO, then unified model consolidation via on-policy distillation | [report](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/blob/main/DeepSeek_V4.pdf) |
 | 2026 | Qwen3.5-Omni | Specialist teacher distillation, then privileged-input self-distillation aligning audio-conditioned outputs to text-conditioned responses (labeled OPD by the report) | [![arXiv](https://img.shields.io/badge/arXiv-2604.15804-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.15804) |
 | 2026 | HY-Embodied-0.5 | Large-to-small on-policy distillation transfers 32B embodied-reasoning behavior into the 2B edge variant: student rollouts, teacher token-level supervision at the same prefixes | [![arXiv](https://img.shields.io/badge/arXiv-2604.07430-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.07430) |
+| 2026 | KAT-Coder-V2 | Specialize-then-Unify: five domain-expert coding agents (SWE, WebCoding, Terminal, WebSearch, General) each trained with SFT+RL, then consolidated into one model via on-policy distillation on student trajectories | [![arXiv](https://img.shields.io/badge/arXiv-2603.27703-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.27703) |
 
 ## Frameworks, Tools, and Implementations
 
@@ -439,6 +472,8 @@ Production training pipelines that use OPD as a post-training stage.
 | ATLAS | Continual-learning framework using GKD/GRPO from runtime traces | [docs](https://docs.arc.computer/introduction) |
 | AReaL | OPD and KDRL implementation over student-sampled trajectories with teacher log-prob guidance | [docs](https://github.com/inclusionAI/AReaL/blob/main/docs/en/algorithms/distillation.md) |
 | SpecForge | Open-source training framework for speculative draft models with EAGLE-3 support, target-draft decoupling, and hybrid parallelism | [![arXiv](https://img.shields.io/badge/arXiv-2603.18567-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.18567), [repo](https://github.com/sgl-project/SpecForge) |
+| Tinker Cookbook | Thinking Machines' Tinker SDK recipes for off-policy KD plus single-teacher, multi-teacher, and multi-turn tool-use on-policy distillation | [recipes](https://github.com/thinking-machines-lab/tinker-cookbook/tree/main/tinker_cookbook/recipes/distillation), [repo](https://github.com/thinking-machines-lab/tinker-cookbook) |
+| ROLL | Alibaba's scalable RL library for LLMs/VLMs with an on-policy distill pipeline alongside RL post-training | [repo](https://github.com/alibaba/ROLL) |
 
 ### Implementations
 
