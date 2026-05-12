@@ -490,6 +490,7 @@ Production training pipelines that use OPD as a post-training stage.
 - [Unlocking On-Policy Distillation for Any Model Family (GOLD)](https://huggingface.co/spaces/HuggingFaceH4/on-policy-distillation) (2025) — Cross-tokenizer OPD walkthrough with TRL code.
 - [On SFT, RL, and on-policy distillation](https://x.com/willccbb/status/2050038277454143918) (2026) — Will Brown's essay framing OPD via the SFT-vs-RL compounding argument and gradient geometry (sparse/dense × biased/unbiased × concentrated/diffuse), with directions toward an optimal teacher on the reward-vs-KL Pareto curve.
 - [OPD深度解析：从数学推导到DeepSeek V4、SWIFT与verl实践](https://zhuanlan.zhihu.com/p/2033212181823608430) (2026) — Chinese-language Zhihu deep-dive deriving OPD's sequence- and token-level reverse-KL objectives, comparing sampled-token / top-k / full-vocab signals and the k1/k2/k3 KL estimators, and mapping each variant to MiniLLM, GKD/SWIFT, verl, and DeepSeek V4's full-vocab multi-teacher recipe.
+- [On-Policy Distillation: Theory & Practice in Model Merging](https://www.notion.so/On-Policy-Distillation-Theory-Practice-in-Model-Merging-2f44795a3e8b801cbedee2c96a23c788) (2026) — ByteDance Seed blog framing OPD as entropy-regularized RL, contrasting REINFORCE's unbiased accumulated log-ratio-to-go against the biased but lower-variance per-token log ratio, with case studies on cross-tokenizer teacher-sequence pitfalls and OPD reward hacking during agent model merging.
 
 ## Acknowledgments
 
