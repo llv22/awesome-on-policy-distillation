@@ -159,6 +159,8 @@ The ~21 papers that define on-policy distillation for LLMs.
   - *(2026)* Diagnoses high variance, vanishing gradients, and exploration bottlenecks in standard OPD; replaces ineffective negative reinforcement with localized teacher-distribution matching in non-positive advantage regions while preserving positive reinforcement.
 - **vOPD: On-Policy Distillation with a Control Variate Baseline** [![arXiv](https://img.shields.io/badge/arXiv-2605.07865-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.07865)
   - *(2026)* Stabilizes single-sample OPD by subtracting a closed-form per-token reverse-KL value baseline derived from the already-computed forward pass; unbiased lower-variance estimator with no extra critic.
+- **Unmasking On-Policy Distillation: Where It Helps, Where It Hurts, and Why** [![arXiv](https://img.shields.io/badge/arXiv-2605.10889-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.10889)
+  - *(2026)* Training-free per-token, per-question, per-teacher diagnostic computing gradient alignment (cosine of distillation gradient with an ideal success-maximizing gradient derived from empirical pass rates via targeted rollouts); finds distillation guidance is more reliable on incorrect rollouts than correct ones, the best teacher/context depends jointly on student capacity and task (no universal recipe), and student-teacher divergence is a weak but cheap necessary-condition filter for alignment.
 
 ### Self-Distillation
 
