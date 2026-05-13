@@ -356,6 +356,8 @@ Papers that are not canonical OPD but matter for understanding or deploying it.
   - *(2026)* Examiner generates tasks plus question-construction-paths (QCPs); same-scale teacher uses QCPs as privileged context to densely supervise student rollouts via reverse KL; turns sparse-reward self-play into dense self-distillation.
 - **SPHERE: Self-Evolved Preference Optimization for Enhancing Mathematical Reasoning in Small Language Models** [![arXiv](https://img.shields.io/badge/arXiv-2503.04813-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.04813)
   - *(2025)* PRM/ORM-scored MCTS rollouts plus self-correction yield max-vs-min preference pairs for iterative DPO; bootstraps small reasoning models without external teachers.
+- **SGS: Scaling Self-Play with Self-Guidance** [![arXiv](https://img.shields.io/badge/arXiv-2604.20209-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.20209)
+  - *(2026)* Three-role self-play for formal theorem proving — Solver, Generator, and Reviewer share a base model; the Generator proposes simpler related problems trained with a reward combining the Solver's empirical solve rate (difficulty curriculum) and a Reviewer-scored relevance/cleanness signal that supervises against Generator-side reward hacking and collapse; surpasses the strongest RL baseline in fewer than 80 rounds and lets a 7B model out-solve a 671B model at pass@4 on Lean4 after 200 rounds.
 
 ### Agent Distillation, Multimodal, and Other Extensions
 
