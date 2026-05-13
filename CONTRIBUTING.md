@@ -51,9 +51,22 @@ Training frameworks and code. Table or bullet format depending on subsection.
 
 ## Entry format
 
+**Arxiv papers** (most entries) use a bold title with an arXiv badge, and a second indented line carrying the year and description:
+
 ```
-- [Full Paper Title](url) (Year) — One-line description.
+- **Full Paper Title** [![arXiv](https://img.shields.io/badge/arXiv-XXXX.XXXXX-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/XXXX.XXXXX)
+  - *(Year)* One-line description.
 ```
+
+**Non-arxiv items** (blog posts, essays, implementation repos) use a single line:
+
+```
+- [Title](url) (Year) — One-line description.
+```
+
+For implementation repos under `### Implementations`, omit the year: `- [Repo Name](url) — Description.`
+
+**Tables** (Technical Reports, Training Frameworks) follow the column layout already in each section — match the existing rows.
 
 The description should be a single terse sentence capturing what makes this paper distinctive. Look at existing entries for calibration.
 

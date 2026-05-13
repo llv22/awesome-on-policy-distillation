@@ -503,7 +503,7 @@ This list draws on the parallel curation effort at [thinkwee/AwesomeOPD](https:/
 Contributions welcome! Please open a PR if you know of papers, reports, or tools related to on-policy distillation. See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed criteria, section placement, and formatting guidelines.
 
 - **Inclusion criteria:** The work should involve student rollouts as central to the learning signal, or directly enable OPD deployment (cross-tokenizer, frameworks, etc.).
-- **Entry format:** `[Title](url) (Year) — One-line description.`
+- **Entry format:** Arxiv papers use a bold title with an arXiv badge, then a second-line `*(Year)* One-line description.` Non-arxiv items (blog posts, repos) use `[Title](url) (Year) — One-line description.` See [CONTRIBUTING.md](CONTRIBUTING.md) for full examples.
 
 ## Citation
 
