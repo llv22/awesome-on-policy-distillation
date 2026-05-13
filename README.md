@@ -19,10 +19,10 @@ As of 2026, OPD is a standard post-training primitive at Alibaba (Qwen3), Xiaomi
 
 - [Quick Start by Role](#quick-start-by-role)
 - [Start Here](#start-here)
-- [Surveys](#surveys)
 - [Taxonomy](#taxonomy)
   - [By Teacher Type](#by-teacher-type)
   - [By Primary Goal](#by-primary-goal)
+- [Surveys](#surveys)
 - [Core OPD Papers](#core-opd-papers)
   - [Foundations](#foundations)
   - [Gap-Bridging](#gap-bridging)
@@ -79,11 +79,6 @@ The fastest path to understanding the field:
 7. **Industrial patterns** — [Qwen3](https://arxiv.org/abs/2505.09388), [MiMo-V2-Flash](https://arxiv.org/abs/2601.02780), [GLM-5](https://arxiv.org/abs/2602.15763).
    How labs deploy OPD in production.
 
-## Surveys
-
-- **A Survey of On-Policy Distillation for Large Language Models** [![arXiv](https://img.shields.io/badge/arXiv-2604.00626-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.00626)
-  - *(2026)* First dedicated OPD survey; organizes methods by feedback signal, teacher access mode, and loss scope.
-
 ## Taxonomy
 
 ### By Teacher Type
@@ -108,6 +103,11 @@ The fastest path to understanding the field:
 | Black-box distillation | GAD, OVD, ROPD |
 
 Many papers span multiple categories. The taxonomy is for orientation, not strict partitioning.
+
+## Surveys
+
+- **A Survey of On-Policy Distillation for Large Language Models** [![arXiv](https://img.shields.io/badge/arXiv-2604.00626-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.00626)
+  - *(2026)* First dedicated OPD survey; organizes methods by feedback signal, teacher access mode, and loss scope.
 
 ## Core OPD Papers
 
