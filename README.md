@@ -161,6 +161,8 @@ The ~21 papers that define on-policy distillation for LLMs.
   - *(2026)* Stabilizes single-sample OPD by subtracting a closed-form per-token reverse-KL value baseline derived from the already-computed forward pass; unbiased lower-variance estimator with no extra critic.
 - **Unmasking On-Policy Distillation: Where It Helps, Where It Hurts, and Why** [![arXiv](https://img.shields.io/badge/arXiv-2605.10889-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.10889)
   - *(2026)* Training-free per-token, per-question, per-teacher diagnostic computing gradient alignment (cosine of distillation gradient with an ideal success-maximizing gradient derived from empirical pass rates via targeted rollouts); finds distillation guidance is more reliable on incorrect rollouts than correct ones, the best teacher/context depends jointly on student capacity and task (no universal recipe), and student-teacher divergence is a weak but cheap necessary-condition filter for alignment.
+- **The Many Faces of On-Policy Distillation: Pitfalls, Mechanisms, and Fixes** [![arXiv](https://img.shields.io/badge/arXiv-2605.11182-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.11182)
+  - *(2026)* Empirical study of when OPD and OPSD work and fail across reasoning, system-prompt internalization, and alignment; identifies three failure mechanisms (student-prefix-induced teacher-state mismatch, biased Top-K reverse-KL gradients, and OPSD's PI-free aggregation across instance-specific privileged information) and three stabilizers (stop-gradient Top-K KL, RLVR-adapted teachers, and SFT-stabilized students for length and format).
 
 ### Self-Distillation
 
