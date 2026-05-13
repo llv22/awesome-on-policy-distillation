@@ -92,7 +92,7 @@ The fastest path to understanding the field:
 |---|---|
 | External white-box | MiniLLM, GKD, Veto, Entropy-Aware OPD, ExOPD, REOPOLD, PACED, Prefix OPD, Revisiting OPD, Rethinking OPD, Lightning OPD, Uni-OPD, SOD, AOPD, vOPD, NPD, Prune-OPD, EffOPD |
 | External black-box | Black-Box OPD / GAD, OVD, ROPD |
-| Self-teacher with privileged context | OPSD, SDFT, SDPO, OPSDC, GATES, pi-Distill, RLSD, SDZero |
+| Self-teacher with privileged context | OPSD, SDFT, SDPO, OPSDC, GATES, pi-Distill, RLSD, SDZero, OGLS-SD |
 | Context-conditioned | OPCD, OEL |
 | Multiple / lifecycle teachers | MiMo-V2-Flash MOPD, GLM-5, Qwen3, Baichuan-M3, DeepSeek-V4, CoPD, MAD-OPD, KAT-Coder-V2 |
 
@@ -103,7 +103,7 @@ The fastest path to understanding the field:
 | Compression / strong-to-weak transfer | MiniLLM, GKD, Qwen3, Prefix OPD, Rethinking OPD, Lightning OPD |
 | Post-RL consolidation / skill integration | MiMo MOPD, GLM-5, ExOPD, CoPD |
 | Continual learning | SDFT, OPCD, OEL |
-| RL replacement / augmentation | SDPO, RLTF-SD, RLAD, REOPOLD, RLSD, SDZero |
+| RL replacement / augmentation | SDPO, RLTF-SD, RLAD, REOPOLD, RLSD, SDZero, OGLS-SD |
 | Reasoning compression | OPSDC |
 | Black-box distillation | GAD, OVD, ROPD |
 
@@ -186,6 +186,8 @@ The ~21 papers that define on-policy distillation for LLMs.
   - *(2026)* Long-context self-distillation: short-context distribution of the same model serves as a co-evolving token-level reverse-KL teacher for student rollouts under long context.
 - **OPSD Compresses What RLVR Teaches: A Post-RL Compaction Stage for Reasoning Models** [![arXiv](https://img.shields.io/badge/arXiv-2605.06188-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.06188)
   - *(2026)* Splits OPSD by rollout correctness on thinking-enabled math: correct-only training preserves accuracy and shortens responses, incorrect-only training damages accuracy, indicating the hindsight self-teacher reveals redundancy more reliably than missing reasoning steps; proposes SFT → RLVR → OPSD as a post-RL compaction stage.
+- **OGLS-SD: On-Policy Self-Distillation with Outcome-Guided Logit Steering for LLM Reasoning** [![arXiv](https://img.shields.io/badge/arXiv-2605.12400-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.12400)
+  - *(2026)* Diagnoses OPSD collapse as teacher-student mismatch from reflection-induced bias and privileged-context overconfidence; contrasts averaged teacher logits over correct vs. incorrect on-policy rollouts to form an outcome-guided steering direction added to the anchor teacher logits, calibrating token-level self-distillation supervision.
 
 ### Context and Experience Internalization
 
@@ -522,4 +524,4 @@ If you find this resource useful, please cite it as:
 
 ---
 
-*Last updated: 2026-05-12. Coverage: core OPD papers, adjacent work (including speculative-decoding draft-model training and self-play / iterative bootstrapping), surveys, technical reports, and tooling through May 2026.*
+*Last updated: 2026-05-13. Coverage: core OPD papers, adjacent work (including speculative-decoding draft-model training and self-play / iterative bootstrapping), surveys, technical reports, and tooling through May 2026.*
