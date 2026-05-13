@@ -90,7 +90,7 @@ The fastest path to understanding the field:
 
 | Teacher Type | Papers |
 |---|---|
-| External white-box | MiniLLM, GKD, Veto, Entropy-Aware OPD, ExOPD, REOPOLD, PACED, Prefix OPD, Revisiting OPD, Rethinking OPD, Lightning OPD, Uni-OPD, SOD, AOPD, vOPD, NPD, Prune-OPD |
+| External white-box | MiniLLM, GKD, Veto, Entropy-Aware OPD, ExOPD, REOPOLD, PACED, Prefix OPD, Revisiting OPD, Rethinking OPD, Lightning OPD, Uni-OPD, SOD, AOPD, vOPD, NPD, Prune-OPD, EffOPD |
 | External black-box | Black-Box OPD / GAD, OVD, ROPD |
 | Self-teacher with privileged context | OPSD, SDFT, SDPO, OPSDC, GATES, pi-Distill, RLSD, SDZero |
 | Context-conditioned | OPCD, OEL |
@@ -212,6 +212,8 @@ The ~21 papers that define on-policy distillation for LLMs.
   - *(2026)* Decouples student generation from training and reframes OPD as SFT with sequence packing; sparse student updates plus Δ-IFD sample filtering keep updates inside a proximal learning zone; 8.1× speedup over on-policy baselines.
 - **Prune-OPD: Efficient and Reliable On-Policy Distillation for Long-Horizon Reasoning** [![arXiv](https://img.shields.io/badge/arXiv-2605.07804-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.07804)
   - *(2026)* Monitors top-k student-teacher overlap to detect prefix drift; monotonically attenuates unreliable rewards and truncates drifted rollouts to reallocate compute toward locally exploitable teacher supervision.
+- **EffOPD: Learning to Foresee — Unveiling the Unlocking Efficiency of On-Policy Distillation** [![arXiv](https://img.shields.io/badge/arXiv-2605.11739-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.11739)
+  - *(2026)* Parameter-dynamics view of OPD's efficiency: early training establishes a "foresight" trajectory where updates concentrate on reasoning-critical modules (Module-Allocation) and dominant low-rank subspaces align with the final update direction (Update-Direction); EffOPD exploits this by adaptively extrapolating along the current update step for ~3× training acceleration with no extra trainables.
 
 ## Adjacent and Enabling Work
 
