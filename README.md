@@ -87,7 +87,7 @@ The fastest path to understanding the field:
 |---|---|
 | External white-box | MiniLLM, GKD, Veto, Entropy-Aware OPD, ExOPD, REOPOLD, PACED, Prefix OPD, Revisiting OPD, Rethinking OPD, Lightning OPD, Uni-OPD, SOD, AOPD, vOPD, NPD, Prune-OPD, EffOPD, CoDistill-GRPO, Rock Tokens |
 | External black-box | Black-Box OPD / GAD, OVD, ROPD |
-| Self-teacher with privileged context | OPSD, SDFT, SDPO, OPSDC, GATES, pi-Distill, RLSD, SDZero, OGLS-SD, PBSD, UniSD, ATESD |
+| Self-teacher with privileged context | OPSD, SDFT, SDPO, OPSDC, GATES, pi-Distill, RLSD, SDZero, OGLS-SD, PBSD, UniSD, ATESD, RLRT |
 | Context-conditioned | OPCD, OEL |
 | Multiple / lifecycle teachers | MiMo-V2-Flash MOPD, GLM-5, Qwen3, Baichuan-M3, DeepSeek-V4, CoPD, MAD-OPD, KAT-Coder-V2 |
 
@@ -98,7 +98,7 @@ The fastest path to understanding the field:
 | Compression / strong-to-weak transfer | MiniLLM, GKD, Qwen3, Prefix OPD, Rethinking OPD, Lightning OPD |
 | Post-RL consolidation / skill integration | MiMo MOPD, GLM-5, ExOPD, CoPD |
 | Continual learning | SDFT, OPCD, OEL |
-| RL replacement / augmentation | SDPO, RLTF-SD, RLAD, REOPOLD, RLSD, SDZero, OGLS-SD, PBSD, CoDistill-GRPO |
+| RL replacement / augmentation | SDPO, RLTF-SD, RLAD, REOPOLD, RLSD, SDZero, OGLS-SD, PBSD, CoDistill-GRPO, RLRT |
 | Reasoning compression | OPSDC |
 | Black-box distillation | GAD, OVD, ROPD |
 
@@ -198,6 +198,8 @@ The ~21 papers that define on-policy distillation for LLMs.
   - *(2026)* Identifies teacher-side exposure mismatch in OPSD — letting the privileged teacher see the full reference reasoning produces token targets too strong for the student to absorb — and treats the reveal ratio as a learnable control variable governed by a Beta-policy controller trained with a discounted learning-progress reward that handles OPD's delayed credit assignment; +0.95/+2.05/+2.33 Avg@12 over OPSD on AIME24, AIME25, HMMT25 for Qwen3-1.7B/4B/8B.
 - **OGLS-SD: On-Policy Self-Distillation with Outcome-Guided Logit Steering for LLM Reasoning** [![arXiv](https://img.shields.io/badge/arXiv-2605.12400-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.12400)
   - *(2026)* Diagnoses OPSD collapse as teacher-student mismatch from reflection-induced bias and privileged-context overconfidence; contrasts averaged teacher logits over correct vs. incorrect on-policy rollouts to form an outcome-guided steering direction added to the anchor teacher logits, calibrating token-level self-distillation supervision.
+- **RLRT: Rebellious Student — Reversing Teacher Signals for Reasoning Exploration with Self-Distilled RLVR** [![arXiv](https://img.shields.io/badge/arXiv-2605.10781-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.10781)
+  - *(2026)* Reverses the self-distillation direction on correct rollouts: instead of pulling the student toward the privileged teacher (which overwrites self-driven reasoning), RLRT upweights tokens where the student diverged from the teacher and still reached the correct answer, augmenting GRPO with a "valuable exploration" signal grounded in already-successful student reasoning rather than uniform diversity; +8.9% average across six math benchmarks over self-distillation baselines on Qwen3-4B/8B base, instruct, and thinking checkpoints.
 
 ### Context and Experience Internalization
 
