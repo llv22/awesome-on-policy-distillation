@@ -409,6 +409,8 @@ Papers that are not canonical OPD but matter for understanding or deploying it.
   - *(2026)* Video-aware judge decomposes reasoning quality into structured dimensions; an EMA teacher conditioned on this privileged feedback supervises student rollouts at the token level, with direction-magnitude decoupling to stably integrate dense supervision with RL.
 - **TAD: Temporal-Aware Trajectory Self-Distillation for Fast and Accurate Diffusion LLM** [![arXiv](https://img.shields.io/badge/arXiv-2605.09536-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.09536) [![Code](https://img.shields.io/badge/Code-181717?style=flat&logo=github&logoColor=white)](https://github.com/BHmingyang/TAD)
   - *(2026)* Adapts self-distillation to diffusion LLMs: a teacher conditioned on prompt + ground-truth response records masked-decoding trajectories, partitioning masked positions into near (hard cross-entropy) and distant (soft KL) subsets by remaining decoding steps; yields paired Quality and Speed deployment models that improve LLaDA's accuracy-parallelism trade-off (avg accuracy 46.2 → 51.6 for Quality; avg AUP 46.2 → 257.1 for Speed).
+- **DiMO: Distilling Masked Diffusion Models into One-step Generator** [![arXiv](https://img.shields.io/badge/arXiv-2503.15457-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.15457)
+  - *(2025)* First on-policy distillation for masked discrete diffusion image generation (class-conditional and text-to-image from Meissonic teacher): student-induced intermediate states $\tilde{x}_t$ from forward-masking the one-step student's outputs drive token-level distribution matching against the frozen teacher, with a DMD-style auxiliary model approximating the student distribution to make the gradient tractable; Generalized Jeffrey divergence (FKL/RKL mix) avoids RKL mode-seeking, and a hybrid mask/random-token initialization with Gaussian embedding perturbation prevents one-step mode collapse from the deterministic all-mask init (ICCV 2025).
 
 ### Speculative Decoding (Draft-Model Training)
 
@@ -547,4 +549,4 @@ If you find this resource useful, please cite it as:
 
 ---
 
-*Last updated: 2026-05-13. Coverage: core OPD papers, adjacent work (including speculative-decoding draft-model training and self-play / iterative bootstrapping), surveys, technical reports, and tooling through May 2026.*
+*Last updated: 2026-05-15. Coverage: core OPD papers, adjacent work (including speculative-decoding draft-model training and self-play / iterative bootstrapping), surveys, technical reports, and tooling through May 2026.*
