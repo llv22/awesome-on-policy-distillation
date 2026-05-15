@@ -153,8 +153,7 @@ Cross-cutting views over the canonical papers. Many entries span multiple catego
 
 Papers that are not canonical OPD but matter for understanding or deploying it.
 
-<details>
-<summary><b>Cross-Tokenizer and Model-Family Enablers</b> (11 entries)</summary>
+### Cross-Tokenizer and Model-Family Enablers
 
 - [ULD: Towards Cross-Tokenizer Distillation](https://arxiv.org/abs/2402.12030) *(2024)* — Universal Logit Distillation; foundational enabler for cross-family OPD.
 - [Multi-Level OT for Universal Cross-Tokenizer KD](https://arxiv.org/abs/2412.14528) *(2024)* — Token- and sequence-level optimal transport for cross-tokenizer KD.
@@ -168,10 +167,7 @@ Papers that are not canonical OPD but matter for understanding or deploying it.
 - [Cross-Tokenizer LLM Distillation through a Byte-Level Interface](https://arxiv.org/abs/2604.07466) *(2026)* — Byte-level conversion of teacher distributions plus byte-level student decoder for mismatched tokenizers.
 - [SimCT: Recovering Lost Supervision for Cross-Tokenizer On-Policy Distillation](https://arxiv.org/abs/2605.07711) *(2026)* — Short multi-token continuations replace exact matching; recovers teacher signal at mismatched positions.
 
-</details>
-
-<details>
-<summary><b>Mismatch Mitigation and Student Quality</b> (19 entries)</summary>
+### Mismatch Mitigation and Student Quality
 
 - [DistiLLM](https://arxiv.org/abs/2402.03898) *(2024)* — Skew-KL with adaptive off-policy use of student-generated outputs.
 - [Exploring and Enhancing Distribution Transfer in KD](https://arxiv.org/abs/2409.12512) *(2024)* — Analyzes reverse-KL with student-generated output; proposes OKD.
@@ -192,8 +188,6 @@ Papers that are not canonical OPD but matter for understanding or deploying it.
 - [TIP: Token Importance in On-Policy Distillation](https://arxiv.org/abs/2604.14084) *(2026)* — Selective training on high-entropy and confidently-wrong low-entropy tokens; matches full-token baselines at lower memory.
 - [DP-OPD: Differentially Private On-Policy Distillation for Language Models](https://arxiv.org/abs/2604.04461) *(2026)* — Student-rollout OPD with DP-SGD on student updates; first OPD recipe with sample-level DP.
 - [Distillation Traps and Guards: A Calibration Knob for LLM Distillability](https://arxiv.org/abs/2604.18963) *(2026)* — Post-hoc calibrates teachers via RFT to control distillability against tail noise and instability.
-
-</details>
 
 ### Preference, Reward-Guided, and Hybrid RL+KD
 
@@ -257,8 +251,7 @@ Papers that are not canonical OPD but matter for understanding or deploying it.
 - [DiMO: Distilling Masked Diffusion Models into One-step Generator](https://arxiv.org/abs/2503.15457) *(2025)* — First OPD for masked discrete diffusion image generation; Generalized Jeffrey divergence with DMD-style auxiliary (ICCV 2025).
 - [SDAR: Self-Distilled Agentic Reinforcement Learning](https://arxiv.org/abs/2605.15155) *(2026)* — Sigmoid-gated OPSD auxiliary on top of GRPO for multi-turn agents; amplifies positive-gap, attenuates negative-gap tokens (COLM 2026). [![Code](https://img.shields.io/badge/Code-181717?style=flat&logo=github&logoColor=white)](https://github.com/ZJU-REAL/SDAR)
 
-<details>
-<summary><b>Speculative Decoding — Draft-Model Training</b> (16 entries)</summary>
+### Speculative Decoding (Draft-Model Training)
 
 Draft-model training for speculative decoding shares OPD's core loop: the draft (student) generates, the target (teacher) verifies, and the draft is updated to match. Included for breadth even though the goal is inference acceleration rather than student capability.
 
@@ -278,8 +271,6 @@ Draft-model training for speculative decoding shares OPD's core loop: the draft 
 - [Aurora: When RL Meets Adaptive Speculative Training](https://arxiv.org/abs/2602.06932) *(2026)* — Online continual draft training; target verifications stream into FKL/RKL fine-tuning then hot-swap into serving.
 - [SpecBlock: Block-Iterative Speculative Decoding with Dynamic Tree Drafting](https://arxiv.org/abs/2605.07243) *(2026)* — Block-iterative drafter with layer-wise shift; valid-prefix masking and cost-aware bandit adaptation.
 - [SFDD: Flatter Tokens are More Valuable for Speculative Draft Model Training](https://arxiv.org/abs/2601.18902) *(2026)* — Sample-level flatness filters EAGLE training data; 2× speedup at 50% data with <4% inference-speedup loss.
-
-</details>
 
 ### Precursors
 
@@ -302,7 +293,7 @@ Production training pipelines that use OPD as a post-training stage.
 | 2026 | Typhoon-S | Minimal sovereign recipe: SFT + OPD + small-scale RFT | [arXiv](https://arxiv.org/abs/2601.18129) |
 | 2026 | Nemotron-Cascade 2 | Cascade RL + multi-domain on-policy distillation | [arXiv](https://arxiv.org/abs/2603.19220) |
 | 2026 | Baichuan-M3 | Task RL → offline policy distillation → multi-teacher OPD | [arXiv](https://arxiv.org/abs/2602.06570) |
-| 2026 | MobileLLM-R1.5 | Final-stage on-policy KD as primary improvement over R1 | model card |
+| 2026 | MobileLLM-R1.5 | Final-stage on-policy KD as primary improvement over R1 | [model card](https://huggingface.co/facebook/MobileLLM-R1.5-950M) |
 | 2026 | Nanbeige4-3B-Thinking | OPD preferred over off-policy for math reasoning | [model card](https://huggingface.co/Nanbeige/Nanbeige4-3B-Thinking-2510) |
 | 2026 | DeepSeek-V4 | Domain-expert SFT+GRPO → unified model consolidation via OPD | [report](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/blob/main/DeepSeek_V4.pdf) |
 | 2026 | Qwen3.5-Omni | Specialist distillation → privileged-input self-distillation aligning audio to text | [arXiv](https://arxiv.org/abs/2604.15804) |
