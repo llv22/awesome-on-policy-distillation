@@ -87,7 +87,7 @@ The fastest path to understanding the field:
 |---|---|
 | External white-box | MiniLLM, GKD, Veto, Entropy-Aware OPD, ExOPD, REOPOLD, PACED, Prefix OPD, Revisiting OPD, Rethinking OPD, Lightning OPD, Uni-OPD, SOD, AOPD, vOPD, NPD, Prune-OPD, EffOPD, CoDistill-GRPO, Rock Tokens |
 | External black-box | Black-Box OPD / GAD, OVD, ROPD |
-| Self-teacher with privileged context | OPSD, SDFT, SDPO, OPSDC, GATES, pi-Distill, RLSD, SDZero, OGLS-SD, PBSD, UniSD, ATESD, RLRT |
+| Self-teacher with privileged context | OPSD, SDFT, SDPO, OPSDC, GATES, pi-Distill, RLSD, SDZero, OGLS-SD, PBSD, UniSD, ATESD, RLRT, SDAR |
 | Context-conditioned | OPCD, OEL |
 | Multiple / lifecycle teachers | MiMo-V2-Flash MOPD, GLM-5, Qwen3, Baichuan-M3, DeepSeek-V4, CoPD, MAD-OPD, KAT-Coder-V2 |
 
@@ -98,7 +98,7 @@ The fastest path to understanding the field:
 | Compression / strong-to-weak transfer | MiniLLM, GKD, Qwen3, Prefix OPD, Rethinking OPD, Lightning OPD |
 | Post-RL consolidation / skill integration | MiMo MOPD, GLM-5, ExOPD, CoPD |
 | Continual learning | SDFT, OPCD, OEL |
-| RL replacement / augmentation | SDPO, RLTF-SD, RLAD, REOPOLD, RLSD, SDZero, OGLS-SD, PBSD, CoDistill-GRPO, RLRT |
+| RL replacement / augmentation | SDPO, RLTF-SD, RLAD, REOPOLD, RLSD, SDZero, OGLS-SD, PBSD, CoDistill-GRPO, RLRT, SDAR |
 | Reasoning compression | OPSDC |
 | Black-box distillation | GAD, OVD, ROPD |
 
@@ -411,6 +411,8 @@ Papers that are not canonical OPD but matter for understanding or deploying it.
   - *(2026)* Adapts self-distillation to diffusion LLMs: a teacher conditioned on prompt + ground-truth response records masked-decoding trajectories, partitioning masked positions into near (hard cross-entropy) and distant (soft KL) subsets by remaining decoding steps; yields paired Quality and Speed deployment models that improve LLaDA's accuracy-parallelism trade-off (avg accuracy 46.2 → 51.6 for Quality; avg AUP 46.2 → 257.1 for Speed).
 - **DiMO: Distilling Masked Diffusion Models into One-step Generator** [![arXiv](https://img.shields.io/badge/arXiv-2503.15457-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.15457)
   - *(2025)* First on-policy distillation for masked discrete diffusion image generation (class-conditional and text-to-image from Meissonic teacher): student-induced intermediate states $\tilde{x}_t$ from forward-masking the one-step student's outputs drive token-level distribution matching against the frozen teacher, with a DMD-style auxiliary model approximating the student distribution to make the gradient tractable; Generalized Jeffrey divergence (FKL/RKL mix) avoids RKL mode-seeking, and a hybrid mask/random-token initialization with Gaussian embedding perturbation prevents one-step mode collapse from the deterministic all-mask init (ICCV 2025).
+- **SDAR: Self-Distilled Agentic Reinforcement Learning** [![arXiv](https://img.shields.io/badge/arXiv-2605.15155-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.15155) [![Code](https://img.shields.io/badge/Code-181717?style=flat&logo=github&logoColor=white)](https://github.com/ZJU-REAL/SDAR)
+  - *(2026)* Diagnoses two pathologies of skill-conditioned OPSD in multi-turn agents — compounding trajectory drift and asymmetric trust where >50% of student-sampled tokens carry a negative teacher-student log-prob gap (reverse distillation from imperfect skill retrieval, weak teacher skill grounding, and turn-by-turn drift); adds a sigmoid-gated OPSD auxiliary loss over the detached gap on student-sampled tokens that amplifies positive-gap (teacher-endorsed) tokens and softly attenuates negative-gap tokens while leaving the GRPO advantage untouched (three gating variants: gap, entropy, soft-OR); +9.4/+7.0/+10.2% on ALFWorld/Search-QA/WebShop-Acc over GRPO on Qwen2.5-3B and consistently beats naive GRPO+OPSD, Skill-SD, and RLSD across Qwen2.5 and Qwen3 scales (COLM 2026).
 
 ### Speculative Decoding (Draft-Model Training)
 
