@@ -107,6 +107,7 @@ The ~21 papers that define on-policy distillation for LLMs.
 - [OGLS-SD: On-Policy Self-Distillation with Outcome-Guided Logit Steering](https://arxiv.org/abs/2605.12400) *(2026)* — Contrasts averaged teacher logits over correct vs. incorrect rollouts to form outcome-guided steering on anchor logits.
 - [RLRT: Rebellious Student — Reversing Teacher Signals for Reasoning Exploration](https://arxiv.org/abs/2605.10781) *(2026)* — Upweights student tokens that diverged from teacher but still succeeded as a "valuable exploration" signal added to GRPO; +8.9% average across six math benchmarks.
 - [EGRSD: Respecting Self-Uncertainty in On-Policy Self-Distillation for Efficient LLM Reasoning](https://arxiv.org/abs/2605.13255) *(2026)* — Teacher-entropy confidence gate on top of RLSD's direction × magnitude; CL variant uses causal-lookahead minimum entropy to preserve transient pivot tokens (COLM 2026).
+- [CREDIT: From Generic Correlation to Input-Specific Credit in On-Policy Self Distillation](https://arxiv.org/abs/2605.11613) *(2026)* — Self-distillation token reward as Bayesian filtering increment whose trajectory sum equals pMI(y; z | x); batch-contrastive teacher baseline strips input-generic shortcuts (NeurIPS 2026).
 
 ### Context and Experience Internalization
 
@@ -135,7 +136,7 @@ Cross-cutting views over the canonical papers. Many entries span multiple catego
 |---|---|
 | External white-box | MiniLLM, GKD, Veto, Entropy-Aware OPD, ExOPD, REOPOLD, PACED, Prefix OPD, Revisiting OPD, Rethinking OPD, Lightning OPD, Uni-OPD, SOD, AOPD, vOPD, NPD, Prune-OPD, EffOPD, CoDistill-GRPO, Rock Tokens |
 | External black-box | Black-Box OPD / GAD, OVD, ROPD |
-| Self-teacher with privileged context | OPSD, SDFT, SDPO, OPSDC, GATES, pi-Distill, RLSD, SDZero, OGLS-SD, PBSD, UniSD, ATESD, RLRT, EGRSD, SDAR |
+| Self-teacher with privileged context | OPSD, SDFT, SDPO, OPSDC, GATES, pi-Distill, RLSD, SDZero, OGLS-SD, PBSD, UniSD, ATESD, RLRT, EGRSD, CREDIT, SDAR |
 | Context-conditioned | OPCD, OEL |
 | Multiple / lifecycle teachers | MiMo-V2-Flash MOPD, GLM-5, Qwen3, Baichuan-M3, DeepSeek-V4, CoPD, MAD-OPD, KAT-Coder-V2 |
 
@@ -146,7 +147,7 @@ Cross-cutting views over the canonical papers. Many entries span multiple catego
 | Compression / strong-to-weak transfer | MiniLLM, GKD, Qwen3, Prefix OPD, Rethinking OPD, Lightning OPD |
 | Post-RL consolidation / skill integration | MiMo MOPD, GLM-5, ExOPD, CoPD |
 | Continual learning | SDFT, OPCD, OEL |
-| RL replacement / augmentation | SDPO, RLTF-SD, RLAD, REOPOLD, RLSD, SDZero, OGLS-SD, PBSD, CoDistill-GRPO, RLRT, EGRSD, SDAR |
+| RL replacement / augmentation | SDPO, RLTF-SD, RLAD, REOPOLD, RLSD, SDZero, OGLS-SD, PBSD, CoDistill-GRPO, RLRT, EGRSD, CREDIT, SDAR |
 | Reasoning compression | OPSDC |
 | Black-box distillation | GAD, OVD, ROPD |
 
