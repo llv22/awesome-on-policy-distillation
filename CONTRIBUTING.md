@@ -38,7 +38,9 @@ The default landing zone. Subsections:
 - **Cross-Tokenizer and Model-Family Enablers** — vocabulary alignment, cross-architecture methods
 - **Mismatch Mitigation and Student Quality** — distribution gap, adaptive mixing, student output quality
 - **Preference, Reward-Guided, and Hybrid RL+KD** — preference optimization, reward-guided distillation, RL+KD unification
-- **Agent Distillation, Multimodal, and Other Extensions** — agents, VLMs, speech, embodied, other modalities
+- **Self-Play and Iterative Bootstrapping** — SPIN-style self-play, iterative best-of-N, MCTS-guided self-evolution
+- **Agent, Multimodal, and Other Extensions** — agents, VLMs, speech, embodied, other modalities
+- **Speculative Decoding (Draft-Model Training)** — DistillSpec, EAGLE, HASS families; draft trained from target supervision on its own rollouts
 - **Precursors** — historical antecedents that predate the OPD label
 
 ### Technical Reports
@@ -51,24 +53,25 @@ Training frameworks and code. Table or bullet format depending on subsection.
 
 ## Entry format
 
-**Arxiv papers** (most entries) use a bold title with an arXiv badge, and a second indented line carrying the year and description:
+All entries are single-line. The title is the hyperlink; the year is italicized; the description follows an em dash:
 
 ```
-- **Full Paper Title** [![arXiv](https://img.shields.io/badge/arXiv-XXXX.XXXXX-B31B1B?style=flat&logo=arxiv&logoColor=white)](https://arxiv.org/abs/XXXX.XXXXX)
-  - *(Year)* One-line description.
+- [Full Paper Title](url) *(Year)* — One-line description.
 ```
 
-**Non-arxiv items** (blog posts, essays, implementation repos) use a single line:
+For arxiv papers, link directly to `https://arxiv.org/abs/XXXX.XXXXX`. For blog posts, essays, model cards, or repos, use the canonical URL.
+
+If the entry has an associated code release, append a Code badge at the end:
 
 ```
-- [Title](url) (Year) — One-line description.
+- [Title](arxiv-url) *(Year)* — Description. [![Code](https://img.shields.io/badge/Code-181717?style=flat&logo=github&logoColor=white)](repo-url)
 ```
 
 For implementation repos under `### Implementations`, omit the year: `- [Repo Name](url) — Description.`
 
 **Tables** (Technical Reports, Training Frameworks) follow the column layout already in each section — match the existing rows.
 
-The description should be a single terse sentence capturing what makes this paper distinctive. Look at existing entries for calibration.
+The description should be a single terse sentence (target ~25 words, hard cap ~35) capturing what makes this paper distinctive. Avoid mini-abstracts, mechanism details, or benchmark numbers — those belong in the paper. Look at existing entries for calibration.
 
 ## Batch additions
 
