@@ -87,6 +87,7 @@ The ~21 papers that define on-policy distillation for LLMs.
 - [Unmasking On-Policy Distillation — Where It Helps, Where It Hurts, and Why](https://arxiv.org/abs/2605.10889) *(2026)* — Training-free gradient-alignment diagnostic; best teacher flips with student capacity and task; wrong demos hurt self-distillation except on hard math.
 - [The Many Faces of On-Policy Distillation — Pitfalls, Mechanisms, and Fixes](https://arxiv.org/abs/2605.11182) *(2026)* — Names three failure modes (student-prefix teacher-state mismatch, biased Top-K gradients, PI-free OPSD aggregation) and three stabilizers (stop-grad Top-K KL, RLVR teachers, SFT-stabilized students).
 - [Rock Tokens — Deciphering High-Loss Tokens in On-Policy Distillation](https://arxiv.org/abs/2605.09253) *(2026)* — High-loss tokens (up to 18%) persist after apparent convergence; masking them streamlines alignment. [![Code](https://img.shields.io/badge/Code-181717?style=flat&logo=github&logoColor=white)](https://github.com/YuxuanJiang1/Rock-Token)
+- [BRTS: On-Policy Distillation with Best-of-N Teacher Rollout Selection](https://arxiv.org/abs/2605.09725) *(2026)* — Auxiliary teacher-context branch beside standard student-context OPD; selects from N teacher rollouts by correctness then student-alignment, with ground-truth-conditioned recovery for prompts where unconditioned samples all fail. [![Code](https://img.shields.io/badge/Code-181717?style=flat&logo=github&logoColor=white)](https://github.com/BWGZK-keke/BRTS)
 
 ### Self-Distillation
 
@@ -108,6 +109,7 @@ The ~21 papers that define on-policy distillation for LLMs.
 - [RLRT: Rebellious Student — Reversing Teacher Signals for Reasoning Exploration](https://arxiv.org/abs/2605.10781) *(2026)* — Upweights student tokens that diverged from teacher but still succeeded as a "valuable exploration" signal added to GRPO; +8.9% average across six math benchmarks.
 - [EGRSD: Respecting Self-Uncertainty in On-Policy Self-Distillation for Efficient LLM Reasoning](https://arxiv.org/abs/2605.13255) *(2026)* — Teacher-entropy confidence gate on top of RLSD's direction × magnitude; CL variant uses causal-lookahead minimum entropy to preserve transient pivot tokens (COLM 2026).
 - [CREDIT: From Generic Correlation to Input-Specific Credit in On-Policy Self Distillation](https://arxiv.org/abs/2605.11613) *(2026)* — Self-distillation token reward as Bayesian filtering increment whose trajectory sum equals pMI(y; z | x); batch-contrastive teacher baseline strips input-generic shortcuts (NeurIPS 2026).
+- [OPHSD: Training with Harnesses — On-Policy Harness Self-Distillation for Complex Reasoning](https://arxiv.org/abs/2605.08741) *(2026)* — Generalizes self-distillation privileged context from a static variable (reference solution, environment trace) to a harness-driven workflow (draft-verify, plan-solve); harness is a removable training scaffold, +10.83% over OPSD on HMMT25. [![Code](https://img.shields.io/badge/Code-181717?style=flat&logo=github&logoColor=white)](https://github.com/zzy1127/OPHSD-On-Policy-Harness-Self-Distillation)
 
 ### Context and Experience Internalization
 
