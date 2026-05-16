@@ -88,6 +88,7 @@ The ~21 papers that define on-policy distillation for LLMs.
 - [The Many Faces of On-Policy Distillation — Pitfalls, Mechanisms, and Fixes](https://arxiv.org/abs/2605.11182) *(2026)* — Names three failure modes (student-prefix teacher-state mismatch, biased Top-K gradients, PI-free OPSD aggregation) and three stabilizers (stop-grad Top-K KL, RLVR teachers, SFT-stabilized students).
 - [Rock Tokens — Deciphering High-Loss Tokens in On-Policy Distillation](https://arxiv.org/abs/2605.09253) *(2026)* — High-loss tokens (up to 18%) persist after apparent convergence; masking them streamlines alignment. [![Code](https://img.shields.io/badge/Code-181717?style=flat&logo=github&logoColor=white)](https://github.com/YuxuanJiang1/Rock-Token)
 - [BRTS: On-Policy Distillation with Best-of-N Teacher Rollout Selection](https://arxiv.org/abs/2605.09725) *(2026)* — Auxiliary teacher-context branch beside standard student-context OPD; selects from N teacher rollouts by correctness then student-alignment, with ground-truth-conditioned recovery for prompts where unconditioned samples all fail. [![Code](https://img.shields.io/badge/Code-181717?style=flat&logo=github&logoColor=white)](https://github.com/BWGZK-keke/BRTS)
+- [Prefix Teach, Suffix Fade: Local Teachability Collapse in Strong-to-Weak On-Policy Distillation](https://arxiv.org/abs/2605.13643) *(2026)* — Dynamic release rule truncates dense supervision when the teacher's margin over the student's top-K candidate set collapses across NLTK-tokenized sentence segments via BIC-style change-point detection; counters suffix degradation in strong-to-weak OPD on Qwen3.
 
 ### Self-Distillation
 
@@ -254,6 +255,8 @@ Papers that are not canonical OPD but matter for understanding or deploying it.
 - [TAD: Temporal-Aware Trajectory Self-Distillation for Fast and Accurate Diffusion LLM](https://arxiv.org/abs/2605.09536) *(2026)* — Partitions masked positions by remaining decoding steps into near (CE) and distant (KL) subsets. [![Code](https://img.shields.io/badge/Code-181717?style=flat&logo=github&logoColor=white)](https://github.com/BHmingyang/TAD)
 - [DiMO: Distilling Masked Diffusion Models into One-step Generator](https://arxiv.org/abs/2503.15457) *(2025)* — First OPD for masked discrete diffusion image generation; Generalized Jeffrey divergence with DMD-style auxiliary (ICCV 2025).
 - [SDAR: Self-Distilled Agentic Reinforcement Learning](https://arxiv.org/abs/2605.15155) *(2026)* — Sigmoid-gated OPSD auxiliary on top of GRPO for multi-turn agents; amplifies positive-gap, attenuates negative-gap tokens (COLM 2026). [![Code](https://img.shields.io/badge/Code-181717?style=flat&logo=github&logoColor=white)](https://github.com/ZJU-REAL/SDAR)
+- [GEAR: Granularity-Adaptive Advantage Reweighting for LLM Agents via Self-Distillation](https://arxiv.org/abs/2605.11853) *(2026)* — Reverse-KL between student and ground-truth-conditioned same-model teacher gives token saliency; KL-initiated entropy-terminated segmentation propagates credit within segments to sign-aware reweight GRPO advantages.
+- [Revisiting DAgger in the Era of LLM-Agents](https://arxiv.org/abs/2605.12913) *(2026)* — Turn-level (DAgger) or trajectory-prefix (AggreVaTe) mixture of student/teacher rollouts with teacher actions queried at every visited state for cross-entropy supervision; +3.9 points over the strongest baseline on SWE-bench Verified at 4B.
 
 ### Speculative Decoding (Draft-Model Training)
 
@@ -323,6 +326,7 @@ Production training pipelines that use OPD as a post-training stage.
 | ATLAS | Continual-learning framework using GKD/GRPO from runtime traces | [docs](https://docs.arc.computer/introduction) |
 | AReaL | OPD and KDRL over student-sampled trajectories with teacher log-prob guidance | [docs](https://github.com/inclusionAI/AReaL/blob/main/docs/en/algorithms/distillation.md) |
 | SpecForge | Speculative draft training with EAGLE-3 support and hybrid parallelism | [arXiv](https://arxiv.org/abs/2603.18567), [repo](https://github.com/sgl-project/SpecForge) |
+| TorchSpec | Torch-native speculative draft training with disaggregated inference/training; streams target hidden states via Mooncake store; Kimi-K2.5/MiniMax-M2.5/Qwen3-Coder-Next examples | [blog](https://pytorch.org/blog/torchspec-speculative-decoding-training-at-scale/), [repo](https://github.com/lightseekorg/TorchSpec) |
 | Tinker Cookbook | Thinking Machines' Tinker SDK recipes for off-policy KD, single/multi-teacher OPD, multi-turn tool use | [recipes](https://github.com/thinking-machines-lab/tinker-cookbook/tree/main/tinker_cookbook/recipes/distillation), [repo](https://github.com/thinking-machines-lab/tinker-cookbook) |
 | ROLL | Alibaba's scalable RL library for LLMs/VLMs with an OPD pipeline | [repo](https://github.com/alibaba/ROLL) |
 
