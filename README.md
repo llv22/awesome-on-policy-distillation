@@ -11,7 +11,7 @@ A curated collection of papers, technical reports, frameworks, and tools for on-
 
 > **On-policy distillation** trains a student on samples from its own evolving policy, while a teacher (external, privileged, or self-conditioned) provides dense supervision on those same samples.
 
-OPD sits between supervised fine-tuning and reinforcement learning. Unlike off-policy KD, the student trains on its *own* generations, closing the train-inference distribution gap. Unlike RL, the student receives dense token-level teacher guidance rather than sparse rewards. As of 2026, OPD is a standard post-training primitive at Alibaba (Qwen3), Xiaomi (MiMo), Zhipu (GLM-5), NVIDIA (Nemotron-Cascade 2), and others.
+On-policy distillation (OPD) trains a student on trajectories sampled from its own policy while a teacher scores the student-visited prefixes with dense token-level guidance. This on-policy data collection reduces the train-inference distribution gap that affects off-policy KD/SFT on fixed traces. Depending on the estimator, OPD looks like GKD on student rollouts or policy-gradient/RL with teacher-defined per-token KL/log-prob rewards, making the natural contrast sparse outcome-reward RL rather than RL as a whole. As of 2026, OPD is a standard post-training primitive at Alibaba (Qwen3), Xiaomi (MiMo), Zhipu (GLM-5), NVIDIA (Nemotron-Cascade 2), and others.
 
 **Shipping today?** Jump to [Frameworks, Tools, and Implementations](#frameworks-tools-and-implementations). **New to OPD?** Read [Start Here](#start-here).
 
