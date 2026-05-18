@@ -39,13 +39,13 @@ On-policy distillation (OPD) trains a student on trajectories sampled from its o
 A fast path through the field:
 
 1. **Survey.** [OPD Survey](https://arxiv.org/abs/2604.00626) — taxonomy, methods, and open problems in one place.
-2. **Foundations.** [MiniLLM](https://arxiv.org/abs/2306.08543) and [GKD](https://arxiv.org/abs/2306.13649) — the core student-rollout plus teacher-supervision loop.
+2. **Foundations.** [MiniLLM](https://arxiv.org/abs/2306.08543), [GKD](https://arxiv.org/abs/2306.13649), and [ExOPD](https://arxiv.org/abs/2602.12125) — the core student-rollout plus teacher-supervision loop, including its dense KL-constrained RL framing.
 3. **Practical intuition.** [Thinking Machines blog](https://thinkingmachines.ai/blog/on-policy-distillation/) — the clearest end-to-end explanation of why and when OPD applies.
-4. **Failure modes.** [Revisiting OPD](https://arxiv.org/abs/2603.25562) and [Entropy-Aware OPD](https://arxiv.org/abs/2603.07079) — what breaks: instability, diversity collapse, tokenizer mismatch.
+4. **When OPD works and when it breaks.** [Revisiting OPD](https://arxiv.org/abs/2603.25562), [Entropy-Aware OPD](https://arxiv.org/abs/2603.07079), and [Rethinking OPD](https://arxiv.org/abs/2604.13016) — failure modes (instability, diversity collapse, tokenizer mismatch) and success conditions (compatible thinking patterns, novel teacher capability).
 5. **No teacher logits.** [Black-Box OPD](https://arxiv.org/abs/2511.10643) — discriminator-based reward when the teacher is API-only.
 6. **No teacher at all.** [OPSD](https://arxiv.org/abs/2601.18734) and [SDFT](https://arxiv.org/abs/2601.19897) — same model as student and self-teacher.
 7. **Context and experience.** [OPCD](https://arxiv.org/abs/2602.12275) and [OEL](https://arxiv.org/abs/2603.16856) — distill prompts and deployment traces into weights.
-8. **Industrial recipes.** [Qwen3](https://arxiv.org/abs/2505.09388), [MiMo-V2-Flash](https://arxiv.org/abs/2601.02780), [GLM-5](https://arxiv.org/abs/2602.15763) — how labs ship OPD in production.
+8. **Industrial recipes.** [Qwen3](https://arxiv.org/abs/2505.09388), [DeepSeek-V4](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/blob/main/DeepSeek_V4.pdf), [MiMo-V2-Flash](https://arxiv.org/abs/2601.02780), [GLM-5](https://arxiv.org/abs/2602.15763) — how labs ship OPD in production.
 
 **Key decision:** access to teacher logits? Yes → white-box (GKD, Veto, Entropy-Aware OPD). No → black-box (GAD, OVD) or self-distillation (OPSD, SDFT).
 
