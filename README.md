@@ -349,6 +349,7 @@ Production training pipelines that use OPD as a post-training stage.
 - [SFT, RL, and OPD Through a Distributional Lens](https://x.com/nrehiew_/status/2053482349300797526) *(2026)* — wh's distributional-geometry framing; experiment shows OPD students from SFT and RL teachers converge and forget less.
 - [What Apple found out about On-Policy Distillation](https://x.com/neural_avb/status/2054585001757614172) *(2026)* — AVB's tutorial-style breakdown of "Unmasking OPD"; training-free gradient-alignment for predicting student-teacher fit.
 - [OPD深度解析：从数学推导到DeepSeek V4、SWIFT与verl实践](https://zhuanlan.zhihu.com/p/2033212181823608430) *(2026)* — Chinese-language Zhihu deep-dive deriving OPD's sequence- and token-level reverse-KL; maps variants to MiniLLM, GKD, verl, DeepSeek V4.
+- [重温 On-Policy Distillation](https://yph22.github.io/files/notes/OPD.pdf) *(2026)* — Penghui Yang's Chinese-language two-part study notes deriving OPD as both SeqKD's student-rollout mirror (GKD-style) and RL with token-level teacher supervision (PG-style); centers on why the SeqKD loss is directly differentiable in θ while RL loss is not.
 
 ## Acknowledgments
 
