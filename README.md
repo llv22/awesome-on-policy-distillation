@@ -306,6 +306,7 @@ Production training pipelines that use OPD as a post-training stage.
 | 2026 | Qwen3.5-Omni | Specialist distillation → privileged-input self-distillation aligning audio to text | [arXiv](https://arxiv.org/abs/2604.15804) |
 | 2026 | HY-Embodied-0.5 | 32B → 2B on-policy distillation; student rollouts, teacher token-level supervision | [arXiv](https://arxiv.org/abs/2604.07430) |
 | 2026 | KAT-Coder-V2 | Specialize-then-Unify: 5 domain-expert agents → unified via OPD on student trajectories | [arXiv](https://arxiv.org/abs/2603.27703) |
+| 2026 | Cursor Composer 2.5 | Hint-conditioned self-teacher OPD KL added to RL for targeted behaviors (tool calls, style); built on Kimi K2.5 | [blog](https://cursor.com/blog/composer-2-5) |
 
 ## Frameworks, Tools, and Implementations
 
