@@ -89,6 +89,7 @@ The ~21 papers that define on-policy distillation for LLMs.
 - [Rock Tokens — Deciphering High-Loss Tokens in On-Policy Distillation](https://arxiv.org/abs/2605.09253) *(2026)* — High-loss tokens (up to 18%) persist after apparent convergence; masking them streamlines alignment. [![Code](https://img.shields.io/badge/Code-181717?style=flat&logo=github&logoColor=white)](https://github.com/YuxuanJiang1/Rock-Token)
 - [BRTS: On-Policy Distillation with Best-of-N Teacher Rollout Selection](https://arxiv.org/abs/2605.09725) *(2026)* — Auxiliary teacher-context branch beside standard student-context OPD; selects from N teacher rollouts by correctness then student-alignment, with ground-truth-conditioned recovery for prompts where unconditioned samples all fail. [![Code](https://img.shields.io/badge/Code-181717?style=flat&logo=github&logoColor=white)](https://github.com/BWGZK-keke/BRTS)
 - [Prefix Teach, Suffix Fade: Local Teachability Collapse in Strong-to-Weak On-Policy Distillation](https://arxiv.org/abs/2605.13643) *(2026)* — Dynamic release rule truncates dense supervision when the teacher's margin over the student's top-K candidate set collapses across NLTK-tokenized sentence segments via BIC-style change-point detection; counters suffix degradation in strong-to-weak OPD on Qwen3.
+- [Beyond GRPO and On-Policy Distillation: An Empirical Sparse-to-Dense Reward Principle for LLM Post-Training](https://arxiv.org/abs/2605.12483) *(2026)* — Four-stage labeled-data allocation workflow (teacher GRPO → forward-KL warmup on teacher rollouts → OPD on student rollouts → optional student GRPO); trust-region reading of OPD as dense teacher-induced implicit reward requires teacher reward-shaping (C1) and small teacher-student KL (C2), each stage shown load-bearing on Qwen3-1.7B and Llama-3.1-8B.
 
 ### Self-Distillation
 
@@ -137,7 +138,7 @@ Cross-cutting views over the canonical papers. Many entries span multiple catego
 
 | Teacher Type | Papers |
 |---|---|
-| External white-box | MiniLLM, GKD, Veto, Entropy-Aware OPD, ExOPD, REOPOLD, PACED, Prefix OPD, Revisiting OPD, Rethinking OPD, Lightning OPD, Uni-OPD, SOD, AOPD, vOPD, NPD, Prune-OPD, EffOPD, CoDistill-GRPO, Rock Tokens |
+| External white-box | MiniLLM, GKD, Veto, Entropy-Aware OPD, ExOPD, REOPOLD, PACED, Prefix OPD, Revisiting OPD, Rethinking OPD, Lightning OPD, Uni-OPD, SOD, AOPD, vOPD, NPD, Prune-OPD, EffOPD, CoDistill-GRPO, Rock Tokens, Sparse-to-Dense |
 | External black-box | Black-Box OPD / GAD, OVD, ROPD |
 | Self-teacher with privileged context | OPSD, SDFT, SDPO, OPSDC, GATES, pi-Distill, RLSD, SDZero, OGLS-SD, PBSD, UniSD, ATESD, RLRT, EGRSD, CREDIT, SDAR |
 | Context-conditioned | OPCD, OEL |
@@ -150,7 +151,7 @@ Cross-cutting views over the canonical papers. Many entries span multiple catego
 | Compression / strong-to-weak transfer | MiniLLM, GKD, Qwen3, Prefix OPD, Rethinking OPD, Lightning OPD |
 | Post-RL consolidation / skill integration | MiMo MOPD, GLM-5, ExOPD, CoPD |
 | Continual learning | SDFT, OPCD, OEL |
-| RL replacement / augmentation | SDPO, RLTF-SD, RLAD, REOPOLD, RLSD, SDZero, OGLS-SD, PBSD, CoDistill-GRPO, RLRT, EGRSD, CREDIT, SDAR |
+| RL replacement / augmentation | SDPO, RLTF-SD, RLAD, REOPOLD, RLSD, SDZero, OGLS-SD, PBSD, CoDistill-GRPO, RLRT, EGRSD, CREDIT, SDAR, Sparse-to-Dense |
 | Reasoning compression | OPSDC |
 | Black-box distillation | GAD, OVD, ROPD |
 
