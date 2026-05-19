@@ -55,7 +55,7 @@ A fast path through the field:
 
 ## Core OPD Papers
 
-The ~21 papers that define on-policy distillation for LLMs.
+The papers that define on-policy distillation for LLMs.
 
 ### Foundations
 
