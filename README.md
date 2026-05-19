@@ -112,6 +112,7 @@ The papers that define on-policy distillation for LLMs.
 - [EGRSD: Respecting Self-Uncertainty in On-Policy Self-Distillation for Efficient LLM Reasoning](https://arxiv.org/abs/2605.13255) *(2026)* — Teacher-entropy confidence gate on top of RLSD's direction × magnitude; CL variant uses causal-lookahead minimum entropy to preserve transient pivot tokens (COLM 2026).
 - [CREDIT: From Generic Correlation to Input-Specific Credit in On-Policy Self Distillation](https://arxiv.org/abs/2605.11613) *(2026)* — Self-distillation token reward as Bayesian filtering increment whose trajectory sum equals pMI(y; z | x); batch-contrastive teacher baseline strips input-generic shortcuts (NeurIPS 2026).
 - [OPHSD: Training with Harnesses — On-Policy Harness Self-Distillation for Complex Reasoning](https://arxiv.org/abs/2605.08741) *(2026)* — Generalizes self-distillation privileged context from a static variable (reference solution, environment trace) to a harness-driven workflow (draft-verify, plan-solve); harness is a removable training scaffold, +10.83% over OPSD on HMMT25. [![Code](https://img.shields.io/badge/Code-181717?style=flat&logo=github&logoColor=white)](https://github.com/zzy1127/OPHSD-On-Policy-Harness-Self-Distillation)
+- [MixSD: Mixed Contextual Self-Distillation for Knowledge Injection](https://arxiv.org/abs/2605.16865) *(2026)* — Per-token Bernoulli mix of expert-conditional (target fact in context) and naive-conditional samples from the base model as self-supervision; replaces SFT for knowledge injection while preserving up to 100% of held-out capability vs SFT's 1%.
 
 ### Context and Experience Internalization
 
@@ -140,7 +141,7 @@ Cross-cutting views over the canonical papers. Many entries span multiple catego
 |---|---|
 | External white-box | MiniLLM, GKD, Veto, Entropy-Aware OPD, ExOPD, REOPOLD, PACED, Prefix OPD, Revisiting OPD, Rethinking OPD, Lightning OPD, Uni-OPD, SOD, AOPD, vOPD, NPD, Prune-OPD, EffOPD, CoDistill-GRPO, Rock Tokens, Sparse-to-Dense |
 | External black-box | Black-Box OPD / GAD, OVD, ROPD |
-| Self-teacher with privileged context | OPSD, SDFT, SDPO, OPSDC, GATES, pi-Distill, RLSD, SDZero, OGLS-SD, PBSD, UniSD, ATESD, RLRT, EGRSD, CREDIT, SDAR |
+| Self-teacher with privileged context | OPSD, SDFT, SDPO, OPSDC, GATES, pi-Distill, RLSD, SDZero, OGLS-SD, PBSD, UniSD, ATESD, RLRT, EGRSD, CREDIT, SDAR, MixSD |
 | Context-conditioned | OPCD, OEL |
 | Multiple / lifecycle teachers | MiMo-V2-Flash MOPD, GLM-5, Qwen3, Baichuan-M3, DeepSeek-V4, CoPD, MAD-OPD, KAT-Coder-V2 |
 
@@ -150,7 +151,7 @@ Cross-cutting views over the canonical papers. Many entries span multiple catego
 |---|---|
 | Compression / strong-to-weak transfer | MiniLLM, GKD, Qwen3, Prefix OPD, Rethinking OPD, Lightning OPD |
 | Post-RL consolidation / skill integration | MiMo MOPD, GLM-5, ExOPD, CoPD |
-| Continual learning | SDFT, OPCD, OEL |
+| Continual learning | SDFT, OPCD, OEL, MixSD |
 | RL replacement / augmentation | SDPO, RLTF-SD, RLAD, REOPOLD, RLSD, SDZero, OGLS-SD, PBSD, CoDistill-GRPO, RLRT, EGRSD, CREDIT, SDAR, Sparse-to-Dense |
 | Reasoning compression | OPSDC |
 | Black-box distillation | GAD, OVD, ROPD |
