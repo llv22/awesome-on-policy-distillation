@@ -115,6 +115,7 @@ The papers that define on-policy distillation for LLMs.
 - [MixSD: Mixed Contextual Self-Distillation for Knowledge Injection](https://arxiv.org/abs/2605.16865) *(2026)* — Per-token Bernoulli mix of expert-conditional (target fact in context) and naive-conditional samples from the base model as self-supervision; replaces SFT for knowledge injection while preserving up to 100% of held-out capability vs SFT's 1%.
 - [AntiSD: Anti-Self-Distillation for Reasoning RL via Pointwise Mutual Information](https://arxiv.org/abs/2605.11609) *(2026)* — Identifies the per-token OPSD reward as conditional PMI(y_t; c | x, y_<t) that rewards shortcut tokens implied by c and suppresses deliberation tokens (*Wait*, *Let*, *Maybe*); reverses the sign by ascending bounded JSD (-φ(u_t) with φ = ½(softplus − log 2)) under an entropy-triggered Schmitt gate, reaching GRPO's peak 2–10× faster and +up to 11.5 pts on math reasoning across 4B–30B models. [![Code](https://img.shields.io/badge/Code-181717?style=flat&logo=github&logoColor=white)](https://github.com/FloyedShen/AntiSD)
 - [TRACE: Distilling Where It Matters via Token-Routed Self On-Policy Alignment](https://arxiv.org/abs/2605.10194) *(2026)* — Diagnoses an all-token "distillation tax" in SDPO/SRPO (per-token entropy rises >4× GRPO, response length collapses 50%, validation drops 18–19 pp) and routes KL only to annotator-marked spans (coverage capped at α=0.25) with a coarse type-label privileged channel and 40-step KL decay back to pure GRPO; default FKL-on-key-spans corner inverts to RKL-on-error-spans on weaker Qwen3-1.7B (matching the lift-vs-mass theory), gaining +2.76 pp on Qwen3-8B 5-bench AVG and uniquely preserving the base GPQA-Diamond OOD score where every self-OPD baseline degrades; online self-annotation retains +1.90 pp (~69% of strong-API gain) with no external supervisor.
+- [AVSD: Adaptive-View Self-Distillation by Balancing Consensus and Teacher-Specific Privileged Signals](https://arxiv.org/abs/2605.20643) *(2026)* — Multi-view privileged self-distillation that decomposes the per-token teacher signal across M views into a geometric-consensus advantage A_t^G = (1/M)Σ_m Δ_t^(m)(v) plus the AM–GM-nonnegative residual J_t(v) = log q_t^A(v) − log q̃_t^G(v), then gates the residual by λ_t(v) = C_t(v)·R_t(v) (cross-view alignment × consensus-proportionate magnitude) yielding the bound λ_t·J_t ≤ |A_t^G| so the residual adjusts update magnitude but cannot reverse the consensus direction; +2.2 / +3.1 Avg@8 over the strongest baseline (OPSD / GRPO) on Qwen3-4B / Qwen3-8B across AIME24/25 and HMMT25 using {full solution, partial solution, final answer} views, +2.4 over OPSD on Codeforces / LiveCodeBench v6 using {reference impl, algorithmic hint, execution feedback}; wrong-sign credit on high-impact tokens drops to 2.9% vs OPSD 12.3% and GRPO 29.6%-no-signal. [![Code](https://img.shields.io/badge/Code-181717?style=flat&logo=github&logoColor=white)](https://github.com/duykhuongnguyen/AVSD)
 
 ### Context and Experience Internalization
 
@@ -143,7 +144,7 @@ Cross-cutting views over the canonical papers. Many entries span multiple catego
 |---|---|
 | External white-box | MiniLLM, GKD, Veto, Entropy-Aware OPD, ExOPD, REOPOLD, PACED, Prefix OPD, Revisiting OPD, Rethinking OPD, Lightning OPD, Uni-OPD, SOD, AOPD, vOPD, NPD, Prune-OPD, EffOPD, CoDistill-GRPO, Rock Tokens, Sparse-to-Dense |
 | External black-box | Black-Box OPD / GAD, OVD, ROPD |
-| Self-teacher with privileged context | OPSD, SDFT, SDPO, OPSDC, GATES, pi-Distill, RLSD, SDZero, OGLS-SD, PBSD, UniSD, ATESD, RLRT, EGRSD, CREDIT, SDAR, MixSD, AntiSD, TRACE |
+| Self-teacher with privileged context | OPSD, SDFT, SDPO, OPSDC, GATES, pi-Distill, RLSD, SDZero, OGLS-SD, PBSD, UniSD, ATESD, RLRT, EGRSD, CREDIT, SDAR, MixSD, AntiSD, TRACE, AVSD |
 | Context-conditioned | OPCD, OEL |
 | Multiple / lifecycle teachers | MiMo-V2-Flash MOPD, GLM-5, Qwen3, Baichuan-M3, DeepSeek-V4, CoPD, MAD-OPD, KAT-Coder-V2 |
 
@@ -154,7 +155,7 @@ Cross-cutting views over the canonical papers. Many entries span multiple catego
 | Compression / strong-to-weak transfer | MiniLLM, GKD, Qwen3, Prefix OPD, Rethinking OPD, Lightning OPD |
 | Post-RL consolidation / skill integration | MiMo MOPD, GLM-5, ExOPD, CoPD |
 | Continual learning | SDFT, OPCD, OEL, MixSD |
-| RL replacement / augmentation | SDPO, RLTF-SD, RLAD, REOPOLD, RLSD, SDZero, OGLS-SD, PBSD, CoDistill-GRPO, RLRT, EGRSD, CREDIT, SDAR, Sparse-to-Dense, AntiSD, TRACE |
+| RL replacement / augmentation | SDPO, RLTF-SD, RLAD, REOPOLD, RLSD, SDZero, OGLS-SD, PBSD, CoDistill-GRPO, RLRT, EGRSD, CREDIT, SDAR, Sparse-to-Dense, AntiSD, TRACE, AVSD |
 | Reasoning compression | OPSDC |
 | Black-box distillation | GAD, OVD, ROPD |
 
