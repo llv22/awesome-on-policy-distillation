@@ -262,6 +262,7 @@ Papers that are not canonical OPD but matter for understanding or deploying it.
 - [SDAR: Self-Distilled Agentic Reinforcement Learning](https://arxiv.org/abs/2605.15155) *(2026)* — Sigmoid-gated OPSD auxiliary on top of GRPO for multi-turn agents; amplifies positive-gap, attenuates negative-gap tokens (COLM 2026). [![Code](https://img.shields.io/badge/Code-181717?style=flat&logo=github&logoColor=white)](https://github.com/ZJU-REAL/SDAR)
 - [GEAR: Granularity-Adaptive Advantage Reweighting for LLM Agents via Self-Distillation](https://arxiv.org/abs/2605.11853) *(2026)* — Reverse-KL between student and ground-truth-conditioned same-model teacher gives token saliency; KL-initiated entropy-terminated segmentation propagates credit within segments to sign-aware reweight GRPO advantages.
 - [Revisiting DAgger in the Era of LLM-Agents](https://arxiv.org/abs/2605.12913) *(2026)* — Turn-level (DAgger) or trajectory-prefix (AggreVaTe) mixture of student/teacher rollouts with teacher actions queried at every visited state for cross-entropy supervision; +3.9 points over the strongest baseline on SWE-bench Verified at 4B.
+- [DiffusionOPD: A Unified Perspective of On-Policy Distillation in Diffusion Models](https://arxiv.org/abs/2605.15055) *(2026)* — Lifts OPD from autoregressive tokens to diffusion denoising; closed-form reverse-KL between same-covariance Gaussian student/teacher transitions along student rollouts; unifies SDE and ODE samplers under one objective.
 
 ### Speculative Decoding (Draft-Model Training)
 
