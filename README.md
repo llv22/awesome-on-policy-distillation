@@ -75,6 +75,8 @@ A fast path through the field:
 
 The papers that define on-policy distillation for LLMs.
 
+**Scope rule:** A paper belongs here if its primary contribution is a new component of the OPD training loop itself — an objective, divergence formulation, stability fix, teacher access-mode variant, self-distillation variant, context-internalization mechanism, or systems/efficiency/privacy constraint applied to that loop — with student rollouts central to the learning signal, evaluated on LLM text reasoning. Papers that *enable* OPD (cross-tokenizer alignment, calibration), *compose with* OPD as one component of a larger RL/preference structure, or apply OPD to non-text-reasoning substrates live in [Adjacent and Enabling Work](#adjacent-and-enabling-work) or [Domain Extensions](#domain-extensions).
+
 ### Foundations
 
 - [MiniLLM: On-Policy Distillation of Large Language Models](https://arxiv.org/abs/2306.08543) *(2023)* — Reverse-KL framing for generative LMs; the paper that named the field.
@@ -90,6 +92,8 @@ The papers that define on-policy distillation for LLMs.
 
 ### Stability and Objective Design
 
+- [DistiLLM: Towards Streamlined Distillation for Large Language Models](https://arxiv.org/abs/2402.03898) *(2024)* — Skew-KL divergence with adaptive off-policy use of student-generated outputs; foundational OPD objective formulation (ICML 2024).
+- [DistiLLM-2: A Contrastive Approach Boosts the Distillation of LLMs](https://arxiv.org/abs/2503.07067) *(2025)* — Contrastive extension of skew-KL; student-generated outputs collected per epoch.
 - [Veto: Stable On-Policy Distillation through Adaptive Target Reformulation](https://arxiv.org/abs/2601.07155) *(2026)* — Intermediate target distribution in logit space stabilizes training.
 - [Entropy-Aware On-Policy Distillation of Language Models](https://arxiv.org/abs/2603.07079) *(2026)* — Forward-KL on high-entropy teacher tokens preserves output diversity.
 - [ExOPD: Learning beyond Teacher via Generalized On-Policy Distillation with Reward Extrapolation](https://arxiv.org/abs/2602.12125) *(2026)* — Casts OPD as dense KL-constrained RL; reward scaling enables teacher-surpassing behavior.
@@ -99,6 +103,8 @@ The papers that define on-policy distillation for LLMs.
 - [Rethinking On-Policy Distillation — Phenomenology, Mechanism, and Recipe](https://arxiv.org/abs/2604.13016) *(2026)* — Identifies compatible thinking patterns and novel teacher capability as OPD success conditions.
 - [The Illusion of Certainty — Decoupling Capability and Calibration in OPD](https://arxiv.org/abs/2604.16830) *(2026)* — Diagnoses OPD-induced overconfidence; CaOPD replaces confidence targets with student-grounded empirical success rates.
 - [Demystifying OPD — Length Inflation and Stabilization Strategies](https://arxiv.org/abs/2604.08527) *(2026)* — Repetition-driven length inflation in iterative OPD; Stable-OPD adds divergence constraints and a rollout-mixture anchor.
+- [SCOPE: Signal-Calibrated On-Policy Distillation with Dual-Path Adaptive Weighting](https://arxiv.org/abs/2604.10688) *(2026)* — Routes correct student rollouts to student-PPL-weighted MLE and incorrect to teacher-PPL-weighted KL; dual-path OPD loss design.
+- [HPD: Hybrid Policy Distillation for LLMs](https://arxiv.org/abs/2604.20244) *(2026)* — Unified reweighted-log-likelihood framework combining forward/reverse KL with off-policy and on-policy sampling.
 - [Uni-OPD: Unifying On-Policy Distillation with a Dual-Perspective Recipe](https://arxiv.org/abs/2605.03677) *(2026)* — Offline difficulty-aware and online correctness-aware data balancing with outcome-guided margin calibration.
 - [AOPD: Asymmetric On-Policy Distillation](https://arxiv.org/abs/2605.06387) *(2026)* — Replaces ineffective negative reinforcement with localized teacher-distribution matching in non-positive advantage regions.
 - [vOPD: On-Policy Distillation with a Control Variate Baseline](https://arxiv.org/abs/2605.07865) *(2026)* — Closed-form per-token reverse-KL value baseline; unbiased lower-variance single-sample estimator with no extra critic.
@@ -150,6 +156,8 @@ The papers that define on-policy distillation for LLMs.
 - [OVD: On-policy Verbal Distillation](https://arxiv.org/abs/2601.21968) *(2026)* — Trajectory-level verbal scoring instead of token-level logit matching; relaxes alignment requirements.
 - [pi-Distill: Privileged Information Distillation for Language Models](https://arxiv.org/abs/2602.04942) *(2026)* — Training-time privileged information in agentic settings where only actions are observable.
 - [Lightning OPD: Efficient Post-Training for Large Reasoning Models with Offline OPD](https://arxiv.org/abs/2604.13010) *(2026)* — Precomputes teacher log-probs once over SFT rollouts; 4× speedup via teacher-consistency condition.
+- [DP-OPD: Differentially Private On-Policy Distillation for Language Models](https://arxiv.org/abs/2604.04461) *(2026)* — Student-rollout OPD with DP-SGD on student updates; first OPD recipe with sample-level differential privacy.
+- [TIP: Token Importance in On-Policy Distillation](https://arxiv.org/abs/2604.14084) *(2026)* — Selective training on high-entropy and confidently-wrong low-entropy tokens; matches full-token baselines at lower memory.
 - [Nitrobrew: Communication- and Memory-Efficient On-Policy Distillation](https://blog.tilderesearch.com/blog/nitrobrew) *(2026)* — Hidden-state teacher→student transport plus tile-wise online divergence kernel; 1.5-3× throughput.
 - [NPD: Near-Policy Distillation via Asynchronous Generation and Selective Packing](https://arxiv.org/abs/2605.05940) *(2026)* — Decouples generation from training; sparse updates plus Δ-IFD filtering; 8.1× speedup over on-policy baselines.
 - [Prune-OPD: Efficient and Reliable On-Policy Distillation for Long-Horizon Reasoning](https://arxiv.org/abs/2605.07804) *(2026)* — Top-k overlap monitors prefix drift; attenuates unreliable rewards and truncates drifted rollouts.
@@ -163,7 +171,7 @@ Cross-cutting views over the canonical papers. Many entries span multiple catego
 
 | Teacher Type | Papers |
 |---|---|
-| External white-box | MiniLLM, GKD, Veto, Entropy-Aware OPD, ExOPD, REOPOLD, PACED, Prefix OPD, Revisiting OPD, Rethinking OPD, Lightning OPD, Uni-OPD, SOD, AOPD, vOPD, NPD, Prune-OPD, EffOPD, CoDistill-GRPO, Rock Tokens, Sparse-to-Dense |
+| External white-box | MiniLLM, GKD, DistiLLM, DistiLLM-2, Veto, Entropy-Aware OPD, ExOPD, REOPOLD, PACED, Prefix OPD, Revisiting OPD, Rethinking OPD, Lightning OPD, Uni-OPD, SOD, AOPD, vOPD, SCOPE, HPD, TIP, DP-OPD, NPD, Prune-OPD, EffOPD, CoDistill-GRPO, Rock Tokens, Sparse-to-Dense |
 | External black-box | Black-Box OPD / GAD, OVD, ROPD |
 | Self-teacher with privileged context | OPSD, SDFT, SDPO, OPSDC, GATES, pi-Distill, RLSD, SDZero, OGLS-SD, PBSD, UniSD, ATESD, RLRT, EGRSD, CREDIT, SDAR, MixSD, AntiSD, TRACE, AVSD, VPD, RMSD, SPD |
 | Context-conditioned | OPCD, OEL |
@@ -176,7 +184,7 @@ Cross-cutting views over the canonical papers. Many entries span multiple catego
 | Compression / strong-to-weak transfer | MiniLLM, GKD, Qwen3, Prefix OPD, Rethinking OPD, Lightning OPD |
 | Post-RL consolidation / skill integration | MiMo MOPD, GLM-5, ExOPD, CoPD |
 | Continual learning | SDFT, OPCD, OEL, MixSD |
-| RL replacement / augmentation | SDPO, RLTF-SD, RLAD, REOPOLD, RLSD, SDZero, OGLS-SD, PBSD, CoDistill-GRPO, RLRT, EGRSD, CREDIT, SDAR, Sparse-to-Dense, AntiSD, TRACE, AVSD, VPD, RMSD |
+| RL replacement / augmentation | SDPO, RLTF-SD, RLAD, REOPOLD, RLSD, SDZero, OGLS-SD, PBSD, CoDistill-GRPO, RLRT, EGRSD, CREDIT, SDAR, Sparse-to-Dense, AntiSD, TRACE, AVSD, VPD, RMSD, HPD |
 | Reasoning compression | OPSDC |
 | Black-box distillation | GAD, OVD, ROPD |
 
@@ -200,13 +208,11 @@ Papers that are not canonical OPD but matter for understanding or deploying it.
 
 ### Mismatch Mitigation and Student Quality
 
-- [DistiLLM](https://arxiv.org/abs/2402.03898) *(2024)* — Skew-KL with adaptive off-policy use of student-generated outputs.
 - [Exploring and Enhancing Distribution Transfer in KD](https://arxiv.org/abs/2409.12512) *(2024)* — Analyzes reverse-KL with student-generated output; proposes OKD.
 - [FIRST: Efficient Trustworthy Distillation](https://arxiv.org/abs/2408.12168) *(2024)* — Teacher recalibration for trustworthy offline KD.
 - [Multi-Granularity Semantic Revision](https://arxiv.org/abs/2407.10068) *(2024)* — Sequence correction for low-quality student-generated outputs.
 - [Warmup-Distill](https://arxiv.org/abs/2502.11766) *(2025)* — Bridges distribution mismatch before distillation begins.
 - [TAID: Temporally Adaptive Interpolated Distillation](https://arxiv.org/abs/2501.16937) *(2025)* — Addresses teacher-student mismatch via adaptive interpolation.
-- [DistiLLM-2](https://arxiv.org/abs/2503.07067) *(2025)* — Contrastive extension; student-generated outputs collected per epoch.
 - [SpecKD: Speculative Decoding for Effective KD](https://arxiv.org/abs/2510.24021) *(2025)* — Speculative-decoding-inspired selective token-level losses.
 - [Knowledge Distillation with Training Wheels](https://arxiv.org/abs/2502.17717) *(2025)* — Entropy-regularized value optimization with on-/off-policy demonstrations.
 - [Revealing the Power of Post-Training via KD](https://arxiv.org/abs/2509.26497) *(2025)* — Offline on-policy KD: student generates, then teacher labels.
@@ -215,9 +221,6 @@ Papers that are not canonical OPD but matter for understanding or deploying it.
 - [AdaSwitch: Balancing Exploration and Guidance in KD via Adaptive Switching](https://arxiv.org/abs/2510.07842) *(2025)* — Switches between on-policy rollouts and off-policy teacher data via context-aware divergence threshold.
 - [DDT: Towards On-Policy SFT via Distribution Discriminant Theory](https://arxiv.org/abs/2602.12222) *(2026)* — In-Distribution Finetuning and Hinted Decoding realign training data to the student's distribution.
 - [DASD: Distribution-Aligned Sequence Distillation for Superior Long-CoT Reasoning](https://arxiv.org/abs/2601.09088) *(2026)* — On-policy correction pipeline for distribution mismatch and exposure bias in sequence-level CoT distillation.
-- [SCOPE: Signal-Calibrated On-Policy Distillation with Dual-Path Adaptive Weighting](https://arxiv.org/abs/2604.10688) *(2026)* — Routes correct rollouts to student-PPL-weighted MLE and incorrect to teacher-PPL-weighted KL.
-- [TIP: Token Importance in On-Policy Distillation](https://arxiv.org/abs/2604.14084) *(2026)* — Selective training on high-entropy and confidently-wrong low-entropy tokens; matches full-token baselines at lower memory.
-- [DP-OPD: Differentially Private On-Policy Distillation for Language Models](https://arxiv.org/abs/2604.04461) *(2026)* — Student-rollout OPD with DP-SGD on student updates; first OPD recipe with sample-level DP.
 - [Distillation Traps and Guards: A Calibration Knob for LLM Distillability](https://arxiv.org/abs/2604.18963) *(2026)* — Post-hoc calibrates teachers via RFT to control distillability against tail noise and instability.
 
 ### Preference, Reward-Guided, and Hybrid RL+KD
@@ -240,7 +243,6 @@ Papers that are not canonical OPD but matter for understanding or deploying it.
 - [KEPO: Knowledge-Enhanced Preference Optimization for Reinforcement Learning with Reasoning](https://arxiv.org/abs/2602.00400) *(2026)* — Quality-gated OPD on high-quality trajectories plus knowledge-enhanced exploration via teacher hints.
 - [𝒳-KD: General Experiential Knowledge Distillation for Large Language Models](https://arxiv.org/abs/2602.12674) *(2026)* — Jointly models teacher reward and policy-distills so the student learns inside the teacher's original environment.
 - [ExGRPO: Probing to Refine — Reinforcement Distillation of LLMs via Explanatory Inversion](https://arxiv.org/abs/2603.19266) *(2026)* — Explanatory probes plus dialogue-structure utility bonus reward coherent reasoning over memorized answers.
-- [HPD: Hybrid Policy Distillation for LLMs](https://arxiv.org/abs/2604.20244) *(2026)* — Unified reweighted-log-likelihood framework combining forward/reverse KL with off-policy and on-policy sampling.
 - [NPO: Near-Future Policy Optimization](https://arxiv.org/abs/2604.20733) *(2026)* — Later checkpoint of same policy as teacher; AutoNPO adaptively triggers switch to maximize RLVR signal.
 - [CoDistill-GRPO: A Co-Distillation Recipe for Efficient Group Relative Policy Optimization](https://arxiv.org/abs/2605.08873) *(2026)* — Dual GRPO with on-policy KD reward between large/small models; matches standard GRPO with 18% speedup.
 
