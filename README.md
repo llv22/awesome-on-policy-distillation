@@ -75,7 +75,7 @@ A fast path through the field:
 
 The papers that define on-policy distillation for LLMs.
 
-**Scope rule:** A paper belongs here if its primary contribution is a new component of the OPD training loop itself — an objective, divergence formulation, stability fix, teacher access-mode variant, self-distillation variant, context-internalization mechanism, or systems/efficiency/privacy constraint applied to that loop — with student rollouts central to the learning signal, evaluated on LLM text reasoning. Papers that *enable* OPD (cross-tokenizer alignment, calibration), *compose with* OPD as one component of a larger RL/preference structure, or apply OPD to non-text-reasoning substrates live in [Adjacent and Enabling Work](#adjacent-and-enabling-work) or [Domain Extensions](#domain-extensions).
+**Scope rule:** A paper belongs here if its primary contribution is a new component of the OPD training loop itself — an objective, divergence formulation, stability fix, teacher access-mode variant, self-distillation variant, context-internalization mechanism, or systems/efficiency/privacy constraint applied to that loop — with student rollouts central to the learning signal, evaluated on LLM text generation or reasoning. **Operational test:** if removing the OPD-loop component leaves a working contribution (a working RL recipe, preference method, or KD baseline), the OPD piece is auxiliary → Adjacent. Papers that *enable* OPD (cross-tokenizer alignment, calibration), *compose with* OPD as one component of a larger RL/preference structure, or apply OPD to non-text-reasoning substrates live in [Adjacent and Enabling Work](#adjacent-and-enabling-work) or [Domain Extensions](#domain-extensions).
 
 ### Foundations
 
