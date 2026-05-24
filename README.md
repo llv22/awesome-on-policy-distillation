@@ -13,12 +13,12 @@ A curated collection of papers, technical reports, frameworks, and tools for on-
 
 On-policy distillation (OPD) trains a student on trajectories sampled from its own policy while a teacher scores the student-visited prefixes with dense token-level guidance. This on-policy data collection reduces the train-inference distribution gap that affects off-policy KD/SFT on fixed traces. Depending on the estimator, OPD looks like GKD on student rollouts or policy-gradient/RL with teacher-defined per-token KL/log-prob rewards, making the natural contrast sparse outcome-reward RL rather than RL as a whole. As of 2026, OPD is a standard post-training primitive at Alibaba (Qwen3), DeepSeek (V4), Xiaomi (MiMo), Zhipu (GLM-5), NVIDIA (Nemotron-Cascade 2), and others.
 
-**Shipping today?** Jump to [Frameworks, Tools, and Implementations](#frameworks-tools-and-implementations). **New to OPD?** Read [Start Here](#start-here).
+**Shipping today?** Jump to [Frameworks and Implementations](#frameworks-and-implementations). **New to OPD?** Read [Start Here](#start-here).
 
 ## Contents
 
 - [Start Here](#start-here)
-- [Surveys](#surveys)
+- [Surveys and Essays](#surveys-and-essays)
 - [Core OPD Papers](#core-opd-papers)
   - [Foundations](#foundations)
   - [Gap-Bridging](#gap-bridging)
@@ -28,8 +28,9 @@ On-policy distillation (OPD) trains a student on trajectories sampled from its o
   - [Efficiency Variants](#efficiency-variants)
 - [Taxonomy](#taxonomy)
 - [Adjacent and Enabling Work](#adjacent-and-enabling-work)
+- [Domain Extensions](#domain-extensions)
 - [Technical Reports and Industrial Recipes](#technical-reports-and-industrial-recipes)
-- [Frameworks, Tools, and Implementations](#frameworks-tools-and-implementations)
+- [Frameworks and Implementations](#frameworks-and-implementations)
 - [Acknowledgments](#acknowledgments)
 - [Contributing](#contributing)
 - [Citation](#citation)
@@ -49,9 +50,26 @@ A fast path through the field:
 
 **Key decision:** access to teacher logits? Yes → white-box (GKD, Veto, Entropy-Aware OPD). No → black-box (GAD, OVD) or self-distillation (OPSD, SDFT).
 
-## Surveys
+## Surveys and Essays
+
+### Surveys
 
 - [A Survey of On-Policy Distillation for Large Language Models](https://arxiv.org/abs/2604.00626) *(2026)* — First dedicated OPD survey; organizes methods by feedback signal, teacher access mode, and loss scope.
+
+### Essays, Blog Posts, and Walkthroughs
+
+- [Thinking Machines: On-Policy Distillation](https://thinkingmachines.ai/blog/on-policy-distillation/) *(2025)* — Best single-article introduction. Covers concepts, intuition, and practical use cases.
+- [Unlocking On-Policy Distillation for Any Model Family (GOLD)](https://huggingface.co/spaces/HuggingFaceH4/on-policy-distillation) *(2025)* — Cross-tokenizer OPD walkthrough with TRL code.
+- [Distilling 100B+ Models 40x Faster with TRL](https://huggingface.co/spaces/HuggingFaceTB/trl-distillation-trainer) *(2026)* — HF engineering walkthrough of TRL's `DistillationTrainer` scaling tricks; ~40× speedup, validated on Qwen3-235B → Qwen3-4B math.
+- [Multi-Teacher On-Policy Distillation: A New Post-Training Primitive](https://yumoxu.notion.site/multi-teacher-on-policy-distillation) *(2026)* — Yumo Xu surveys MOPD as a post-training primitive across MiMo-V2-Flash, GLM-5, Nemotron-Cascade 2, DeepSeek-V4.
+- [On-Policy Distillation: Theory & Practice in Model Merging](https://www.notion.so/On-Policy-Distillation-Theory-Practice-in-Model-Merging-2f44795a3e8b801cbedee2c96a23c788) *(2026)* — ByteDance Seed framing OPD as entropy-regularized RL; cross-tokenizer pitfalls and reward hacking in agent merging.
+- [On SFT, RL, and on-policy distillation](https://x.com/willccbb/status/2050038277454143918) *(2026)* — Will Brown's essay on OPD via SFT-vs-RL compounding and gradient geometry; pointers toward an optimal teacher.
+- [SFT, RL, and OPD Through a Distributional Lens](https://x.com/nrehiew_/status/2053482349300797526) *(2026)* — wh's distributional-geometry framing; experiment shows OPD students from SFT and RL teachers converge and forget less.
+- [On Policy Self Distillation](https://x.com/ar0cket1/status/2054108160450064571) *(2026)* — @ar0cket1's experimental KL-geometry study of OPSD (hint-conditioned self-teacher, no external model) vs OPD on Olmo 3 7B; shows OPSD inverts OPD's positive-pressure sign (downweights student-chosen tokens ~83% vs OPD's ~80% upweight), suffers ~3.5× larger max-KL shocks, and applies GEPA hint-prompt evolution to halve those shocks.
+- [What Apple found out about On-Policy Distillation](https://x.com/neural_avb/status/2054585001757614172) *(2026)* — AVB's tutorial-style breakdown of "Unmasking OPD"; training-free gradient-alignment for predicting student-teacher fit.
+- [OPD深度解析：从数学推导到DeepSeek V4、SWIFT与verl实践 / OPD Deep Dive: From Mathematical Derivation to DeepSeek V4, SWIFT, and verl Practice](https://zhuanlan.zhihu.com/p/2033212181823608430) *(2026)* — Chinese-language Zhihu deep-dive deriving OPD's sequence- and token-level reverse-KL; maps variants to MiniLLM, GKD, verl, DeepSeek V4.
+- [重温 On-Policy Distillation / Revisiting On-Policy Distillation](https://yph22.github.io/files/notes/OPD.pdf) *(2026)* — Penghui Yang's Chinese-language two-part study notes deriving OPD as both SeqKD's student-rollout mirror (GKD-style) and RL with token-level teacher supervision (PG-style); centers on why the SeqKD loss is directly differentiable in θ while RL loss is not.
+- [The Imitation Game: State of Policy Distillation in Language Model training](https://hackmd.io/@l_WDq7lkQq29Pz-KD1JPNA/r1oNsX9Jfl) *(2026)* — Long-form survey of six core OPD methods (MiniLLM, GKD, DistiLLM, G-OPD, AOPD, OPCD) and six OPSD methods (OPSD, SDFT, SDPO, GATES, CRISP, RLSD) plus a four-axis failure-modes taxonomy; argues hybrid OPSD and cross-tokenizer OPD as the highest-leverage open problem.
 
 ## Core OPD Papers
 
@@ -236,6 +254,15 @@ Papers that are not canonical OPD but matter for understanding or deploying it.
 - [SPHERE: Self-Evolved Preference Optimization for Mathematical Reasoning in SLMs](https://arxiv.org/abs/2503.04813) *(2025)* — PRM/ORM-scored MCTS rollouts plus self-correction yield preference pairs for iterative DPO.
 - [SGS: Scaling Self-Play with Self-Guidance](https://arxiv.org/abs/2604.20209) *(2026)* — Three-role self-play (Solver, Generator, Reviewer) for theorem proving; 7B beats 671B at pass@4 on Lean4.
 
+### Precursors
+
+- [Autoregressive KD through Imitation Learning](https://arxiv.org/abs/2009.07253) *(2020)* — Early precursor framing sequence-model KD as imitation learning.
+- [Learning by Distilling Context](https://arxiv.org/abs/2209.15189) *(2022)* — Context distillation; key precursor to OPCD and OEL.
+
+## Domain Extensions
+
+OPD applied to non-text-reasoning settings — agents, multimodal models, diffusion, audio, robotics — and to inference acceleration via speculative decoding. These pass the inclusion criterion (student rollouts central to the learning signal) but on substrates beyond LLM text reasoning.
+
 ### Agent, Multimodal, and Other Extensions
 
 - [Structured Agent Distillation](https://arxiv.org/abs/2505.13820) *(2025)* — Queries teacher online to avoid distribution drift in agent settings.
@@ -289,11 +316,6 @@ Draft-model training for speculative decoding shares OPD's core loop: the draft 
 - [SpecBlock: Block-Iterative Speculative Decoding with Dynamic Tree Drafting](https://arxiv.org/abs/2605.07243) *(2026)* — Block-iterative drafter with layer-wise shift; valid-prefix masking and cost-aware bandit adaptation.
 - [SFDD: Flatter Tokens are More Valuable for Speculative Draft Model Training](https://arxiv.org/abs/2601.18902) *(2026)* — Sample-level flatness filters EAGLE training data; 2× speedup at 50% data with <4% inference-speedup loss.
 
-### Precursors
-
-- [Autoregressive KD through Imitation Learning](https://arxiv.org/abs/2009.07253) *(2020)* — Early precursor framing sequence-model KD as imitation learning.
-- [Learning by Distilling Context](https://arxiv.org/abs/2209.15189) *(2022)* — Context distillation; key precursor to OPCD and OEL.
-
 ## Technical Reports and Industrial Recipes
 
 Production training pipelines that use OPD as a post-training stage.
@@ -318,7 +340,7 @@ Production training pipelines that use OPD as a post-training stage.
 | 2026 | KAT-Coder-V2 | Specialize-then-Unify: 5 domain-expert agents → unified via OPD on student trajectories | [arXiv](https://arxiv.org/abs/2603.27703) |
 | 2026 | Cursor Composer 2.5 | Hint-conditioned self-teacher OPD KL added to RL for targeted behaviors (tool calls, style); built on Kimi K2.5 | [blog](https://cursor.com/blog/composer-2-5) |
 
-## Frameworks, Tools, and Implementations
+## Frameworks and Implementations
 
 ### Training Frameworks
 
@@ -348,21 +370,6 @@ Production training pipelines that use OPD as a post-training stage.
 - [CaOPD](https://github.com/SalesforceAIResearch/CaOPD) — K student rollouts → empirical success rate → confidence target replacement → reverse-KL OPD.
 - [OPSD-OnPolicyDistillation](https://github.com/HJSang/OPSD_OnPolicyDistillation) — verl-based OPD with separate teacher, agent-loop rollouts, and memory-efficient execution.
 - [nano-opd](https://github.com/Athe-kunal/nano-opd) — Hackable OPD library decoupling vLLM rollout, FSDP training, and teacher forwards across independent GPU groups.
-
-### Essays, Blog Posts, and Walkthroughs
-
-- [Thinking Machines: On-Policy Distillation](https://thinkingmachines.ai/blog/on-policy-distillation/) *(2025)* — Best single-article introduction. Covers concepts, intuition, and practical use cases.
-- [Unlocking On-Policy Distillation for Any Model Family (GOLD)](https://huggingface.co/spaces/HuggingFaceH4/on-policy-distillation) *(2025)* — Cross-tokenizer OPD walkthrough with TRL code.
-- [Distilling 100B+ Models 40x Faster with TRL](https://huggingface.co/spaces/HuggingFaceTB/trl-distillation-trainer) *(2026)* — HF engineering walkthrough of TRL's `DistillationTrainer` scaling tricks; ~40× speedup, validated on Qwen3-235B → Qwen3-4B math.
-- [Multi-Teacher On-Policy Distillation: A New Post-Training Primitive](https://yumoxu.notion.site/multi-teacher-on-policy-distillation) *(2026)* — Yumo Xu surveys MOPD as a post-training primitive across MiMo-V2-Flash, GLM-5, Nemotron-Cascade 2, DeepSeek-V4.
-- [On-Policy Distillation: Theory & Practice in Model Merging](https://www.notion.so/On-Policy-Distillation-Theory-Practice-in-Model-Merging-2f44795a3e8b801cbedee2c96a23c788) *(2026)* — ByteDance Seed framing OPD as entropy-regularized RL; cross-tokenizer pitfalls and reward hacking in agent merging.
-- [On SFT, RL, and on-policy distillation](https://x.com/willccbb/status/2050038277454143918) *(2026)* — Will Brown's essay on OPD via SFT-vs-RL compounding and gradient geometry; pointers toward an optimal teacher.
-- [SFT, RL, and OPD Through a Distributional Lens](https://x.com/nrehiew_/status/2053482349300797526) *(2026)* — wh's distributional-geometry framing; experiment shows OPD students from SFT and RL teachers converge and forget less.
-- [On Policy Self Distillation](https://x.com/ar0cket1/status/2054108160450064571) *(2026)* — @ar0cket1's experimental KL-geometry study of OPSD (hint-conditioned self-teacher, no external model) vs OPD on Olmo 3 7B; shows OPSD inverts OPD's positive-pressure sign (downweights student-chosen tokens ~83% vs OPD's ~80% upweight), suffers ~3.5× larger max-KL shocks, and applies GEPA hint-prompt evolution to halve those shocks.
-- [What Apple found out about On-Policy Distillation](https://x.com/neural_avb/status/2054585001757614172) *(2026)* — AVB's tutorial-style breakdown of "Unmasking OPD"; training-free gradient-alignment for predicting student-teacher fit.
-- [OPD深度解析：从数学推导到DeepSeek V4、SWIFT与verl实践 / OPD Deep Dive: From Mathematical Derivation to DeepSeek V4, SWIFT, and verl Practice](https://zhuanlan.zhihu.com/p/2033212181823608430) *(2026)* — Chinese-language Zhihu deep-dive deriving OPD's sequence- and token-level reverse-KL; maps variants to MiniLLM, GKD, verl, DeepSeek V4.
-- [重温 On-Policy Distillation / Revisiting On-Policy Distillation](https://yph22.github.io/files/notes/OPD.pdf) *(2026)* — Penghui Yang's Chinese-language two-part study notes deriving OPD as both SeqKD's student-rollout mirror (GKD-style) and RL with token-level teacher supervision (PG-style); centers on why the SeqKD loss is directly differentiable in θ while RL loss is not.
-- [The Imitation Game: State of Policy Distillation in Language Model training](https://hackmd.io/@l_WDq7lkQq29Pz-KD1JPNA/r1oNsX9Jfl) *(2026)* — Long-form survey of six core OPD methods (MiniLLM, GKD, DistiLLM, G-OPD, AOPD, OPCD) and six OPSD methods (OPSD, SDFT, SDPO, GATES, CRISP, RLSD) plus a four-axis failure-modes taxonomy; argues hybrid OPSD and cross-tokenizer OPD as the highest-leverage open problem.
 
 ## Acknowledgments
 
