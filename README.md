@@ -25,7 +25,7 @@ On-policy distillation (OPD) trains a student on trajectories sampled from its o
   - [Stability and Objective Design](#stability-and-objective-design)
   - [Self-Distillation](#self-distillation)
   - [Context and Experience Internalization](#context-and-experience-internalization)
-  - [Efficiency Variants](#efficiency-variants)
+  - [Efficiency, Systems, and Privacy Variants](#efficiency-systems-and-privacy-variants)
 - [Taxonomy](#taxonomy)
 - [Adjacent and Enabling Work](#adjacent-and-enabling-work)
 - [Domain Extensions](#domain-extensions)
@@ -150,7 +150,7 @@ The papers that define on-policy distillation for LLMs.
 - [OEL: Online Experiential Learning for Language Models](https://arxiv.org/abs/2603.16856) *(2026)* — Deployment loop using OPCD for consolidating interaction traces into weights.
 - [Aligning Language Models from User Interactions](https://arxiv.org/abs/2603.12273) *(2026)* — Hindsight self-distillation from user follow-ups; same model conditioned on the follow-up serves as the teacher.
 
-### Efficiency Variants
+### Efficiency, Systems, and Privacy Variants
 
 - [Prefix OPD: Fast and Effective On-policy Distillation from Reasoning Prefixes](https://arxiv.org/abs/2602.15260) *(2026)* — Distills only reasoning prefixes, cutting training FLOPs 2×-47×.
 - [OVD: On-policy Verbal Distillation](https://arxiv.org/abs/2601.21968) *(2026)* — Trajectory-level verbal scoring instead of token-level logit matching; relaxes alignment requirements.
@@ -184,7 +184,7 @@ Cross-cutting views over the canonical papers. Many entries span multiple catego
 | Compression / strong-to-weak transfer | MiniLLM, GKD, Qwen3, Prefix OPD, Rethinking OPD, Lightning OPD |
 | Post-RL consolidation / skill integration | MiMo MOPD, GLM-5, ExOPD, CoPD |
 | Continual learning | SDFT, OPCD, OEL, MixSD |
-| RL replacement / augmentation | SDPO, RLTF-SD, RLAD, REOPOLD, RLSD, SDZero, OGLS-SD, PBSD, CoDistill-GRPO, RLRT, EGRSD, CREDIT, SDAR, Sparse-to-Dense, AntiSD, TRACE, AVSD, VPD, RMSD, HPD |
+| RL replacement / augmentation | SDPO, RLTF-SD, RLAD, REOPOLD, RLSD, SDZero, OGLS-SD, PBSD, CoDistill-GRPO, RLRT, EGRSD, CREDIT, SDAR, Sparse-to-Dense, AntiSD, TRACE, AVSD, VPD, RMSD |
 | Reasoning compression | OPSDC |
 | Black-box distillation | GAD, OVD, ROPD |
 
