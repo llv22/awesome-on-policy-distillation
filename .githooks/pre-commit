@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+# Recompute the entry count badge before each commit.
+# Skips during merge/rebase/cherry-pick replays to avoid mutating README
+# mid-history-rewrite. Skips auto-staging if README has unstaged changes,
+# so partial stages (`git add -p README.md`) don't silently get re-staged
+# in full.
+
+set -euo pipefail
+
+ROOT="$(git rev-parse --show-toplevel)"
+GITDIR="$(git rev-parse --git-dir)"
+
+if [ -f "$GITDIR/MERGE_HEAD" ] \
+   || [ -d "$GITDIR/rebase-merge" ] \
+   || [ -d "$GITDIR/rebase-apply" ] \
+   || [ -f "$GITDIR/CHERRY_PICK_HEAD" ]; then
+  exit 0
+fi
+
+had_unstaged=0
+if ! git diff --quiet -- README.md; then
+  had_unstaged=1
+fi
+
+if ! "$ROOT/scripts/update_entry_count.sh"; then
+  echo "[pre-commit] update_entry_count.sh failed; aborting commit." >&2
+  exit 1
+fi
+
+if ! git diff --quiet -- README.md; then
+  if [ "$had_unstaged" -eq 1 ]; then
+    echo "[pre-commit] README.md had unstaged changes; entry count updated but NOT auto-staged." >&2
+    echo "[pre-commit] Run scripts/update_entry_count.sh manually before partial-staging." >&2
+  else
+    git add README.md
+  fi
+fi
