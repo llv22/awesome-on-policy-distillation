@@ -71,7 +71,7 @@ For implementation repos under `### Implementations`, omit the year: `- [Repo Na
 
 **Tables** (Technical Reports, Training Frameworks) follow the column layout already in each section — match the existing rows.
 
-The description should be a single terse sentence (target ~25 words, hard cap ~35) capturing what makes this paper distinctive. Avoid mini-abstracts, mechanism details, or benchmark numbers — those belong in the paper. Look at existing entries for calibration.
+The description must be a single sentence, **hard cap 22 words** (well-written entries average 12–16). State **one mechanism phrase plus one differentiator** — how the method works at the highest level, then what makes it distinct from the rest of the list. If you need a second mechanism clause to explain the first, the first was wrong. Forbidden: equation symbols, Greek letters, benchmark numbers, hyperparameters, model/dataset enumerations, ablation lists, percentage-point gains, and any second mechanism clause introduced by a semicolon or "and." **Deletion test before committing:** at each comma, semicolon, or "and" in your draft, try deleting the trailing clause; if the entry still tells a scanning reader why to click, that clause was bloat. Look at existing entries for calibration; if your draft is longer than the longest entry in the same subsection, restart.
 
 ## Batch additions
 
