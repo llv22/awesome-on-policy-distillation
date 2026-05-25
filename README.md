@@ -118,6 +118,7 @@ The papers that define on-policy distillation for LLMs.
 - [BRTS: On-Policy Distillation with Best-of-N Teacher Rollout Selection](https://arxiv.org/abs/2605.09725) *(2026)* — Auxiliary teacher-context branch alongside standard OPD; selects best-of-N teacher rollouts by correctness then student-alignment. [![Code](https://img.shields.io/badge/Code-181717?style=flat&logo=github&logoColor=white)](https://github.com/BWGZK-keke/BRTS)
 - [Prefix Teach, Suffix Fade: Local Teachability Collapse in Strong-to-Weak On-Policy Distillation](https://arxiv.org/abs/2605.13643) *(2026)* — Dynamic release rule truncates dense supervision where the teacher's local margin collapses; counters suffix degradation in strong-to-weak OPD.
 - [Beyond GRPO and On-Policy Distillation: An Empirical Sparse-to-Dense Reward Principle for LLM Post-Training](https://arxiv.org/abs/2605.12483) *(2026)* — Sparse-to-dense post-training workflow framing OPD as the dense teacher-induced reward between GRPO stages.
+- [The Extrapolation Cliff in On-Policy Distillation of Near-Deterministic Structured Outputs](https://arxiv.org/abs/2605.08737) *(2026)* — Reward-extrapolation OPD collapses past a clip threshold on near-deterministic structured outputs, mapping where teacher-surpassing reward scaling stops working.
 
 ### Self-Distillation
 
@@ -304,6 +305,9 @@ OPD applied to non-text-reasoning settings — agents, multimodal models, diffus
 - [Search-E1: Self-Distillation Drives Self-Evolution in Search-Augmented Reasoning](https://arxiv.org/abs/2605.22511) *(2026)* — Alternates GRPO with offline self-distillation on correct-fewest-search / divergent-sibling pairs mined from the converged rollout pool.
 - [Healthcare AI GYM for Medical Agents](https://arxiv.org/abs/2605.02943) *(2026)* — Clinical-agent gymnasium plus Turn-level Truncated OPD: an EMA teacher conditioned on outcome-privileged hints that are stripped before logprob comparison.
 - [HyperEyes: Dual-Grained Efficiency-Aware Reinforcement Learning for Parallel Multimodal Search Agents](https://arxiv.org/abs/2605.07177) *(2026)* — Parallel multimodal search agent that applies OPD only to failed rollouts to salvage correct intermediate tool calls from GRPO's uniform negative advantage. [![Code](https://img.shields.io/badge/Code-181717?style=flat&logo=github&logoColor=white)](https://github.com/DeepExperience/HyperEyes)
+- [DGPO: Distillation-Guided Policy Optimization for Preserving Agentic RAG Capabilities](https://arxiv.org/abs/2508.20324) *(2025)* — Selective reverse-KL teacher guidance on student-generated outputs within PPO; teacher intervenes only when the compact agent's autonomous attempts fail.
+- [LiveTalk: Real-Time Multimodal Interactive Video Diffusion via Improved On-Policy Distillation](https://arxiv.org/abs/2512.23576) *(2025)* — On-policy distillation for real-time interactive video diffusion, extending the Self-Forcing few-step student-rollout recipe.
+- [AnyFlow: Any-Step Video Diffusion Model with On-Policy Flow Map Distillation](https://arxiv.org/abs/2605.13724) *(2026)* — On-policy flow-map distillation along the student's own Euler rollout; supports any-step video generation.
 
 ### Speculative Decoding (Draft-Model Training)
 
@@ -325,6 +329,7 @@ Draft-model training for speculative decoding shares OPD's core loop: the draft 
 - [Aurora: When RL Meets Adaptive Speculative Training](https://arxiv.org/abs/2602.06932) *(2026)* — Online continual draft training; target verifications stream into FKL/RKL fine-tuning then hot-swap into serving.
 - [SpecBlock: Block-Iterative Speculative Decoding with Dynamic Tree Drafting](https://arxiv.org/abs/2605.07243) *(2026)* — Block-iterative drafter with layer-wise shift; valid-prefix masking and cost-aware bandit adaptation.
 - [SFDD: Flatter Tokens are More Valuable for Speculative Draft Model Training](https://arxiv.org/abs/2601.18902) *(2026)* — Sample-level flatness filters EAGLE training data; 2× speedup at 50% data with <4% inference-speedup loss.
+- [OmniDraft: A Cross-vocabulary, Online Adaptive Drafter for On-device Speculative Decoding](https://arxiv.org/abs/2507.02659) *(2025)* — Online on-policy distillation on the draft's own generated tokens; cross-vocabulary n-gram cache lets one drafter serve any target.
 
 ## Technical Reports and Industrial Recipes
 
