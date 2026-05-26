@@ -181,22 +181,22 @@ Cross-cutting views over the canonical papers. Many entries span multiple catego
 
 | Teacher Type | Papers |
 |---|---|
-| External white-box | MiniLLM, GKD, DistiLLM, DistiLLM-2, Veto, Entropy-Aware OPD, ExOPD, REOPOLD, PACED, Prefix OPD, Revisiting OPD, Rethinking OPD, Lightning OPD, Uni-OPD, SOD, AOPD, vOPD, SCOPE, HPD, TIP, DP-OPD, NPD, Prune-OPD, EffOPD, CoDistill-GRPO, Rock Tokens, Sparse-to-Dense |
-| External black-box | Black-Box OPD / GAD, OVD, ROPD |
-| Self-teacher with privileged context | OPSD, SDFT, SDPO, OPSDC, GATES, pi-Distill, RLSD, SDZero, OGLS-SD, PBSD, UniSD, ATESD, RLRT, EGRSD, CREDIT, SDAR, MixSD, AntiSD, TRACE, AVSD, VPD, RMSD, SPD, MSD-Safety, COPSD, EDGE-OPD |
-| Context-conditioned | OPCD, OEL, Multi-Rollout MOPD |
-| Multiple / lifecycle teachers | MiMo-V2-Flash MOPD, GLM-5, Qwen3, Baichuan-M3, DeepSeek-V4, CoPD, MAD-OPD, KAT-Coder-V2 |
+| External white-box | [MiniLLM](https://arxiv.org/abs/2306.08543), [GKD](https://arxiv.org/abs/2306.13649), [DistiLLM](https://arxiv.org/abs/2402.03898), [DistiLLM-2](https://arxiv.org/abs/2503.07067), [Veto](https://arxiv.org/abs/2601.07155), [Entropy-Aware OPD](https://arxiv.org/abs/2603.07079), [ExOPD](https://arxiv.org/abs/2602.12125), [REOPOLD](https://arxiv.org/abs/2603.11137), [PACED](https://arxiv.org/abs/2603.11178), [Prefix OPD](https://arxiv.org/abs/2602.15260), [Revisiting OPD](https://arxiv.org/abs/2603.25562), [Rethinking OPD](https://arxiv.org/abs/2604.13016), [Lightning OPD](https://arxiv.org/abs/2604.13010), [Uni-OPD](https://arxiv.org/abs/2605.03677), [SOD](https://arxiv.org/abs/2605.07725), [AOPD](https://arxiv.org/abs/2605.06387), [vOPD](https://arxiv.org/abs/2605.07865), [SCOPE](https://arxiv.org/abs/2604.10688), [HPD](https://arxiv.org/abs/2604.20244), [TIP](https://arxiv.org/abs/2604.14084), [DP-OPD](https://arxiv.org/abs/2604.04461), [NPD](https://arxiv.org/abs/2605.05940), [Prune-OPD](https://arxiv.org/abs/2605.07804), [EffOPD](https://arxiv.org/abs/2605.11739), [CoDistill-GRPO](https://arxiv.org/abs/2605.08873), [Rock Tokens](https://arxiv.org/abs/2605.09253), [Sparse-to-Dense](https://arxiv.org/abs/2605.12483) |
+| External black-box | [Black-Box OPD / GAD](https://arxiv.org/abs/2511.10643), [OVD](https://arxiv.org/abs/2601.21968), [ROPD](https://arxiv.org/abs/2605.07396) |
+| Self-teacher with privileged context | [OPSD](https://arxiv.org/abs/2601.18734), [SDFT](https://arxiv.org/abs/2601.19897), [SDPO](https://arxiv.org/abs/2601.20802), [OPSDC](https://arxiv.org/abs/2603.05433), [GATES](https://arxiv.org/abs/2602.20574), [pi-Distill](https://arxiv.org/abs/2602.04942), [RLSD](https://arxiv.org/abs/2604.03128), [SDZero](https://arxiv.org/abs/2604.12002), [OGLS-SD](https://arxiv.org/abs/2605.12400), [PBSD](https://arxiv.org/abs/2605.05040), [UniSD](https://arxiv.org/abs/2605.06597), [ATESD](https://arxiv.org/abs/2605.11458), [RLRT](https://arxiv.org/abs/2605.10781), [EGRSD](https://arxiv.org/abs/2605.13255), [CREDIT](https://arxiv.org/abs/2605.11613), [SDAR](https://arxiv.org/abs/2605.15155), [MixSD](https://arxiv.org/abs/2605.16865), [AntiSD](https://arxiv.org/abs/2605.11609), [TRACE](https://arxiv.org/abs/2605.10194), [AVSD](https://arxiv.org/abs/2605.20643), [VPD](https://arxiv.org/abs/2605.15113), [RMSD](https://www.appliedcompute.com/research/relevance-masked-self-distillation), [SPD](https://arxiv.org/abs/2605.22675), [MSD-Safety](https://arxiv.org/abs/2605.02971), [COPSD](https://arxiv.org/abs/2605.09548), [EDGE-OPD](https://arxiv.org/abs/2605.23493) |
+| Context-conditioned | [OPCD](https://arxiv.org/abs/2602.12275), [OEL](https://arxiv.org/abs/2603.16856), [Multi-Rollout MOPD](https://arxiv.org/abs/2605.12652) |
+| Multiple / lifecycle teachers | [MiMo-V2-Flash MOPD](https://arxiv.org/abs/2601.02780), [GLM-5](https://arxiv.org/abs/2602.15763), [Qwen3](https://arxiv.org/abs/2505.09388), [Baichuan-M3](https://arxiv.org/abs/2602.06570), [DeepSeek-V4](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/blob/main/DeepSeek_V4.pdf), [CoPD](https://arxiv.org/abs/2604.27083), [MAD-OPD](https://arxiv.org/abs/2605.01347), [KAT-Coder-V2](https://arxiv.org/abs/2603.27703) |
 
 ### By Primary Goal
 
 | Goal | Papers |
 |---|---|
-| Compression / strong-to-weak transfer | MiniLLM, GKD, Qwen3, Prefix OPD, Rethinking OPD, Lightning OPD |
-| Post-RL consolidation / skill integration | MiMo MOPD, GLM-5, ExOPD, CoPD |
-| Continual learning | SDFT, OPCD, OEL, MixSD, EDGE-OPD |
-| RL replacement / augmentation | SDPO, RLTF-SD, RLAD, REOPOLD, RLSD, SDZero, OGLS-SD, PBSD, CoDistill-GRPO, RLRT, EGRSD, CREDIT, SDAR, Sparse-to-Dense, AntiSD, TRACE, AVSD, VPD, RMSD, Multi-Rollout MOPD |
-| Reasoning compression | OPSDC |
-| Black-box distillation | GAD, OVD, ROPD |
+| Compression / strong-to-weak transfer | [MiniLLM](https://arxiv.org/abs/2306.08543), [GKD](https://arxiv.org/abs/2306.13649), [Qwen3](https://arxiv.org/abs/2505.09388), [Prefix OPD](https://arxiv.org/abs/2602.15260), [Rethinking OPD](https://arxiv.org/abs/2604.13016), [Lightning OPD](https://arxiv.org/abs/2604.13010) |
+| Post-RL consolidation / skill integration | [MiMo MOPD](https://arxiv.org/abs/2601.02780), [GLM-5](https://arxiv.org/abs/2602.15763), [ExOPD](https://arxiv.org/abs/2602.12125), [CoPD](https://arxiv.org/abs/2604.27083) |
+| Continual learning | [SDFT](https://arxiv.org/abs/2601.19897), [OPCD](https://arxiv.org/abs/2602.12275), [OEL](https://arxiv.org/abs/2603.16856), [MixSD](https://arxiv.org/abs/2605.16865), [EDGE-OPD](https://arxiv.org/abs/2605.23493) |
+| RL replacement / augmentation | [SDPO](https://arxiv.org/abs/2601.20802), [RLTF-SD](https://arxiv.org/abs/2602.02482), [RLAD](https://arxiv.org/abs/2602.22495), [REOPOLD](https://arxiv.org/abs/2603.11137), [RLSD](https://arxiv.org/abs/2604.03128), [SDZero](https://arxiv.org/abs/2604.12002), [OGLS-SD](https://arxiv.org/abs/2605.12400), [PBSD](https://arxiv.org/abs/2605.05040), [CoDistill-GRPO](https://arxiv.org/abs/2605.08873), [RLRT](https://arxiv.org/abs/2605.10781), [EGRSD](https://arxiv.org/abs/2605.13255), [CREDIT](https://arxiv.org/abs/2605.11613), [SDAR](https://arxiv.org/abs/2605.15155), [Sparse-to-Dense](https://arxiv.org/abs/2605.12483), [AntiSD](https://arxiv.org/abs/2605.11609), [TRACE](https://arxiv.org/abs/2605.10194), [AVSD](https://arxiv.org/abs/2605.20643), [VPD](https://arxiv.org/abs/2605.15113), [RMSD](https://www.appliedcompute.com/research/relevance-masked-self-distillation), [Multi-Rollout MOPD](https://arxiv.org/abs/2605.12652) |
+| Reasoning compression | [OPSDC](https://arxiv.org/abs/2603.05433) |
+| Black-box distillation | [GAD](https://arxiv.org/abs/2511.10643), [OVD](https://arxiv.org/abs/2601.21968), [ROPD](https://arxiv.org/abs/2605.07396) |
 
 ## Adjacent and Enabling Work
 

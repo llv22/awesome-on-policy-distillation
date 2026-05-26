@@ -84,4 +84,5 @@ When adding multiple papers at once:
 ## Taxonomy and reading path
 
 - Update the taxonomy tables only for Core OPD papers or papers that clearly extend an existing taxonomy row.
+- Method names in the taxonomy tables are markdown links to the paper's URL: `[ShortName](url)`, comma-separated, reusing the same URL as the paper's list entry.
 - The Start Here reading path changes rarely. Only add a paper if it is the best introduction to a topic currently underrepresented in the path.
