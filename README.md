@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-229-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
+  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-230-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/stargazers"><img src="https://img.shields.io/github/stars/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Stars&labelColor=000000&color=000000" alt="GitHub Stars"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/network/members"><img src="https://img.shields.io/github/forks/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Forks&labelColor=000000&color=000000" alt="GitHub Forks"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/commits"><img src="https://img.shields.io/github/last-commit/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Last%20Commit&labelColor=000000&color=000000" alt="Last Commit"></a>
@@ -120,6 +120,7 @@ The papers that define on-policy distillation for LLMs.
 - [Prefix Teach, Suffix Fade: Local Teachability Collapse in Strong-to-Weak On-Policy Distillation](https://arxiv.org/abs/2605.13643) *(2026)* — Dynamic release rule truncates dense supervision where the teacher's local margin collapses; counters suffix degradation in strong-to-weak OPD.
 - [Beyond GRPO and On-Policy Distillation: An Empirical Sparse-to-Dense Reward Principle for LLM Post-Training](https://arxiv.org/abs/2605.12483) *(2026)* — Sparse-to-dense post-training workflow framing OPD as the dense teacher-induced reward between GRPO stages.
 - [The Extrapolation Cliff in On-Policy Distillation of Near-Deterministic Structured Outputs](https://arxiv.org/abs/2605.08737) *(2026)* — Reward-extrapolation OPD collapses past a clip threshold on near-deterministic structured outputs, mapping where teacher-surpassing reward scaling stops working.
+- [MOPD: Multi-Rollout On-Policy Distillation via Peer Successes and Failures](https://arxiv.org/abs/2605.12652) *(2026)* — Conditions the teacher on successful and failed peer rollouts from the student's local group, sharpening token-level supervision over independent per-rollout distillation.
 
 ### Self-Distillation
 
@@ -182,7 +183,7 @@ Cross-cutting views over the canonical papers. Many entries span multiple catego
 | External white-box | MiniLLM, GKD, DistiLLM, DistiLLM-2, Veto, Entropy-Aware OPD, ExOPD, REOPOLD, PACED, Prefix OPD, Revisiting OPD, Rethinking OPD, Lightning OPD, Uni-OPD, SOD, AOPD, vOPD, SCOPE, HPD, TIP, DP-OPD, NPD, Prune-OPD, EffOPD, CoDistill-GRPO, Rock Tokens, Sparse-to-Dense |
 | External black-box | Black-Box OPD / GAD, OVD, ROPD |
 | Self-teacher with privileged context | OPSD, SDFT, SDPO, OPSDC, GATES, pi-Distill, RLSD, SDZero, OGLS-SD, PBSD, UniSD, ATESD, RLRT, EGRSD, CREDIT, SDAR, MixSD, AntiSD, TRACE, AVSD, VPD, RMSD, SPD, MSD-Safety, COPSD |
-| Context-conditioned | OPCD, OEL |
+| Context-conditioned | OPCD, OEL, Multi-Rollout MOPD |
 | Multiple / lifecycle teachers | MiMo-V2-Flash MOPD, GLM-5, Qwen3, Baichuan-M3, DeepSeek-V4, CoPD, MAD-OPD, KAT-Coder-V2 |
 
 ### By Primary Goal
@@ -192,7 +193,7 @@ Cross-cutting views over the canonical papers. Many entries span multiple catego
 | Compression / strong-to-weak transfer | MiniLLM, GKD, Qwen3, Prefix OPD, Rethinking OPD, Lightning OPD |
 | Post-RL consolidation / skill integration | MiMo MOPD, GLM-5, ExOPD, CoPD |
 | Continual learning | SDFT, OPCD, OEL, MixSD |
-| RL replacement / augmentation | SDPO, RLTF-SD, RLAD, REOPOLD, RLSD, SDZero, OGLS-SD, PBSD, CoDistill-GRPO, RLRT, EGRSD, CREDIT, SDAR, Sparse-to-Dense, AntiSD, TRACE, AVSD, VPD, RMSD |
+| RL replacement / augmentation | SDPO, RLTF-SD, RLAD, REOPOLD, RLSD, SDZero, OGLS-SD, PBSD, CoDistill-GRPO, RLRT, EGRSD, CREDIT, SDAR, Sparse-to-Dense, AntiSD, TRACE, AVSD, VPD, RMSD, Multi-Rollout MOPD |
 | Reasoning compression | OPSDC |
 | Black-box distillation | GAD, OVD, ROPD |
 
