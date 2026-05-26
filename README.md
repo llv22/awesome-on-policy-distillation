@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-228-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
+  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-229-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/stargazers"><img src="https://img.shields.io/github/stars/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Stars&labelColor=000000&color=000000" alt="GitHub Stars"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/network/members"><img src="https://img.shields.io/github/forks/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Forks&labelColor=000000&color=000000" alt="GitHub Forks"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/commits"><img src="https://img.shields.io/github/last-commit/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Last%20Commit&labelColor=000000&color=000000" alt="Last Commit"></a>
@@ -74,6 +74,7 @@ A fast path through the field:
 - [OPD深度解析：从数学推导到DeepSeek V4、SWIFT与verl实践 / OPD Deep Dive: From Mathematical Derivation to DeepSeek V4, SWIFT, and verl Practice](https://zhuanlan.zhihu.com/p/2033212181823608430) *(2026)* — Chinese-language Zhihu deep-dive deriving OPD's sequence- and token-level reverse-KL; maps variants to MiniLLM, GKD, verl, DeepSeek V4.
 - [重温 On-Policy Distillation / Revisiting On-Policy Distillation](https://yph22.github.io/files/notes/OPD.pdf) *(2026)* — Chinese-language notes deriving OPD as both a SeqKD student-rollout mirror and RL with token-level teacher supervision.
 - [The Imitation Game: State of Policy Distillation in Language Model training](https://hackmd.io/@l_WDq7lkQq29Pz-KD1JPNA/r1oNsX9Jfl) *(2026)* — Long-form OPD/OPSD survey with a four-axis failure-modes taxonomy; argues hybrid OPSD and cross-tokenizer OPD as the highest-leverage open problems.
+- [Post-Training is About States, Not Tokens: A State Distribution View of SFT, RL, and On-Policy Distillation](https://arxiv.org/abs/2605.22731) *(2026)* — Reframes SFT/RL/OPD by training-state source rather than loss, explaining why OPD's student-sampled states beat a degraded teacher.
 
 ## Core OPD Papers
 
