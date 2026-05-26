@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-230-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
+  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-231-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/stargazers"><img src="https://img.shields.io/github/stars/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Stars&labelColor=000000&color=000000" alt="GitHub Stars"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/network/members"><img src="https://img.shields.io/github/forks/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Forks&labelColor=000000&color=000000" alt="GitHub Forks"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/commits"><img src="https://img.shields.io/github/last-commit/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Last%20Commit&labelColor=000000&color=000000" alt="Last Commit"></a>
@@ -152,6 +152,7 @@ The papers that define on-policy distillation for LLMs.
 - [SPD: Self-Policy Distillation via Capability-Selective Subspace Projection](https://arxiv.org/abs/2605.22675) *(2026)* — Decode-time KV-subspace projection biases self-rollout generation toward capability-relevant directions, then LoRA-SFTs on those rollouts without any external verifier or teacher.
 - [Multilingual Safety Alignment via Self-Distillation](https://arxiv.org/abs/2605.02971) *(2026)* — Same-model OPSD transfers English safety reasoning to low-resource languages without any response data.
 - [COPSD: Crosslingual On-Policy Self-Distillation for Multilingual Reasoning](https://arxiv.org/abs/2605.09548) *(2026)* — Uses English translations and reference solutions as privileged teacher context for low-resource multilingual reasoning OPSD.
+- [EDGE-OPD: Internalizing Privileged Context with Evidence Guided On-Policy Distillation](https://arxiv.org/abs/2605.23493) *(2026)* — Guides a fraction of student rollouts with the privileged context, then distills only positive-evidence tokens, internalizing rare identities OPSD never samples.
 
 ### Context and Experience Internalization
 
@@ -182,7 +183,7 @@ Cross-cutting views over the canonical papers. Many entries span multiple catego
 |---|---|
 | External white-box | MiniLLM, GKD, DistiLLM, DistiLLM-2, Veto, Entropy-Aware OPD, ExOPD, REOPOLD, PACED, Prefix OPD, Revisiting OPD, Rethinking OPD, Lightning OPD, Uni-OPD, SOD, AOPD, vOPD, SCOPE, HPD, TIP, DP-OPD, NPD, Prune-OPD, EffOPD, CoDistill-GRPO, Rock Tokens, Sparse-to-Dense |
 | External black-box | Black-Box OPD / GAD, OVD, ROPD |
-| Self-teacher with privileged context | OPSD, SDFT, SDPO, OPSDC, GATES, pi-Distill, RLSD, SDZero, OGLS-SD, PBSD, UniSD, ATESD, RLRT, EGRSD, CREDIT, SDAR, MixSD, AntiSD, TRACE, AVSD, VPD, RMSD, SPD, MSD-Safety, COPSD |
+| Self-teacher with privileged context | OPSD, SDFT, SDPO, OPSDC, GATES, pi-Distill, RLSD, SDZero, OGLS-SD, PBSD, UniSD, ATESD, RLRT, EGRSD, CREDIT, SDAR, MixSD, AntiSD, TRACE, AVSD, VPD, RMSD, SPD, MSD-Safety, COPSD, EDGE-OPD |
 | Context-conditioned | OPCD, OEL, Multi-Rollout MOPD |
 | Multiple / lifecycle teachers | MiMo-V2-Flash MOPD, GLM-5, Qwen3, Baichuan-M3, DeepSeek-V4, CoPD, MAD-OPD, KAT-Coder-V2 |
 
@@ -192,7 +193,7 @@ Cross-cutting views over the canonical papers. Many entries span multiple catego
 |---|---|
 | Compression / strong-to-weak transfer | MiniLLM, GKD, Qwen3, Prefix OPD, Rethinking OPD, Lightning OPD |
 | Post-RL consolidation / skill integration | MiMo MOPD, GLM-5, ExOPD, CoPD |
-| Continual learning | SDFT, OPCD, OEL, MixSD |
+| Continual learning | SDFT, OPCD, OEL, MixSD, EDGE-OPD |
 | RL replacement / augmentation | SDPO, RLTF-SD, RLAD, REOPOLD, RLSD, SDZero, OGLS-SD, PBSD, CoDistill-GRPO, RLRT, EGRSD, CREDIT, SDAR, Sparse-to-Dense, AntiSD, TRACE, AVSD, VPD, RMSD, Multi-Rollout MOPD |
 | Reasoning compression | OPSDC |
 | Black-box distillation | GAD, OVD, ROPD |
