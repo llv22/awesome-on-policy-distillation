@@ -56,9 +56,10 @@ A fast path through the field:
 
 ## Surveys and Essays
 
-### Surveys
+### Surveys and Position Papers
 
 - [A Survey of On-Policy Distillation for Large Language Models](https://arxiv.org/abs/2604.00626) *(2026)* — First dedicated OPD survey; organizes methods by feedback signal, teacher access mode, and loss scope.
+- [Post-Training is About States, Not Tokens: A State Distribution View of SFT, RL, and On-Policy Distillation](https://arxiv.org/abs/2605.22731) *(2026)* — Reframes SFT/RL/OPD by training-state source rather than loss, explaining why OPD's student-sampled states beat a degraded teacher.
 
 ### Essays, Blog Posts, and Walkthroughs
 
@@ -74,7 +75,6 @@ A fast path through the field:
 - [OPD深度解析：从数学推导到DeepSeek V4、SWIFT与verl实践 / OPD Deep Dive: From Mathematical Derivation to DeepSeek V4, SWIFT, and verl Practice](https://zhuanlan.zhihu.com/p/2033212181823608430) *(2026)* — Chinese-language Zhihu deep-dive deriving OPD's sequence- and token-level reverse-KL; maps variants to MiniLLM, GKD, verl, DeepSeek V4.
 - [重温 On-Policy Distillation / Revisiting On-Policy Distillation](https://yph22.github.io/files/notes/OPD.pdf) *(2026)* — Chinese-language notes deriving OPD as both a SeqKD student-rollout mirror and RL with token-level teacher supervision.
 - [The Imitation Game: State of Policy Distillation in Language Model training](https://hackmd.io/@l_WDq7lkQq29Pz-KD1JPNA/r1oNsX9Jfl) *(2026)* — Long-form OPD/OPSD survey with a four-axis failure-modes taxonomy; argues hybrid OPSD and cross-tokenizer OPD as the highest-leverage open problems.
-- [Post-Training is About States, Not Tokens: A State Distribution View of SFT, RL, and On-Policy Distillation](https://arxiv.org/abs/2605.22731) *(2026)* — Reframes SFT/RL/OPD by training-state source rather than loss, explaining why OPD's student-sampled states beat a degraded teacher.
 
 ## Core OPD Papers
 
