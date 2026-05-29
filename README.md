@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-259-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
+  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-260-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/stargazers"><img src="https://img.shields.io/github/stars/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Stars&labelColor=000000&color=000000" alt="GitHub Stars"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/network/members"><img src="https://img.shields.io/github/forks/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Forks&labelColor=000000&color=000000" alt="GitHub Forks"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/commits"><img src="https://img.shields.io/github/last-commit/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Last%20Commit&labelColor=000000&color=000000" alt="Last Commit"></a>
@@ -337,6 +337,7 @@ OPD applied to non-text-reasoning settings — agents, multimodal models, diffus
 - [Adversarial Dual On-Policy Distillation from Expressive Flow-based Teacher](https://arxiv.org/abs/2605.27095) *(2026)* — Co-trains a demonstration-learned flow-matching teacher that supplies reward and action signals on embodied student rollouts, enabling OPD without a fixed strong teacher.
 - [Data-Efficient On-Policy Distillation for Automatic Speech Recognition](https://arxiv.org/abs/2605.28139) *(2026)* — Cross-modal OPD for speech recognition: a compact audio-conditioned student learns from a frozen ASR teacher scoring its own transcript rollouts.
 - [GAPD: Gold-Action Policy Distillation for Agentic Reinforcement Learning in Knowledge Base Question Answering](https://arxiv.org/abs/2605.29584) *(2026)* — Agentic-KBQA OPD distilling a gold-action-conditioned self-teacher onto entity-anchored student action spans, densifying sparse outcome rewards.
+- [GDSD: Reinforcement Learning as Guided Denoiser Self-Distillation for Diffusion Language Models](https://arxiv.org/abs/2605.29398) *(2026)* — Diffusion-LLM RL-as-self-distillation matching denoiser logits to an advantage-guided self-teacher, bypassing ELBO surrogate likelihood bias.
 
 ### Speculative Decoding (Draft-Model Training)
 
