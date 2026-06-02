@@ -27,7 +27,7 @@ Apply the same bar to multimodal, speech, agent, and embodied papers as to text-
 
 ## Section placement
 
-### Core OPD Papers (~21 canonical entries)
+### Core OPD Papers (selective canonical entries)
 
 Only add here if the paper's primary contribution is a new OPD method and it would be cited as a defining work in the field. When unsure, place in Adjacent.
 
