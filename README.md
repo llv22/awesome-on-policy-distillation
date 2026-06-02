@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-285-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
+  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-286-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/stargazers"><img src="https://img.shields.io/github/stars/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Stars&labelColor=000000&color=000000" alt="GitHub Stars"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/network/members"><img src="https://img.shields.io/github/forks/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Forks&labelColor=000000&color=000000" alt="GitHub Forks"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/commits"><img src="https://img.shields.io/github/last-commit/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Last%20Commit&labelColor=000000&color=000000" alt="Last Commit"></a>
@@ -59,6 +59,7 @@ A fast path through the field:
 ### Surveys and Position Papers
 
 - [A Survey of On-Policy Distillation for Large Language Models](https://arxiv.org/abs/2604.00626) *(2026)* — First dedicated OPD survey; organizes methods by feedback signal, teacher access mode, and loss scope.
+- [A Brief Overview: On-Policy Self-Distillation in Large Language Models](https://arxiv.org/abs/2605.18141) *(2026)* — Beginner-oriented overview of on-policy self-distillation, cataloguing privileged-context designs where a single model is both teacher and student.
 - [Post-Training is About States, Not Tokens: A State Distribution View of SFT, RL, and On-Policy Distillation](https://arxiv.org/abs/2605.22731) *(2026)* — Reframes SFT/RL/OPD by training-state source rather than loss, explaining why OPD's student-sampled states beat a degraded teacher.
 
 ### Essays, Blog Posts, and Walkthroughs
