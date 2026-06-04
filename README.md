@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-292-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
+  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-293-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/stargazers"><img src="https://img.shields.io/github/stars/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Stars&labelColor=000000&color=000000" alt="GitHub Stars"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/network/members"><img src="https://img.shields.io/github/forks/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Forks&labelColor=000000&color=000000" alt="GitHub Forks"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/commits"><img src="https://img.shields.io/github/last-commit/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Last%20Commit&labelColor=000000&color=000000" alt="Last Commit"></a>
@@ -418,6 +418,7 @@ Production training pipelines that use OPD as a post-training stage.
 | 2026 | KAT-Coder-V2 | Specialize-then-Unify: 5 domain-expert agents → unified via OPD on student trajectories | [arXiv](https://arxiv.org/abs/2603.27703) |
 | 2026 | Cursor Composer 2.5 | Hint-conditioned self-teacher OPD KL added to RL for targeted behaviors (tool calls, style); built on Kimi K2.5 | [blog](https://cursor.com/blog/composer-2-5) |
 | 2026 | MAI-Thinking-1 | Self-distillation on own RL rollouts to resume climbs after collapses or base-policy refreshes | [report](https://microsoft.ai/wp-content/uploads/2026/06/main_20260602_2.pdf) |
+| 2026 | Nemotron 3 Ultra | Iterative MOPD: 10+ domain-specialized teachers consolidated into the student, refreshed from it each cycle | [report](https://research.nvidia.com/labs/nemotron/files/NVIDIA-Nemotron-3-Ultra-Technical-Report.pdf) |
 
 ## Frameworks and Implementations
 
