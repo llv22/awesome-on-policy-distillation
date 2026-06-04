@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-293-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
+  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-294-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/stargazers"><img src="https://img.shields.io/github/stars/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Stars&labelColor=000000&color=000000" alt="GitHub Stars"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/network/members"><img src="https://img.shields.io/github/forks/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Forks&labelColor=000000&color=000000" alt="GitHub Forks"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/commits"><img src="https://img.shields.io/github/last-commit/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Last%20Commit&labelColor=000000&color=000000" alt="Last Commit"></a>
@@ -77,6 +77,7 @@ A fast path through the field:
 - [重温 On-Policy Distillation / Revisiting On-Policy Distillation](https://yph22.github.io/files/notes/OPD.pdf) *(2026)* — Chinese-language notes deriving OPD as both a SeqKD student-rollout mirror and RL with token-level teacher supervision.
 - [The Imitation Game: State of Policy Distillation in Language Model training](https://hackmd.io/@l_WDq7lkQq29Pz-KD1JPNA/r1oNsX9Jfl) *(2026)* — Long-form OPD/OPSD survey with a four-axis failure-modes taxonomy; argues hybrid OPSD and cross-tokenizer OPD as the highest-leverage open problems.
 - [Scaling SDPO](https://trajectory.ai/field-notes/scaling-sdpo) *(2026)* — Trajectory field note extending self-distillation policy optimization to stale off-policy production rollouts for single-trajectory continual learning on live interactions.
+- [My Continuous Learning Pipeline with Self-Distillation on Agent Traces](https://x.com/ben_burtenshaw/status/2062541534994555302) *(2026)* — HuggingFace continuous-learning walkthrough that self-distills coding-agent traces with TRL's SDPO trainer, using an evaluator model's targeted feedback as privileged context.
 
 ## Core OPD Papers
 
