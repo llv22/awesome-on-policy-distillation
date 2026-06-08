@@ -62,7 +62,7 @@ If you create a new subsection (rare), add it to the `## Contents` list at the t
 
 ## Entry-count badge
 
-The `Entries-N` badge is recomputed by `scripts/update_entry_count.sh`. If you are opening a PR, leave the badge alone; the maintainer's tooling refreshes it on merge. If you commit directly, run `scripts/update_entry_count.sh` so the badge is not stale. Never edit the badge number by hand.
+The `Entries-N` badge is auto-maintained by the maintainer's local tooling. Leave it alone — never edit the badge number by hand — and it is refreshed automatically.
 
 ## Output
 
