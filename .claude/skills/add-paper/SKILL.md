@@ -62,7 +62,7 @@ If you create a new subsection (rare), add it to the `## Contents` list at the t
 
 ## Entry-count badge
 
-The `Entries-N` badge is recomputed by `scripts/update_entry_count.sh`, wired as a pre-commit hook in `.githooks/`. That hook only runs if the clone has `git config core.hooksPath .githooks` set — a fresh clone does not. If you are opening a PR, leave the badge alone; the maintainer's tooling refreshes it on merge. If you commit directly, run `scripts/update_entry_count.sh` (or set the hook) so the badge is not stale. Never edit the badge number by hand.
+The `Entries-N` badge is recomputed by `scripts/update_entry_count.sh`. If you are opening a PR, leave the badge alone; the maintainer's tooling refreshes it on merge. If you commit directly, run `scripts/update_entry_count.sh` so the badge is not stale. Never edit the badge number by hand.
 
 ## Output
 
