@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-306-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
+  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-307-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/stargazers"><img src="https://img.shields.io/github/stars/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Stars&labelColor=000000&color=000000" alt="GitHub Stars"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/network/members"><img src="https://img.shields.io/github/forks/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Forks&labelColor=000000&color=000000" alt="GitHub Forks"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/commits"><img src="https://img.shields.io/github/last-commit/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Last%20Commit&labelColor=000000&color=000000" alt="Last Commit"></a>
@@ -380,6 +380,7 @@ OPD applied to non-text-reasoning settings — agents, multimodal models, diffus
 - [COMAP: Co-Evolving World Models and Agent Policies for LLM Agents](https://arxiv.org/abs/2606.02372) *(2026)* — Co-evolves a textual world model and agent policy by self-distilling the world model on its own on-policy next-state rollouts.
 - [Knowledge Distillation for Visual Autoregressive Models](https://arxiv.org/abs/2606.06078) *(2026)* — Distills visual autoregressive image models along student-generated token rollouts with teacher-scored suffixes, using confidence reweighting for ambiguous visual tokens.
 - [GeoDrive-Bench: Benchmarking Region-Specific Multimodal Reasoning in Autonomous Driving](https://arxiv.org/abs/2606.02774) *(2026)* — Distills a handbook-conditioned teacher into a driving VLM along the student's own rule-free rollouts, removing inference-time handbook lookups.
+- [LoRi: Low-Rank Distillation for Implicit Reasoning](https://arxiv.org/abs/2606.05315) *(2026)* — Aligns the student's self-generated latent reasoning trajectory to the teacher's hidden states in a shared low-rank Tucker subspace, enabling length-invariant implicit-CoT distillation. [![Code](https://img.shields.io/badge/Code-181717?style=flat&logo=github&logoColor=white)](https://github.com/rmsolgi/lori)
 
 ### Speculative Decoding (Draft-Model Training)
 
