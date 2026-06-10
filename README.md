@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-327-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
+  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-330-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/stargazers"><img src="https://img.shields.io/github/stars/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Stars&labelColor=000000&color=000000" alt="GitHub Stars"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/network/members"><img src="https://img.shields.io/github/forks/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Forks&labelColor=000000&color=000000" alt="GitHub Forks"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/commits"><img src="https://img.shields.io/github/last-commit/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Last%20Commit&labelColor=000000&color=000000" alt="Last Commit"></a>
@@ -195,6 +195,8 @@ The papers that define on-policy distillation for LLMs.
 - [Internalize the Temperature: On-Policy Self-Distillation as Policy Reheater for Reinforcement Learning](https://arxiv.org/abs/2606.00755) *(2026)* — Distills a temperature-scaled copy of the model's own logits to restore entropy in RL-collapsed policies before continued training.
 - [SDPG: Self-Distilled Policy Gradient](https://arxiv.org/abs/2606.04036) *(2026)* — Couples GRPO verifier rewards with exact full-vocabulary privileged self-distillation, casting its reverse-KL term as an equivalent centered log-ratio policy gradient. [![Code](https://img.shields.io/badge/Code-181717?style=flat&logo=github&logoColor=white)](https://github.com/lauyikfung/SDPG)
 - [Tailoring Teaching to Aptitude: Direction-Adaptive Self-Distillation for LLM Reasoning](https://arxiv.org/abs/2605.22263) *(2026)* — Routes signed-KL self-distillation by student entropy, pulling low-entropy tokens toward the privileged self-teacher while pushing high-entropy tokens away to preserve exploration.
+- [AR-OPD: Anchored Residual Guidance for Privileged On-Policy Distillation](https://arxiv.org/abs/2606.10385) *(2026)* — Splits privileged supervision into a locally reachable partial-oracle anchor plus a scaled full-view residual, curbing hindsight leakage from monolithic full-privilege imitation.
+- [The Role of Feedback Alignment in Self-Distillation](https://arxiv.org/abs/2606.11173) *(2026)* — Compares self-teacher context forms, showing step-aligned critique matched to the solver's reasoning trace localizes distillation credit at errors unlike reference solutions.
 
 ### Context and Experience Internalization
 
@@ -401,6 +403,7 @@ OPD applied to non-text-reasoning settings — agents, multimodal models, diffus
 - [OPDLM: Data-Efficient Autoregressive-to-Diffusion Language Models via On-Policy Distillation](https://arxiv.org/abs/2606.06712) *(2026)* — Converts an autoregressive LM into a diffusion LM along the student's own reverse-diffusion rollouts, supervised by the frozen original model. [![Code](https://img.shields.io/badge/Code-181717?style=flat&logo=github&logoColor=white)](https://github.com/divelab/OPDLM)
 - [GNDPO: Stabilizing On-Policy Distillation for MLLM Reasoning with Global Normalization](https://arxiv.org/abs/2606.09091) *(2026)* — Normalizes token-level reverse-KL distillation rewards into batch-relative advantages, suppressing gradient spikes from out-of-distribution teacher-student logit mismatches. [![Code](https://img.shields.io/badge/Code-181717?style=flat&logo=github&logoColor=white)](https://github.com/OPPO-Mente-Lab/GNDPO)
 - [T3D: Few-Step Diffusion Language Models via Trajectory Self-Distillation](https://arxiv.org/abs/2602.12262) *(2026)* — Self-distills a few-step diffusion-LM student onto the full-step teacher's own generative trajectory via a reverse-KL objective curbing factorization error.
+- [Visual-SDPO: Self-Distillation Policy Optimization via Visual Feedback](https://arxiv.org/abs/2606.10334) *(2026)* — Distills rendered-artifact visual feedback from a weight-sharing privileged teacher into a code-generating student, weighting tokens by defect-to-statement code credit.
 
 ### Speculative Decoding (Draft-Model Training)
 
