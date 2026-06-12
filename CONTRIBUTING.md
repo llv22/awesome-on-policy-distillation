@@ -61,10 +61,10 @@ All entries are single-line. The title is the hyperlink; the year is italicized;
 
 For arxiv papers, link directly to `https://arxiv.org/abs/XXXX.XXXXX`. For blog posts, essays, model cards, or repos, use the canonical URL.
 
-If the entry has an associated code release, append a Code badge at the end:
+If the entry has an associated code release, append a parenthesized Code link at the end:
 
 ```
-- [Title](arxiv-url) *(Year)* — Description. [![Code](https://img.shields.io/badge/Code-181717?style=flat&logo=github&logoColor=white)](repo-url)
+- [Title](arxiv-url) *(Year)* — Description. ([Code](repo-url))
 ```
 
 For implementation repos under `### Implementations`, omit the year: `- [Repo Name](url) — Description.`

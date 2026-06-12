@@ -39,7 +39,7 @@ If you cannot place it, default to **Adjacent and Enabling Work** — the core s
 Follow the entry format in `CONTRIBUTING.md`. The rules that break most often if missed:
 
 - Bullet entries: `- [Full Paper Title](url) *(Year)* — One-line description.` The year is **italic**.
-- If there is an associated code release, append the badge: `[![Code](https://img.shields.io/badge/Code-181717?style=flat&logo=github&logoColor=white)](repo-url)`.
+- If there is an associated code release, append a parenthesized Code link: `([Code](repo-url))`.
 - Implementation repos under `### Implementations` **omit the year**: `- [Repo Name](url) — Description.`
 - Tables (Technical Reports, Training Frameworks): add one row matching the existing columns exactly — do not invent headers.
 - Description: one sentence, **hard cap 22 words** (well-written entries average 12–16), stating **one mechanism phrase plus one differentiator**. Forbidden: equation symbols, Greek letters, benchmark numbers, hyperparameters, model/dataset enumerations, ablation lists, percentage-point gains, and any second mechanism clause introduced by a semicolon or "and." Run the deletion test before committing: at each comma, semicolon, or "and," try deleting the trailing clause; if the entry still tells a scanning reader why to click, that clause was bloat.
