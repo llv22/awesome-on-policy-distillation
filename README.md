@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-334-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
+  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-335-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/stargazers"><img src="https://img.shields.io/github/stars/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Stars&labelColor=000000&color=000000" alt="GitHub Stars"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/network/members"><img src="https://img.shields.io/github/forks/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Forks&labelColor=000000&color=000000" alt="GitHub Forks"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/commits"><img src="https://img.shields.io/github/last-commit/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Last%20Commit&labelColor=000000&color=000000" alt="Last Commit"></a>
@@ -408,6 +408,7 @@ OPD applied to non-text-reasoning settings — agents, multimodal models, diffus
 - [Visual-SDPO: Self-Distillation Policy Optimization via Visual Feedback](https://arxiv.org/abs/2606.10334) *(2026)* — Distills rendered-artifact visual feedback from a weight-sharing privileged teacher into a code-generating student, weighting tokens by defect-to-statement code credit.
 - [HERA: Hindsight-Enhanced Reflection from Environment Observations for Agentic Self-Distillation](https://arxiv.org/abs/2606.11559) *(2026)* — Agentic self-distillation reflecting each environment observation into a turn-level diagnosis, supplying locally aligned dense feedback for multi-turn credit assignment.
 - [World Model Self-Distillation: Training World Models to Solve General Tasks](https://arxiv.org/abs/2606.12072) *(2026)* — Distills a caption-conditioned video-diffusion demonstrator into an instruction-only executor along the student's own rollouts, eliciting task-solving without curated task-execution video supervision.
+- [SGCD: Sibling-Guided Credit Distillation for Long-Horizon Tool-Use Agents](https://arxiv.org/abs/2606.12634) *(2026)* — Turns teacher/student divergence over mixed sibling rollouts into a detached credit signal reshaping GRPO token advantages, rather than a tool-use-destroying actor loss.
 
 ### Speculative Decoding (Draft-Model Training)
 
