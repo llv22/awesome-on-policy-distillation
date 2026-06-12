@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-333-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
+  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-334-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/stargazers"><img src="https://img.shields.io/github/stars/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Stars&labelColor=000000&color=000000" alt="GitHub Stars"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/network/members"><img src="https://img.shields.io/github/forks/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Forks&labelColor=000000&color=000000" alt="GitHub Forks"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/commits"><img src="https://img.shields.io/github/last-commit/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Last%20Commit&labelColor=000000&color=000000" alt="Last Commit"></a>
@@ -198,6 +198,7 @@ The papers that define on-policy distillation for LLMs.
 - [AR-OPD: Anchored Residual Guidance for Privileged On-Policy Distillation](https://arxiv.org/abs/2606.10385) *(2026)* — Splits privileged supervision into a locally reachable partial-oracle anchor plus a scaled full-view residual, curbing hindsight leakage from monolithic full-privilege imitation.
 - [The Role of Feedback Alignment in Self-Distillation](https://arxiv.org/abs/2606.11173) *(2026)* — Compares self-teacher context forms, showing step-aligned critique matched to the solver's reasoning trace localizes distillation credit at errors unlike reference solutions.
 - [RLCSD: Reinforcement Learning with Contrastive On-Policy Self-Distillation](https://arxiv.org/abs/2606.11709) *(2026)* — Contrasts the privileged-hint self-teacher gap under correct versus wrong hints, cancelling style-token drift to concentrate distillation signal on task-bearing tokens. [![Code](https://img.shields.io/badge/Code-181717?style=flat&logo=github&logoColor=white)](https://github.com/THU-BPM/RLCSD)
+- [RGSD: Rubric-Guided Self-Distillation](https://arxiv.org/abs/2606.12507) *(2026)* — Conditions the frozen self-teacher on per-prompt grading rubrics, distilling dense token-level targets into the prompt-only student to replace verifier-scored rubric reinforcement learning.
 
 ### Context and Experience Internalization
 
