@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-337-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
+  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-338-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/stargazers"><img src="https://img.shields.io/github/stars/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Stars&labelColor=000000&color=000000" alt="GitHub Stars"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/network/members"><img src="https://img.shields.io/github/forks/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Forks&labelColor=000000&color=000000" alt="GitHub Forks"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/commits"><img src="https://img.shields.io/github/last-commit/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Last%20Commit&labelColor=000000&color=000000" alt="Last Commit"></a>
@@ -68,6 +68,7 @@ A fast path through the field:
 
 - [Thinking Machines: On-Policy Distillation](https://thinkingmachines.ai/blog/on-policy-distillation/) *(2025)* — Best single-article introduction. Covers concepts, intuition, and practical use cases.
 - [Unlocking On-Policy Distillation for Any Model Family (GOLD)](https://huggingface.co/spaces/HuggingFaceH4/on-policy-distillation) *(2025)* — Cross-tokenizer OPD walkthrough with TRL code.
+- [The Magic of LLM Distillation — Rishabh Agarwal, Google DeepMind](https://www.youtube.com/watch?v=O1AR4iL30mg) *(2025)* — Latent Space talk tracing distillation from logits to on-policy student rollouts, framed as the DAgger-style fix for exposure bias.
 - [Distilling 100B+ Models 40x Faster with TRL](https://huggingface.co/spaces/HuggingFaceTB/trl-distillation-trainer) *(2026)* — HF engineering walkthrough of TRL's `DistillationTrainer` scaling tricks; ~40× speedup, validated on Qwen3-235B → Qwen3-4B math.
 - [Multi-Teacher On-Policy Distillation: A New Post-Training Primitive](https://yumoxu.notion.site/multi-teacher-on-policy-distillation) *(2026)* — Yumo Xu surveys MOPD as a post-training primitive across MiMo-V2-Flash, GLM-5, Nemotron-Cascade 2, DeepSeek-V4.
 - [On-Policy Distillation: Theory & Practice in Model Merging](https://www.notion.so/On-Policy-Distillation-Theory-Practice-in-Model-Merging-2f44795a3e8b801cbedee2c96a23c788) *(2026)* — ByteDance Seed framing OPD as entropy-regularized RL; cross-tokenizer pitfalls and reward hacking in agent merging.
