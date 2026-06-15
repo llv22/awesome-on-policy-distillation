@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-338-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
+  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-339-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/stargazers"><img src="https://img.shields.io/github/stars/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Stars&labelColor=000000&color=000000" alt="GitHub Stars"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/network/members"><img src="https://img.shields.io/github/forks/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Forks&labelColor=000000&color=000000" alt="GitHub Forks"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/commits"><img src="https://img.shields.io/github/last-commit/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Last%20Commit&labelColor=000000&color=000000" alt="Last Commit"></a>
@@ -308,6 +308,7 @@ Papers that are not canonical OPD but matter for understanding or deploying it.
 - [RLAD: Reinforcement-aware KD for LLM Reasoning](https://arxiv.org/abs/2602.22495) *(2026)* — Trust-region ratio distillation on student rollouts.
 - [Multi-Token Prediction via Self-Distillation](https://arxiv.org/abs/2602.06019) *(2026)* — Online self-distillation for multi-token prediction and faster inference. ([Code](https://github.com/jwkirchenbauer/mtp-lm))
 - [ORPO-Distill: Mixed-Policy Preference Optimization for Cross-Architecture LLM Distillation](https://arxiv.org/abs/2509.25100) *(2025)* — Mixed-policy preference distillation with student-generated outputs; black-box cross-architecture transfer.
+- [SODA: Semi On-Policy Black-Box Distillation for Large Language Models](https://arxiv.org/abs/2604.03873) *(2026)* — Pairs teacher responses with a one-time static snapshot of student generations as preference pairs, avoiding fully on-policy distillation's dynamic rollouts.
 - [SRPO: Unifying Group-Relative and Self-Distillation Policy Optimization via Sample Routing](https://arxiv.org/abs/2604.02288) *(2026)* — Routes correct student rollouts to reward-based RL and failed ones to self-distillation.
 - [KETCHUP: K-Step Return Estimation for Sequential Knowledge Distillation](https://arxiv.org/abs/2504.19024) *(2025)* — K-step Bellman return replaces high-variance single-step REINFORCE in sequence-level OPD.
 - [Rethinking LLM Distillation: A Constrained MDP Perspective](https://arxiv.org/abs/2509.22921) *(2025)* — Maximizes task reward under hard KL constraint against the teacher; avoids manual Lagrangian tuning.
