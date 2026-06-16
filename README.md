@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-346-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
+  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-347-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/stargazers"><img src="https://img.shields.io/github/stars/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Stars&labelColor=000000&color=000000" alt="GitHub Stars"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/network/members"><img src="https://img.shields.io/github/forks/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Forks&labelColor=000000&color=000000" alt="GitHub Forks"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/commits"><img src="https://img.shields.io/github/last-commit/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Last%20Commit&labelColor=000000&color=000000" alt="Last Commit"></a>
@@ -205,6 +205,7 @@ The papers that define on-policy distillation for LLMs.
 - [RGSD: Rubric-Guided Self-Distillation](https://arxiv.org/abs/2606.12507) *(2026)* — Conditions the frozen self-teacher on per-prompt grading rubrics, distilling dense token-level targets into the prompt-only student to replace verifier-scored rubric reinforcement learning.
 - [PAINT: Partial-Solution Adaptive Interpolated Training for Self-Distilled Reasoners](https://arxiv.org/abs/2604.26573) *(2026)* — Privileged self-distillation re-scoring student rollouts under an adaptively masked reference solution, calibrating only high-entropy-mismatch tokens. ([Code](https://github.com/tzq1999/PAINT))
 - [OPCoD: Be My Tutor — On-Policy Co-Distillation for Mutual LLM Improvement via Peer Feedback](https://arxiv.org/abs/2606.14368) *(2026)* — Bidirectional co-distillation where paired students condition each self-teacher on peer natural-language feedback, targeting mutual cross-domain Pareto improvement without external teachers.
+- [Rethinking On-Policy Self-Distillation for Thinking Models](https://openreview.net/forum?id=VhCJItwQHn) *(2026)* — Traces privileged-context OPSD degradation in thinking models to fork suppression at high-entropy positions, where vanilla OPD instead helps.
 
 ### Context and Experience Internalization
 
