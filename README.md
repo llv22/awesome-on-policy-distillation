@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-356-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
+  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-360-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/stargazers"><img src="https://img.shields.io/github/stars/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Stars&labelColor=000000&color=000000" alt="GitHub Stars"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/network/members"><img src="https://img.shields.io/github/forks/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Forks&labelColor=000000&color=000000" alt="GitHub Forks"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/commits"><img src="https://img.shields.io/github/last-commit/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Last%20Commit&labelColor=000000&color=000000" alt="Last Commit"></a>
@@ -208,6 +208,8 @@ The papers that define on-policy distillation for LLMs.
 - [PAINT: Partial-Solution Adaptive Interpolated Training for Self-Distilled Reasoners](https://arxiv.org/abs/2604.26573) *(2026)* — Privileged self-distillation re-scoring student rollouts under an adaptively masked reference solution, calibrating only high-entropy-mismatch tokens. ([Code](https://github.com/tzq1999/PAINT))
 - [OPCoD: Be My Tutor — On-Policy Co-Distillation for Mutual LLM Improvement via Peer Feedback](https://arxiv.org/abs/2606.14368) *(2026)* — Bidirectional co-distillation where paired students condition each self-teacher on peer natural-language feedback, targeting mutual cross-domain Pareto improvement without external teachers.
 - [Rethinking On-Policy Self-Distillation for Thinking Models](https://openreview.net/forum?id=VhCJItwQHn) *(2026)* — Traces privileged-context OPSD degradation in thinking models to fork suppression at high-entropy positions, where vanilla OPD instead helps.
+- [Learning from Your Own Mistakes: Constructing Learnable Micro-Reflective Trajectories for Self-Distillation](https://arxiv.org/abs/2606.18844) *(2026)* — Splices a student's own wrong rollouts with self-generated correct references into explicit error-correction trajectories, replacing logit-level self-distillation.
+- [Rethinking Reward Supervision: Rubric-Conditioned Self-Distillation](https://arxiv.org/abs/2606.19327) *(2026)* — Conditions the privileged teacher on learned rubrics to give criterion-aware token-level guidance on student rollouts, replacing reference-trajectory supervision.
 
 ### Context and Experience Internalization
 
@@ -429,6 +431,8 @@ OPD applied to non-text-reasoning settings — agents, multimodal models, diffus
 - [Trust the Right Teacher: Quality-Aware Self-Distillation for GUI Grounding](https://arxiv.org/abs/2606.18101) *(2026)* — Down-weights GUI-grounding self-distillation's coordinate-token teacher signals when the student prefix can no longer complete into the ground-truth box.
 - [Learning from the Self-future: On-Policy Self-Distillation for dLLMs](https://arxiv.org/abs/2606.18195) *(2026)* — First on-policy self-distillation tailored to diffusion LLMs, conditioning the self-teacher on self-generated answers as suffix context rather than autoregressive prefixes. ([Code](https://github.com/xingzhejun/d-OPSD))
 - [OPD-Evolver: Cultivating a Holistic Agent Evolver via On-Policy Distillation](https://arxiv.org/abs/2606.17628) *(2026)* — Distills a hindsight-privileged self-teacher into a self-evolving memory agent across the full experience lifecycle rather than execution alone. ([Code](https://github.com/bingreeky/opd-evolver))
+- [Visual-OPSD: Cross-Modal On-Policy Self-Distillation for Efficient Unified Multimodal Reasoning](https://arxiv.org/abs/2606.18974) *(2026)* — Distills a unified model's visual-generation reasoning into its text pathway by scoring student rollouts against a privileged-visual-thought teacher.
+- [Seeing Before Reasoning: Decoupling Perception and Reasoning for Shortcut-Resilient Multimodal On-Policy Self-Distillation](https://arxiv.org/abs/2606.19120) *(2026)* — Routes separate perception and reasoning teachers to distinct segments of a student's multimodal rollouts, curbing visual-grounding shortcuts.
 
 ### Speculative Decoding (Draft-Model Training)
 
