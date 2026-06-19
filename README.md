@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-360-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
+  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-361-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/stargazers"><img src="https://img.shields.io/github/stars/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Stars&labelColor=000000&color=000000" alt="GitHub Stars"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/network/members"><img src="https://img.shields.io/github/forks/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Forks&labelColor=000000&color=000000" alt="GitHub Forks"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/commits"><img src="https://img.shields.io/github/last-commit/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Last%20Commit&labelColor=000000&color=000000" alt="Last Commit"></a>
@@ -433,6 +433,7 @@ OPD applied to non-text-reasoning settings — agents, multimodal models, diffus
 - [OPD-Evolver: Cultivating a Holistic Agent Evolver via On-Policy Distillation](https://arxiv.org/abs/2606.17628) *(2026)* — Distills a hindsight-privileged self-teacher into a self-evolving memory agent across the full experience lifecycle rather than execution alone. ([Code](https://github.com/bingreeky/opd-evolver))
 - [Visual-OPSD: Cross-Modal On-Policy Self-Distillation for Efficient Unified Multimodal Reasoning](https://arxiv.org/abs/2606.18974) *(2026)* — Distills a unified model's visual-generation reasoning into its text pathway by scoring student rollouts against a privileged-visual-thought teacher.
 - [Seeing Before Reasoning: Decoupling Perception and Reasoning for Shortcut-Resilient Multimodal On-Policy Self-Distillation](https://arxiv.org/abs/2606.19120) *(2026)* — Routes separate perception and reasoning teachers to distinct segments of a student's multimodal rollouts, curbing visual-grounding shortcuts.
+- [SAGE-OPD: Selective Agent-Guided Intervention for Multi-Turn On-Policy Distillation](https://arxiv.org/abs/2606.19659) *(2026)* — Verifier-free multi-turn agent OPD where a teacher judges each student turn, allocating distillation only where intervention is necessary and reliable.
 
 ### Speculative Decoding (Draft-Model Training)
 
