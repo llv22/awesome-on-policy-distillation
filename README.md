@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-362-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
+  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-363-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/stargazers"><img src="https://img.shields.io/github/stars/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Stars&labelColor=000000&color=000000" alt="GitHub Stars"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/network/members"><img src="https://img.shields.io/github/forks/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Forks&labelColor=000000&color=000000" alt="GitHub Forks"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/commits"><img src="https://img.shields.io/github/last-commit/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Last%20Commit&labelColor=000000&color=000000" alt="Last Commit"></a>
@@ -83,6 +83,7 @@ A fast path through the field:
 - [My Continuous Learning Pipeline with Self-Distillation on Agent Traces](https://x.com/ben_burtenshaw/status/2062541534994555302) *(2026)* — HuggingFace continuous-learning walkthrough that self-distills coding-agent traces with TRL's SDPO trainer, using an evaluator model's targeted feedback as privileged context.
 - [On-Policy Distillation: Promise, Pitfalls, and Prospects](https://louieworth.github.io/blog/opd_reflection/) *(2026)* — Li Jiang organizes recent OPD failure analyses into three connected mechanisms — local teacher noise, horizon coverage decay, and myopic per-token supervision.
 - [Solving OPSD (basically)](https://x.com/ar0cket1/status/2065772402622263701) *(2026)* — Continuation arguing OPSD's positive teacher-agreement pressure carries the useful signal while negative pressure drives length collapse, so keeping only positive matches OPD.
+- [Why On-Policy Distillation Works and Naive Self-Distillation Doesn't](https://x.com/rish2k1/status/2068414528598286485) *(2026)* — Frames on-policy distillation as KL-regularized RL toward a reward-tilted teacher, explaining why naive self-distillation distills a feedback-hallucinating template.
 
 ## Core OPD Papers
 
