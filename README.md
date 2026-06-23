@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-370-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
+  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-371-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/stargazers"><img src="https://img.shields.io/github/stars/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Stars&labelColor=000000&color=000000" alt="GitHub Stars"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/network/members"><img src="https://img.shields.io/github/forks/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Forks&labelColor=000000&color=000000" alt="GitHub Forks"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/commits"><img src="https://img.shields.io/github/last-commit/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Last%20Commit&labelColor=000000&color=000000" alt="Last Commit"></a>
@@ -320,6 +320,7 @@ Papers that are not canonical OPD but matter for understanding or deploying it.
 ### Preference, Reward-Guided, and Hybrid RL+KD
 
 - [Direct Preference Knowledge Distillation](https://arxiv.org/abs/2406.19774) *(2024)* — Preference-aware KD combining reverse-KL with implicit reward objectives.
+- [PLaD: Preference-based Large Language Model Distillation with Pseudo-Preference Pairs](https://arxiv.org/abs/2406.02886) *(2024)* — Ranking loss over teacher-preferred-over-student pseudo-preference pairs recalibrates student sequence likelihood without teacher logits.
 - [Online Knowledge Distillation with Reward Guidance](https://arxiv.org/abs/2505.18952) *(2025)* — Sequential KD via preference optimization; offline and online variants.
 - [KDRL](https://arxiv.org/abs/2506.02208) *(2025)* — Unified reverse-KL KD with RL in a single post-training objective.
 - [RLTF-SD: Expanding RL via Text Feedback](https://arxiv.org/abs/2602.02482) *(2026)* — Internalizes text feedback via self-distillation.
