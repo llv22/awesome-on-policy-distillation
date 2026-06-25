@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-374-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
+  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-377-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/stargazers"><img src="https://img.shields.io/github/stars/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Stars&labelColor=000000&color=000000" alt="GitHub Stars"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/network/members"><img src="https://img.shields.io/github/forks/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Forks&labelColor=000000&color=000000" alt="GitHub Forks"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/commits"><img src="https://img.shields.io/github/last-commit/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Last%20Commit&labelColor=000000&color=000000" alt="Last Commit"></a>
@@ -219,6 +219,7 @@ The papers that define on-policy distillation for LLMs.
 - [Learning from Your Own Mistakes: Constructing Learnable Micro-Reflective Trajectories for Self-Distillation](https://arxiv.org/abs/2606.18844) *(2026)* — Splices a student's own wrong rollouts with self-generated correct references into explicit error-correction trajectories, replacing logit-level self-distillation.
 - [Rethinking Reward Supervision: Rubric-Conditioned Self-Distillation](https://arxiv.org/abs/2606.19327) *(2026)* — Conditions the privileged teacher on learned rubrics to give criterion-aware token-level guidance on student rollouts, replacing reference-trajectory supervision.
 - [Self-Distillation as a Performance Recovery Mechanism for LLMs](https://arxiv.org/abs/2604.15794) *(2026)* — Anchors a degraded model to a frozen earlier checkpoint via on-policy self-distillation, recovering capabilities lost to fine-tuning or compression.
+- [On-Policy Self-Distillation Reduces Output Diversity](https://arxiv.org/abs/2606.26091) *(2026)* — Sampled-demonstration teacher tilts the base distribution by pointwise conditional mutual information, collapsing rollout diversity unlike on-policy RL.
 
 ### Context and Experience Internalization
 
@@ -446,6 +447,8 @@ OPD applied to non-text-reasoning settings — agents, multimodal models, diffus
 - [Visual-OPSD: Cross-Modal On-Policy Self-Distillation for Efficient Unified Multimodal Reasoning](https://arxiv.org/abs/2606.18974) *(2026)* — Distills a unified model's visual-generation reasoning into its text pathway by scoring student rollouts against a privileged-visual-thought teacher.
 - [Seeing Before Reasoning: Decoupling Perception and Reasoning for Shortcut-Resilient Multimodal On-Policy Self-Distillation](https://arxiv.org/abs/2606.19120) *(2026)* — Routes separate perception and reasoning teachers to distinct segments of a student's multimodal rollouts, curbing visual-grounding shortcuts.
 - [SAGE-OPD: Selective Agent-Guided Intervention for Multi-Turn On-Policy Distillation](https://arxiv.org/abs/2606.19659) *(2026)* — Verifier-free multi-turn agent OPD where a teacher judges each student turn, allocating distillation only where intervention is necessary and reliable.
+- [V-Zero: Answer-Label-Free On-Policy Distillation for Fine-Grained Visual Reasoning](https://arxiv.org/abs/2606.25319) *(2026)* — Gates dense token-level distillation of student trajectories using a contrastive regional-crop-versus-negative-view signal, requiring no answer labels. ([Code](https://github.com/eVI-group-SCU/V-Zero))
+- [ROAD-VLA: Robust Online Adaptation via Self-Distillation for Vision-Language-Action Models](https://arxiv.org/abs/2606.25800) *(2026)* — Builds an action-space proximal teacher by perturbing the policy's own action logits with advantage estimates, converting sparse rewards into dense supervision.
 
 ### Speculative Decoding (Draft-Model Training)
 
