@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-380-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
+  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-381-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/stargazers"><img src="https://img.shields.io/github/stars/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Stars&labelColor=000000&color=000000" alt="GitHub Stars"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/network/members"><img src="https://img.shields.io/github/forks/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Forks&labelColor=000000&color=000000" alt="GitHub Forks"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/commits"><img src="https://img.shields.io/github/last-commit/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Last%20Commit&labelColor=000000&color=000000" alt="Last Commit"></a>
@@ -506,6 +506,7 @@ Production training pipelines that use OPD as a post-training stage.
 | 2026 | Nemotron 3 Ultra | Iterative MOPD: 10+ domain-specialized teachers consolidated into the student, refreshed from it each cycle | [report](https://research.nvidia.com/labs/nemotron/files/NVIDIA-Nemotron-3-Ultra-Technical-Report.pdf) |
 | 2026 | InternVideo3 | Final-stage reverse-KL distillation on student-sampled video rollouts from a stronger teacher | [arXiv](https://arxiv.org/abs/2606.12195) |
 | 2026 | Kwai Keye-VL-2.0 | Cross-modal multi-teacher OPD: dense token-level teacher feedback on student multimodal rollouts | [arXiv](https://arxiv.org/abs/2606.10651) |
+| 2026 | NebulaExp-8B | Single- and multi-teacher OPD (MOPD), finding teacher capability outweighs scale | [arXiv](https://arxiv.org/abs/2606.26671) |
 
 ## Frameworks and Implementations
 
