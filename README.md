@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-381-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
+  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-382-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/stargazers"><img src="https://img.shields.io/github/stars/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Stars&labelColor=000000&color=000000" alt="GitHub Stars"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/network/members"><img src="https://img.shields.io/github/forks/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Forks&labelColor=000000&color=000000" alt="GitHub Forks"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/commits"><img src="https://img.shields.io/github/last-commit/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Last%20Commit&labelColor=000000&color=000000" alt="Last Commit"></a>
@@ -452,6 +452,7 @@ OPD applied to non-text-reasoning settings — agents, multimodal models, diffus
 - [ROAD-VLA: Robust Online Adaptation via Self-Distillation for Vision-Language-Action Models](https://arxiv.org/abs/2606.25800) *(2026)* — Builds an action-space proximal teacher by perturbing the policy's own action logits with advantage estimates, converting sparse rewards into dense supervision.
 - [OPID: On-Policy Skill Distillation for Agentic Reinforcement Learning](https://arxiv.org/abs/2606.26790) *(2026)* — Extracts hierarchical episode- and step-level hindsight skills from agent rollouts, routing them critical-first to score responses into token-level self-distillation advantages. ([Code](https://github.com/jinyangwu/OPID))
 - [DanceOPD: On-Policy Generative Field Distillation](https://arxiv.org/abs/2606.27377) *(2026)* — On-policy velocity-field matching at student-generated rollout states, hard-routed across capability fields to compose one image generator.
+- [ATOD: Annealed Turn-aware On-policy Distillation for Multi-turn Autonomous Agents](https://arxiv.org/abs/2606.27814) *(2026)* — Anneals one hybrid advantage from on-policy distillation toward reinforcement learning, letting multi-turn agents imitate the teacher early then exceed its ceiling.
 
 ### Speculative Decoding (Draft-Model Training)
 
