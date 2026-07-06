@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-399-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
+  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-404-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/stargazers"><img src="https://img.shields.io/github/stars/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Stars&labelColor=000000&color=000000" alt="GitHub Stars"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/network/members"><img src="https://img.shields.io/github/forks/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Forks&labelColor=000000&color=000000" alt="GitHub Forks"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/commits"><img src="https://img.shields.io/github/last-commit/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Last%20Commit&labelColor=000000&color=000000" alt="Last Commit"></a>
@@ -85,6 +85,9 @@ A fast path through the field:
 - [On-Policy Distillation: Promise, Pitfalls, and Prospects](https://louieworth.github.io/blog/opd_reflection/) *(2026)* — Li Jiang organizes recent OPD failure analyses into three connected mechanisms — local teacher noise, horizon coverage decay, and myopic per-token supervision.
 - [Solving OPSD (basically)](https://x.com/ar0cket1/status/2065772402622263701) *(2026)* — Continuation arguing OPSD's positive teacher-agreement pressure carries the useful signal while negative pressure drives length collapse, so keeping only positive matches OPD.
 - [Why On-Policy Distillation Works and Naive Self-Distillation Doesn't](https://x.com/rish2k1/status/2068414528598286485) *(2026)* — Frames on-policy distillation as KL-regularized RL toward a reward-tilted teacher, explaining why naive self-distillation distills a feedback-hallucinating template.
+- [Self-Distilled Reasoner: On-Policy Self-Distillation](https://siyan-zhao.github.io/blog/2026/opsd/) *(2026)* — Author walkthrough deriving on-policy self-distillation from a privileged self-teacher as dense token-wise distribution matching, with a policy-gradient interpretation.
+- [On-policy Distillation](https://anukriti-ranjan.medium.com/on-policy-distillation-91e296b34c8d) *(2026)* — Accessible long-form guide framing on-policy distillation as teacher-graded student trajectories that fix exposure bias, built around the GKD loop.
+- [Understanding Self-Distillation and Privileged Information Distillation](https://emilianopp.github.io/Privileged-Information-Distillation-and-Self-Distillation/) *(2026)* — Walkthrough deriving self-distillation and privileged-information distillation through an RL-as-variational-inference lens, spanning reverse-KL self-teachers to reward-tilted joint training.
 
 ## Core OPD Papers
 
@@ -445,6 +448,7 @@ OPD applied to non-text-reasoning settings — agents, multimodal models, diffus
 - [LoRi: Low-Rank Distillation for Implicit Reasoning](https://arxiv.org/abs/2606.05315) *(2026)* — Aligns the student's self-generated latent reasoning trajectory to the teacher's hidden states in a shared low-rank Tucker subspace, enabling length-invariant implicit-CoT distillation. ([Code](https://github.com/rmsolgi/lori))
 - [Teaching the Way, Not the Answer: Privileged Tutoring Distillation for Multimodal Policy Optimization](https://arxiv.org/abs/2606.07000) *(2026)* — Distills failed multimodal RLVR rollouts toward a frozen reference conditioned on answer-free privileged hints, providing dense guidance without answer-revealing shortcuts. ([Code](https://github.com/XszNeverSleep/PTD-PO))
 - [OPDLM: Data-Efficient Autoregressive-to-Diffusion Language Models via On-Policy Distillation](https://arxiv.org/abs/2606.06712) *(2026)* — Converts an autoregressive LM into a diffusion LM along the student's own reverse-diffusion rollouts, supervised by the frozen original model. ([Code](https://github.com/divelab/OPDLM))
+- [Diffusion-GR2: Diffusion Generative Reasoning Re-ranker](https://arxiv.org/abs/2607.01170) *(2026)* — Converts an autoregressive reasoning re-ranker to block-diffusion, on-policy-distilling its own parallel-decoded trajectories against the frozen autoregressive teacher's dense per-token targets.
 - [GNDPO: Stabilizing On-Policy Distillation for MLLM Reasoning with Global Normalization](https://arxiv.org/abs/2606.09091) *(2026)* — Normalizes token-level reverse-KL distillation rewards into batch-relative advantages, suppressing gradient spikes from out-of-distribution teacher-student logit mismatches. ([Code](https://github.com/OPPO-Mente-Lab/GNDPO))
 - [T3D: Few-Step Diffusion Language Models via Trajectory Self-Distillation](https://arxiv.org/abs/2602.12262) *(2026)* — Self-distills a few-step diffusion-LM student onto the full-step teacher's own generative trajectory via a reverse-KL objective curbing factorization error.
 - [Visual-SDPO: Self-Distillation Policy Optimization via Visual Feedback](https://arxiv.org/abs/2606.10334) *(2026)* — Distills rendered-artifact visual feedback from a weight-sharing privileged teacher into a code-generating student, weighting tokens by defect-to-statement code credit.
@@ -496,6 +500,7 @@ Draft-model training for speculative decoding shares OPD's core loop: the draft 
 - [LK Losses: Direct Acceptance Rate Optimization for Speculative Decoding](https://arxiv.org/abs/2602.23881) *(2026)* — Replaces KL-proxy draft training with objectives directly targeting acceptance rate, since capacity-limited drafters minimizing KL converge to low-acceptance solutions.
 - [Draft-OPD: On-Policy Distillation for Speculative Draft Models](https://arxiv.org/abs/2605.29343) *(2026)* — Draft-model OPD that replays drafting from verification-exposed error positions, training on target feedback over both accepted and rejected proposals. ([Code](https://github.com/bingyang-lei/Draft-OPD))
 - [Bridging Draft Policy Misalignment: Group Tree Optimization for Speculative Decoding](https://arxiv.org/abs/2509.22134) *(2025)* — Trains the draft model on its own verified tree rollouts via a group-standardized acceptance-length reward, aligning training with tree-based decoding.
+- [JetSpec: Breaking the Scaling Ceiling of Speculative Decoding with Parallel Tree Drafting](https://arxiv.org/abs/2606.18394) *(2026)* — Trains a causal parallel draft head over the frozen target's hidden states, producing branch-conditioned speculative trees that resolve tree drafting's causality-efficiency dilemma. ([Code](https://github.com/hao-ai-lab/JetSpec))
 
 ## Technical Reports and Industrial Recipes
 
