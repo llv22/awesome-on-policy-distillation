@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-411-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
+  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-412-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/stargazers"><img src="https://img.shields.io/github/stars/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Stars&labelColor=000000&color=000000" alt="GitHub Stars"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/network/members"><img src="https://img.shields.io/github/forks/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Forks&labelColor=000000&color=000000" alt="GitHub Forks"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/commits"><img src="https://img.shields.io/github/last-commit/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Last%20Commit&labelColor=000000&color=000000" alt="Last Commit"></a>
@@ -481,6 +481,7 @@ OPD applied to non-text-reasoning settings — agents, multimodal models, diffus
 - [Multi-Turn On-Policy Distillation with Prefix Replay](https://arxiv.org/abs/2607.04763) *(2026)* — Off-environment multi-turn agentic OPD that replays pre-collected teacher trajectory prefixes for student action, eliminating fresh environment rollouts during training.
 - [dOPSD: On-Policy Self-Distillation for Diffusion Language Models](https://arxiv.org/abs/2607.04428) *(2026)* — Draws the teacher's privileged signal from later, more-decoded steps of the student's own denoising trajectory, replacing the external reference label. ([Code](https://github.com/tuandattt/dOPSD))
 - [H-OPD: Confidence-Aware Heterogeneous Multi-Teacher Multimodal On-policy Distillation](https://arxiv.org/abs/2607.02592) *(2026)* — Confidence-aware heterogeneous multi-teacher OPD arbitrating vision-language and text-only teachers per token along the student trajectory, replacing static per-sample teacher routing. ([Code](https://github.com/buptyqx/H-OPD))
+- [UI-MOPD: Multi-Platform On-Policy Distillation for Continual GUI Agent Learning](https://arxiv.org/abs/2607.04425) *(2026)* — Routes student GUI rollouts to platform-specific teachers for on-policy reverse-KL distillation, unifying continual multi-platform agent learning in one policy.
 
 ### Speculative Decoding (Draft-Model Training)
 
