@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-412-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
+  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-414-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/stargazers"><img src="https://img.shields.io/github/stars/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Stars&labelColor=000000&color=000000" alt="GitHub Stars"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/network/members"><img src="https://img.shields.io/github/forks/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Forks&labelColor=000000&color=000000" alt="GitHub Forks"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/commits"><img src="https://img.shields.io/github/last-commit/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Last%20Commit&labelColor=000000&color=000000" alt="Last Commit"></a>
@@ -369,6 +369,7 @@ Papers that are not canonical OPD but matter for understanding or deploying it.
 - [Extreme Region Policy Distillation](https://arxiv.org/abs/2605.25582) *(2026)* — Two-stage RL distilling token-level policy signals into the base model under trust-region constraints, decoupling sample efficiency from KL drift.
 - [Distill Not Only Data but Also Rewards: Can Smaller Language Models Surpass Larger Ones?](https://arxiv.org/abs/2502.19557) *(2025)* — Distills self-supervised pseudo-rewards from teacher and student responses, then guides reinforcement learning on student rollouts beyond response-only distillation.
 - [DRIFT: Difficulty Routing Self-Distillation with Rhythm-Gated Exploration](https://arxiv.org/abs/2606.30345) *(2026)* — Allocates self-distillation versus reinforcement-learning signals per problem by tracked learning progress, unlike methods that optimize all problems uniformly.
+- [Compete Then Collaborate: Frontier AI Teachers Build a Verifiable Curriculum to Improve a Coding Student Beyond Imitation](https://arxiv.org/abs/2607.08255) *(2026)* — Teachers compete then collaborate to build an execution-verified curriculum used as an RLVR environment where the student learns by doing not imitation.
 
 ### Self-Play and Iterative Bootstrapping
 
@@ -433,6 +434,7 @@ OPD applied to non-text-reasoning settings — agents, multimodal models, diffus
 - [EMPO²: Exploratory Memory-Augmented LLM Agent via Hybrid On- and Off-Policy Optimization](https://arxiv.org/abs/2602.23008) *(2026)* — Hybrid agent RL whose off-policy mode distills memory-tip-conditioned rollouts into the tips-free policy, internalizing memory-driven exploration without tips at inference.
 - [AnyFlow: Any-Step Video Diffusion Model with On-Policy Flow Map Distillation](https://arxiv.org/abs/2605.13724) *(2026)* — On-policy flow-map distillation along the student's own Euler rollout; supports any-step video generation.
 - [AFD: On-Policy Adversarial Flow Distillation for Autoregressive Video Generation](https://arxiv.org/abs/2605.26105) *(2026)* — On-policy distillation of a black-box video teacher into a causal student, scoring the student's own rollouts with an adversarial flow-matching discriminator.
+- [OPSD-V: On-Policy Self-Distillation for Post-Training Few-Step Autoregressive Video Generators](https://arxiv.org/abs/2607.08766) *(2026)* — On-policy self-distillation for few-step autoregressive video generators, supervising the student's own rollout with real long-video context to reduce long-horizon error accumulation.
 - [StepOPSD: Step-Aware Online Preference Distillation for Agent Reinforcement Learning](https://arxiv.org/abs/2605.27140) *(2026)* — Converts teacher–student log-probability gaps into sign-preserving GRPO advantage shaping localized to action-centered step spans rather than whole agent trajectories.
 - [HINT-SD: Targeted Hindsight Self-Distillation for Long-Horizon Agents](https://arxiv.org/abs/2605.17873) *(2026)* — Distills reverse-KL from a feedback-conditioned self-teacher onto only the failure-relevant action spans the agent selects from its own failed rollouts.
 - [What and When to Distill: Selective Hindsight Distillation for Multi-Turn Agents](https://arxiv.org/abs/2605.19447) *(2026)* — An environment-conditioned teacher's hindsight log-probability gap on student action tokens becomes a bounded, sign-aware GRPO advantage reweight anchored to task reward.
