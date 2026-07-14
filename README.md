@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-416-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
+  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-419-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/stargazers"><img src="https://img.shields.io/github/stars/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Stars&labelColor=000000&color=000000" alt="GitHub Stars"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/network/members"><img src="https://img.shields.io/github/forks/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Forks&labelColor=000000&color=000000" alt="GitHub Forks"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/commits"><img src="https://img.shields.io/github/last-commit/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Last%20Commit&labelColor=000000&color=000000" alt="Last Commit"></a>
@@ -484,6 +484,7 @@ OPD applied to non-text-reasoning settings — agents, multimodal models, diffus
 - [dOPSD: On-Policy Self-Distillation for Diffusion Language Models](https://arxiv.org/abs/2607.04428) *(2026)* — Draws the teacher's privileged signal from later, more-decoded steps of the student's own denoising trajectory, replacing the external reference label. ([Code](https://github.com/tuandattt/dOPSD))
 - [H-OPD: Confidence-Aware Heterogeneous Multi-Teacher Multimodal On-policy Distillation](https://arxiv.org/abs/2607.02592) *(2026)* — Confidence-aware heterogeneous multi-teacher OPD arbitrating vision-language and text-only teachers per token along the student trajectory, replacing static per-sample teacher routing. ([Code](https://github.com/buptyqx/H-OPD))
 - [UI-MOPD: Multi-Platform On-Policy Distillation for Continual GUI Agent Learning](https://arxiv.org/abs/2607.04425) *(2026)* — Routes student GUI rollouts to platform-specific teachers for on-policy reverse-KL distillation, unifying continual multi-platform agent learning in one policy.
+- [TurnOPD: Making On-Policy Distillation Turn-Aware for Efficient Long-Horizon Agent Training](https://arxiv.org/abs/2607.05804) *(2026)* — Turn-aware on-policy distillation for long-horizon agents, adaptively budgeting rollout depth to concentrate supervision on decision-critical turns.
 
 ### Speculative Decoding (Draft-Model Training)
 
@@ -542,6 +543,8 @@ Production training pipelines that use OPD as a post-training stage.
 | 2026 | Kwai Keye-VL-2.0 | Cross-modal multi-teacher OPD: dense token-level teacher feedback on student multimodal rollouts | [arXiv](https://arxiv.org/abs/2606.10651) |
 | 2026 | NebulaExp-8B | Single- and multi-teacher OPD (MOPD), finding teacher capability outweighs scale | [arXiv](https://arxiv.org/abs/2606.26671) |
 | 2026 | Mach-Mind-4-Flash | Multi-Teacher OPD (MOPD): routed reverse-KL on student rollouts fuses 10+ specialists, ending mixed-reward see-saw | [arXiv](https://arxiv.org/abs/2607.09375) |
+| 2026 | Agents-A1 | Final-stage multi-teacher OPD: routed teachers supervise student rollouts via salient vocabulary alignment | [arXiv](https://arxiv.org/abs/2606.30616) |
+| 2026 | Audex | Cascade RL + multi-domain OPD (Nemotron-Cascade lineage), preserving text intelligence in unified audio-text model | [arXiv](https://arxiv.org/abs/2607.05196) |
 
 ## Frameworks and Implementations
 
