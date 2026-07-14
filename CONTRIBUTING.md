@@ -56,7 +56,6 @@ OPD applied to substrates beyond LLM text reasoning — student rollouts are sti
 - **Speech and Audio** — ASR, speech LLMs, audio reasoning
 - **Diffusion, Flow, and Generative Media** — diffusion/flow image and video generation, diffusion language models
 - **Embodied, Robotics, and Control** — VLA, robotic manipulation, driving, world models
-- **Other Extensions** — substrate-general entries that fit no single modality
 - **Speculative Decoding (Draft-Model Training)** — DistillSpec, EAGLE, HASS families; draft trained from target supervision on its own rollouts
 
 A method whose contribution is a transferable OPD mechanism belongs in Core even when evaluated on an agent or multimodal task; place it in Domain Extensions only when the substrate is the point.

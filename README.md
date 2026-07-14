@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-418-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
+  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-417-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/stargazers"><img src="https://img.shields.io/github/stars/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Stars&labelColor=000000&color=000000" alt="GitHub Stars"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/network/members"><img src="https://img.shields.io/github/forks/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Forks&labelColor=000000&color=000000" alt="GitHub Forks"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/commits"><img src="https://img.shields.io/github/last-commit/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Last%20Commit&labelColor=000000&color=000000" alt="Last Commit"></a>
@@ -38,7 +38,6 @@ On-policy distillation (OPD) trains a student on trajectories sampled from its o
   - [Speech and Audio](#speech-and-audio)
   - [Diffusion, Flow, and Generative Media](#diffusion-flow-and-generative-media)
   - [Embodied, Robotics, and Control](#embodied-robotics-and-control)
-  - [Other Extensions](#other-extensions)
   - [Speculative Decoding](#speculative-decoding-draft-model-training)
 - [Technical Reports and Industrial Recipes](#technical-reports-and-industrial-recipes)
 - [Frameworks and Implementations](#frameworks-and-implementations)
@@ -504,10 +503,6 @@ OPD applied to non-text-reasoning settings — agents, multimodal models, diffus
 - [GeoDrive-Bench: Benchmarking Region-Specific Multimodal Reasoning in Autonomous Driving](https://arxiv.org/abs/2606.02774) *(2026)* — Distills a handbook-conditioned teacher into a driving VLM along the student's own rule-free rollouts, removing inference-time handbook lookups.
 - [World Model Self-Distillation: Training World Models to Solve General Tasks](https://arxiv.org/abs/2606.12072) *(2026)* — Distills a caption-conditioned video-diffusion demonstrator into an instruction-only executor along the student's own rollouts, eliciting task-solving without curated task-execution video supervision.
 - [ROAD-VLA: Robust Online Adaptation via Self-Distillation for Vision-Language-Action Models](https://arxiv.org/abs/2606.25800) *(2026)* — Builds an action-space proximal teacher by perturbing the policy's own action logits with advantage estimates, converting sparse rewards into dense supervision.
-
-### Other Extensions
-
-- [From Deferral to Learning: Online In-Context KD for LLM Cascades](https://arxiv.org/abs/2509.22984) *(2025)* — Teacher-student cascade with reusable online knowledge store.
 
 ### Speculative Decoding (Draft-Model Training)
 
