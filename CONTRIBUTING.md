@@ -27,29 +27,47 @@ Apply the same bar to multimodal, speech, agent, and embodied papers as to text-
 
 ## Section placement
 
+The README's top-level sections, in order. Place an entry by matching its primary contribution.
+
+### Surveys and Essays
+
+Surveys, position papers, and analyses (**Surveys and Position Papers**), plus blog posts, talks, and walkthroughs (**Essays, Blog Posts, and Walkthroughs**).
+
 ### Core OPD Papers (selective canonical entries)
 
-Only add here if the paper's primary contribution is a new OPD method and it would be cited as a defining work in the field. When unsure, place in Adjacent.
+Only add here if the paper's primary contribution is a new component of the OPD training loop — an objective, teacher-access variant, self-distillation variant, stability fix, context-internalization mechanism, or systems/efficiency/privacy constraint — with student rollouts central to the learning signal and evaluated on LLM text generation or reasoning. If removing the OPD-loop component leaves a working contribution (an RL recipe, preference method, or KD baseline), it is Adjacent. When unsure, place in Adjacent.
 
 ### Adjacent and Enabling Work
 
-The default landing zone. Subsections:
+Work that is not canonical OPD but matters for understanding or deploying it. Subsections:
 
 - **Cross-Tokenizer and Model-Family Enablers** — vocabulary alignment, cross-architecture methods
 - **Mismatch Mitigation and Student Quality** — distribution gap, adaptive mixing, student output quality
 - **Preference, Reward-Guided, and Hybrid RL+KD** — preference optimization, reward-guided distillation, RL+KD unification
 - **Self-Play and Iterative Bootstrapping** — SPIN-style self-play, iterative best-of-N, MCTS-guided self-evolution
-- **Agent, Multimodal, and Other Extensions** — agents, VLMs, speech, embodied, other modalities
-- **Speculative Decoding (Draft-Model Training)** — DistillSpec, EAGLE, HASS families; draft trained from target supervision on its own rollouts
 - **Precursors** — historical antecedents that predate the OPD label
 
-### Technical Reports
+### Domain Extensions
+
+OPD applied to substrates beyond LLM text reasoning — student rollouts are still central, but the substrate is the point. Subsections by substrate:
+
+- **Agents and Tool-Use** — multi-turn agents, tool use, search, GUI, RAG, memory
+- **Multimodal and Vision-Language** — VLMs/MLLMs, visual and video reasoning
+- **Speech and Audio** — ASR, speech LLMs, audio reasoning
+- **Diffusion, Flow, and Generative Media** — diffusion/flow image and video generation, diffusion language models
+- **Embodied, Robotics, and Control** — VLA, robotic manipulation, driving, world models
+- **Other Extensions** — substrate-general entries that fit no single modality
+- **Speculative Decoding (Draft-Model Training)** — DistillSpec, EAGLE, HASS families; draft trained from target supervision on its own rollouts
+
+A method whose contribution is a transferable OPD mechanism belongs in Core even when evaluated on an agent or multimodal task; place it in Domain Extensions only when the substrate is the point.
+
+### Technical Reports and Industrial Recipes
 
 Production systems using OPD as a post-training stage. Table format.
 
-### Frameworks and Tools
+### Frameworks and Implementations
 
-Training frameworks and code. Table or bullet format depending on subsection.
+Training frameworks (**Training Frameworks**) and single-method or reference code (**Implementations**). Table or bullet format depending on subsection.
 
 ## Entry format
 
