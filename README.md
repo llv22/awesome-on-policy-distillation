@@ -127,6 +127,7 @@ The papers that define on-policy distillation for LLMs.
 - [MOPD: Multi-Teacher On-Policy Distillation for Capability Integration](https://arxiv.org/abs/2606.30406) *(2026)* — Distills multiple per-domain RL teachers into one student on its own rollouts, integrating their specialized capabilities into a single model.
 - [Student-in-the-Loop Chain-of-Thought Distillation via Generation-Time Selection](https://arxiv.org/abs/2604.02819) *(2026)* — Student perplexity steers the teacher's chunk-by-chunk generation toward learnable reasoning paths, selecting branches during generation instead of filtering afterward.
 - [Weak-to-Strong Generalization via Direct On-Policy Distillation](https://arxiv.org/abs/2607.05394) *(2026)* — Applies a weak teacher's pre/post-RL log-ratio as a dense reward on student rollouts, transferring the RL-induced shift rather than the final policy.
+- [CoPD: Co-Evolving Policy Distillation](https://arxiv.org/abs/2604.27083) *(2026)* — Parallel expert training with bidirectional OPD; experts co-evolve as mutual teachers during RLVR.
 
 ### Stability and Objective Design
 
@@ -275,6 +276,7 @@ The papers that define on-policy distillation for LLMs.
 - [f-OPD: Stabilizing Long-Horizon On-Policy Distillation with Freshness-Aware Control](https://arxiv.org/abs/2605.17862) *(2026)* — Scores per-sample freshness from rollout–supervision drift to stabilize asynchronous on-policy distillation where generation and training are decoupled.
 - [Prefix-Guided On-Policy Distillation: Mining Golden Trajectories from Rollouts](https://arxiv.org/abs/2606.21994) *(2026)* — Prefix-overlap scores fixed-length student rollouts to allocate long-continuation budget only to teacher-compatible candidates, cutting long-horizon OPD compute.
 - [AsyncOPD: How Stale Can On-Policy Distillation Be?](https://arxiv.org/abs/2606.24143) *(2026)* — Asynchronous OPD pipeline decoupling rollout generation from learner updates, mapping how stale rollouts degrade reverse-KL while forward-KL stays robust.
+- [LoRi: Low-Rank Distillation for Implicit Reasoning](https://arxiv.org/abs/2606.05315) *(2026)* — Aligns the student's self-generated latent reasoning trajectory to the teacher's hidden states in a shared low-rank Tucker subspace, enabling length-invariant implicit-CoT distillation. ([Code](https://github.com/rmsolgi/lori))
 
 ## Taxonomy
 
@@ -346,6 +348,7 @@ Papers that are not canonical OPD but matter for understanding or deploying it.
 - [RAFT: Data Refinement and Adaptive Distillation for Domain Fine-Tuning with Alleviated Forgetting](https://arxiv.org/abs/2606.00147) *(2026)* — Pairs data refinement with on-policy distillation, using a gold-answer-conditioned frozen teacher to supervise student trajectories against domain-fine-tuning forgetting.
 - [DuDi: Dual-Signal Distillation with Cross-Lingual Verbalizer](https://arxiv.org/abs/2606.04694) *(2026)* — Scores student rollouts with a teacher routed through a cross-lingual verbalizer, repairing teacher-student transfer for multilingual students.
 - [PromptKD: Distilling Student-Friendly Knowledge for Generative Language Models via Prompt Tuning](https://arxiv.org/abs/2402.12842) *(2024)* — Prompt-tunes the teacher to emit student-friendly targets, distilled on the student's own generations to ease exposure bias.
+- [AllMem](https://arxiv.org/abs/2602.13680) *(2026)* — Offline on-policy distillation for long-context modeling.
 
 ### Preference, Reward-Guided, and Hybrid RL+KD
 
@@ -505,9 +508,6 @@ OPD applied to non-text-reasoning settings — agents, multimodal models, diffus
 ### Other Extensions
 
 - [From Deferral to Learning: Online In-Context KD for LLM Cascades](https://arxiv.org/abs/2509.22984) *(2025)* — Teacher-student cascade with reusable online knowledge store.
-- [AllMem](https://arxiv.org/abs/2602.13680) *(2026)* — Offline on-policy distillation for long-context modeling.
-- [CoPD: Co-Evolving Policy Distillation](https://arxiv.org/abs/2604.27083) *(2026)* — Parallel expert training with bidirectional OPD; experts co-evolve as mutual teachers during RLVR.
-- [LoRi: Low-Rank Distillation for Implicit Reasoning](https://arxiv.org/abs/2606.05315) *(2026)* — Aligns the student's self-generated latent reasoning trajectory to the teacher's hidden states in a shared low-rank Tucker subspace, enabling length-invariant implicit-CoT distillation. ([Code](https://github.com/rmsolgi/lori))
 
 ### Speculative Decoding (Draft-Model Training)
 
