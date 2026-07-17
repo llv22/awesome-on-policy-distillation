@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-422-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
+  <!-- entry-count-start --><a href="#contents"><img src="https://img.shields.io/badge/Entries-432-000000?style=for-the-badge&labelColor=000000" alt="Entries"></a><!-- entry-count-end -->
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/stargazers"><img src="https://img.shields.io/github/stars/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Stars&labelColor=000000&color=000000" alt="GitHub Stars"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/network/members"><img src="https://img.shields.io/github/forks/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Forks&labelColor=000000&color=000000" alt="GitHub Forks"></a>
   <a href="https://github.com/chrisliu298/awesome-on-policy-distillation/commits"><img src="https://img.shields.io/github/last-commit/chrisliu298/awesome-on-policy-distillation?style=for-the-badge&logo=github&logoColor=white&label=Last%20Commit&labelColor=000000&color=000000" alt="Last Commit"></a>
@@ -182,6 +182,7 @@ The papers that define on-policy distillation for LLMs.
 - [Trust Region Policy Distillation](https://arxiv.org/abs/2607.04751) *(2026)* — Interpolates teacher and student probabilities into a proximal teacher, replacing on-policy distillation's unbounded log-ratio reward with a provably variance-bounded signal.
 - [Diagnosing and Mitigating Thinking Collapse in On-Policy Self-Distillation](https://arxiv.org/abs/2607.10805) *(2026)* — Anchors suppression-prone tokens to a frozen-base reference prior via an asymmetric divergence gate, preventing OPSD's collapse of native reasoning.
 - [On-Policy Delta Distillation](https://arxiv.org/abs/2607.15161) *(2026)* — Rewards on-policy distillation by a delta signal, the teacher minus its pre-tuning base, transferring reasoning traces rather than inherited preferences.
+- [Demystifying On-Policy Distillation: Roles, Pathologies, and Regulations](https://arxiv.org/abs/2607.13399) *(2026)* — Diagnoses length-exploitation shortcuts in token-level on-policy distillation, regulating the advantage with hard clipping or order-preserving log-scale compression.
 
 ### Self-Distillation
 
@@ -245,6 +246,7 @@ The papers that define on-policy distillation for LLMs.
 - [Neuron-OPSD: Neuron-Aware Data Selection for Annotation-Free LLM Self-Distillation](https://arxiv.org/abs/2607.02460) *(2026)* — Derives both training-data selection and teacher context from internal neuron activations, driving annotation-free on-policy self-distillation without external oracles.
 - [Denser ≠ Better: Limits of On-Policy Self-Distillation for Continual Post-Training](https://arxiv.org/abs/2607.01763) *(2026)* — Empirical-theoretical critique showing dense on-policy self-distillation forgets more than GRPO during continual post-training, as teacher projection induces excess parameter drift. ([Code](https://github.com/Moenupa/SDPO-CL))
 - [Rethinking On-Policy Self-Distillation for Thinking Models](https://arxiv.org/abs/2607.05184) *(2026)* — Diagnostic study showing privileged self-distillation degrades thinking models on long reasoning, as teacher context lowers fork rates at high-entropy positions.
+- [CANON: Consensus as Privileged Context for Label-Free Self-Distillation](https://arxiv.org/abs/2607.13643) *(2026)* — Turns agreement among a model's own samples into privileged context for a frozen self-teacher, densely supervising fresh rollouts without labels.
 
 ### Context and Experience Internalization
 
@@ -278,6 +280,7 @@ The papers that define on-policy distillation for LLMs.
 - [Prefix-Guided On-Policy Distillation: Mining Golden Trajectories from Rollouts](https://arxiv.org/abs/2606.21994) *(2026)* — Prefix-overlap scores fixed-length student rollouts to allocate long-continuation budget only to teacher-compatible candidates, cutting long-horizon OPD compute.
 - [AsyncOPD: How Stale Can On-Policy Distillation Be?](https://arxiv.org/abs/2606.24143) *(2026)* — Asynchronous OPD pipeline decoupling rollout generation from learner updates, mapping how stale rollouts degrade reverse-KL while forward-KL stays robust.
 - [LoRi: Low-Rank Distillation for Implicit Reasoning](https://arxiv.org/abs/2606.05315) *(2026)* — Aligns the student's self-generated latent reasoning trajectory to the teacher's hidden states in a shared low-rank Tucker subspace, enabling length-invariant implicit-CoT distillation. ([Code](https://github.com/rmsolgi/lori))
+- [ShortOPD: Recovering Pruned LLMs with Short-to-Long On-Policy Distillation](https://arxiv.org/abs/2607.13124) *(2026)* — Recovers structurally pruned LLMs by distilling the frozen pre-pruning model on student rollouts, growing rollout length as teacher-confirmed repetition subsides.
 
 ## Taxonomy
 
@@ -287,9 +290,9 @@ Cross-cutting views over the Core papers — **representative** examples per cat
 
 | Teacher Type | Papers |
 |---|---|
-| External white-box | [MiniLLM](https://arxiv.org/abs/2306.08543), [GKD](https://arxiv.org/abs/2306.13649), [DistiLLM](https://arxiv.org/abs/2402.03898), [DistiLLM-2](https://arxiv.org/abs/2503.07067), [Veto](https://arxiv.org/abs/2601.07155), [Entropy-Aware OPD](https://arxiv.org/abs/2603.07079), [ExOPD](https://arxiv.org/abs/2602.12125), [Prefix OPD](https://arxiv.org/abs/2602.15260), [Revisiting OPD](https://arxiv.org/abs/2603.25562), [Rethinking OPD](https://arxiv.org/abs/2604.13016), [TIP](https://arxiv.org/abs/2604.14084), [TrOPD](https://arxiv.org/abs/2606.01249), [TRD](https://arxiv.org/abs/2606.08432), [SWITCH](https://arxiv.org/abs/2410.19503), [OPD2](https://arxiv.org/abs/2607.15161) *(+48 more)* |
+| External white-box | [MiniLLM](https://arxiv.org/abs/2306.08543), [GKD](https://arxiv.org/abs/2306.13649), [DistiLLM](https://arxiv.org/abs/2402.03898), [DistiLLM-2](https://arxiv.org/abs/2503.07067), [Veto](https://arxiv.org/abs/2601.07155), [Entropy-Aware OPD](https://arxiv.org/abs/2603.07079), [ExOPD](https://arxiv.org/abs/2602.12125), [Prefix OPD](https://arxiv.org/abs/2602.15260), [Revisiting OPD](https://arxiv.org/abs/2603.25562), [Rethinking OPD](https://arxiv.org/abs/2604.13016), [TIP](https://arxiv.org/abs/2604.14084), [TrOPD](https://arxiv.org/abs/2606.01249), [TRD](https://arxiv.org/abs/2606.08432), [SWITCH](https://arxiv.org/abs/2410.19503), [OPD2](https://arxiv.org/abs/2607.15161), [Demystifying OPD](https://arxiv.org/abs/2607.13399), [ShortOPD](https://arxiv.org/abs/2607.13124) *(+48 more)* |
 | External black-box | [Black-Box OPD / GAD](https://arxiv.org/abs/2511.10643), [OVD](https://arxiv.org/abs/2601.21968), [SPoT](https://arxiv.org/abs/2603.01683), [ROPD](https://arxiv.org/abs/2605.07396), [OmniOPD](https://arxiv.org/abs/2606.01476), [DistIL](https://arxiv.org/abs/2606.05152), [ZPPO](https://arxiv.org/abs/2606.18216) |
-| Self-teacher with privileged context | [OPSD](https://arxiv.org/abs/2601.18734), [SDFT](https://arxiv.org/abs/2601.19897), [SDPO](https://arxiv.org/abs/2601.20802), [OPSDC](https://arxiv.org/abs/2603.05433), [GATES](https://arxiv.org/abs/2602.20574), [pi-Distill](https://arxiv.org/abs/2602.04942), [RLSD](https://arxiv.org/abs/2604.03128), [SDZero](https://arxiv.org/abs/2604.12002), [CREDIT](https://arxiv.org/abs/2605.11613), [OPSA](https://arxiv.org/abs/2605.15239), [DOPD](https://arxiv.org/abs/2606.30626), [PHF](https://arxiv.org/abs/2606.29340), [TRSD](https://arxiv.org/abs/2603.13274), [Purified OPSD](https://arxiv.org/abs/2607.02234), [AD-OPSD](https://arxiv.org/abs/2607.10805) *(+39 more)* |
+| Self-teacher with privileged context | [OPSD](https://arxiv.org/abs/2601.18734), [SDFT](https://arxiv.org/abs/2601.19897), [SDPO](https://arxiv.org/abs/2601.20802), [OPSDC](https://arxiv.org/abs/2603.05433), [GATES](https://arxiv.org/abs/2602.20574), [pi-Distill](https://arxiv.org/abs/2602.04942), [RLSD](https://arxiv.org/abs/2604.03128), [SDZero](https://arxiv.org/abs/2604.12002), [CREDIT](https://arxiv.org/abs/2605.11613), [OPSA](https://arxiv.org/abs/2605.15239), [DOPD](https://arxiv.org/abs/2606.30626), [PHF](https://arxiv.org/abs/2606.29340), [TRSD](https://arxiv.org/abs/2603.13274), [Purified OPSD](https://arxiv.org/abs/2607.02234), [AD-OPSD](https://arxiv.org/abs/2607.10805), [CANON](https://arxiv.org/abs/2607.13643) *(+39 more)* |
 | Internal self-teacher (cross-depth) | [OISD](https://arxiv.org/abs/2605.29089) |
 | Self-teacher (non-privileged / answer-free) | [CAST](https://arxiv.org/abs/2606.00172), [TS-OPSD](https://arxiv.org/abs/2606.00755), [SafeSteer](https://arxiv.org/abs/2606.02530) |
 | Context-conditioned | [OPCD](https://arxiv.org/abs/2602.12275), [OEL](https://arxiv.org/abs/2603.16856), [FiC](https://arxiv.org/abs/2605.24432), [CCOPD](https://arxiv.org/abs/2605.30251), [NCA](https://arxiv.org/abs/2606.11627), [PMD](https://arxiv.org/abs/2607.01480) *(+2 more)* |
@@ -299,11 +302,11 @@ Cross-cutting views over the Core papers — **representative** examples per cat
 
 | Goal | Papers |
 |---|---|
-| Compression / strong-to-weak transfer | [MiniLLM](https://arxiv.org/abs/2306.08543), [GKD](https://arxiv.org/abs/2306.13649), [Prefix OPD](https://arxiv.org/abs/2602.15260), [Rethinking OPD](https://arxiv.org/abs/2604.13016), [Lightning OPD](https://arxiv.org/abs/2604.13010), [TrOPD](https://arxiv.org/abs/2606.01249), [TRD](https://arxiv.org/abs/2606.08432), [SWITCH](https://arxiv.org/abs/2410.19503), [KAT](https://arxiv.org/abs/2606.09471), [PowerOPD](https://arxiv.org/abs/2606.17199), [AsyncOPD](https://arxiv.org/abs/2606.24143), [TOP-D](https://arxiv.org/abs/2607.04751) *(+23 more)* |
-| Stability / objective design | [DistiLLM](https://arxiv.org/abs/2402.03898), [DistiLLM-2](https://arxiv.org/abs/2503.07067), [Veto](https://arxiv.org/abs/2601.07155), [Entropy-Aware OPD](https://arxiv.org/abs/2603.07079), [PACED](https://arxiv.org/abs/2603.11178), [SCOPE](https://arxiv.org/abs/2604.10688), [Uni-OPD](https://arxiv.org/abs/2605.03677), [AOPD](https://arxiv.org/abs/2605.06387), [vOPD](https://arxiv.org/abs/2605.07865), [OPD+](https://arxiv.org/abs/2606.01039), [AD-OPSD](https://arxiv.org/abs/2607.10805), [OPD2](https://arxiv.org/abs/2607.15161) *(+ more)* |
+| Compression / strong-to-weak transfer | [MiniLLM](https://arxiv.org/abs/2306.08543), [GKD](https://arxiv.org/abs/2306.13649), [Prefix OPD](https://arxiv.org/abs/2602.15260), [Rethinking OPD](https://arxiv.org/abs/2604.13016), [Lightning OPD](https://arxiv.org/abs/2604.13010), [TrOPD](https://arxiv.org/abs/2606.01249), [TRD](https://arxiv.org/abs/2606.08432), [SWITCH](https://arxiv.org/abs/2410.19503), [KAT](https://arxiv.org/abs/2606.09471), [PowerOPD](https://arxiv.org/abs/2606.17199), [AsyncOPD](https://arxiv.org/abs/2606.24143), [TOP-D](https://arxiv.org/abs/2607.04751), [ShortOPD](https://arxiv.org/abs/2607.13124) *(+23 more)* |
+| Stability / objective design | [DistiLLM](https://arxiv.org/abs/2402.03898), [DistiLLM-2](https://arxiv.org/abs/2503.07067), [Veto](https://arxiv.org/abs/2601.07155), [Entropy-Aware OPD](https://arxiv.org/abs/2603.07079), [PACED](https://arxiv.org/abs/2603.11178), [SCOPE](https://arxiv.org/abs/2604.10688), [Uni-OPD](https://arxiv.org/abs/2605.03677), [AOPD](https://arxiv.org/abs/2605.06387), [vOPD](https://arxiv.org/abs/2605.07865), [OPD+](https://arxiv.org/abs/2606.01039), [AD-OPSD](https://arxiv.org/abs/2607.10805), [OPD2](https://arxiv.org/abs/2607.15161), [Demystifying OPD](https://arxiv.org/abs/2607.13399) *(+ more)* |
 | Post-RL consolidation / skill integration | [ExOPD](https://arxiv.org/abs/2602.12125), [OPCritD](https://arxiv.org/abs/2606.00424), [TS-OPSD](https://arxiv.org/abs/2606.00755), [Multi-Teacher MOPD](https://arxiv.org/abs/2606.30406) *(+3 more)* |
 | Continual learning | [SDFT](https://arxiv.org/abs/2601.19897), [SPoT](https://arxiv.org/abs/2603.01683), [OPCD](https://arxiv.org/abs/2602.12275), [OEL](https://arxiv.org/abs/2603.16856), [MixSD](https://arxiv.org/abs/2605.16865), [CaMOPD](https://arxiv.org/abs/2605.27115), [CCOPD](https://arxiv.org/abs/2605.30251), [SD-Recovery](https://arxiv.org/abs/2604.15794) *(+4 more)* |
-| RL replacement / augmentation | [SDPO](https://arxiv.org/abs/2601.20802), [REOPOLD](https://arxiv.org/abs/2603.11137), [RLSD](https://arxiv.org/abs/2604.03128), [SDZero](https://arxiv.org/abs/2604.12002), [OGLS-SD](https://arxiv.org/abs/2605.12400), [PBSD](https://arxiv.org/abs/2605.05040), [CREDIT](https://arxiv.org/abs/2605.11613), [DA-SD](https://arxiv.org/abs/2605.22263), [PGPO](https://arxiv.org/abs/2606.03620), [Constitutional OPD](https://arxiv.org/abs/2606.03089), [PHF](https://arxiv.org/abs/2606.29340), [Direct-OPD](https://arxiv.org/abs/2607.05394) *(+39 more)* |
+| RL replacement / augmentation | [SDPO](https://arxiv.org/abs/2601.20802), [REOPOLD](https://arxiv.org/abs/2603.11137), [RLSD](https://arxiv.org/abs/2604.03128), [SDZero](https://arxiv.org/abs/2604.12002), [OGLS-SD](https://arxiv.org/abs/2605.12400), [PBSD](https://arxiv.org/abs/2605.05040), [CREDIT](https://arxiv.org/abs/2605.11613), [DA-SD](https://arxiv.org/abs/2605.22263), [PGPO](https://arxiv.org/abs/2606.03620), [Constitutional OPD](https://arxiv.org/abs/2606.03089), [PHF](https://arxiv.org/abs/2606.29340), [Direct-OPD](https://arxiv.org/abs/2607.05394), [CANON](https://arxiv.org/abs/2607.13643) *(+39 more)* |
 | Reasoning compression | [OPSDC](https://arxiv.org/abs/2603.05433), [MPD](https://arxiv.org/abs/2605.08776), [TRSD](https://arxiv.org/abs/2603.13274) |
 | Black-box distillation | [GAD](https://arxiv.org/abs/2511.10643), [OVD](https://arxiv.org/abs/2601.21968), [ROPD](https://arxiv.org/abs/2605.07396), [OmniOPD](https://arxiv.org/abs/2606.01476) |
 | Safety / alignment | [SafeSteer](https://arxiv.org/abs/2606.02530), [Constitutional OPD](https://arxiv.org/abs/2606.03089), [Multilingual Safety Alignment](https://arxiv.org/abs/2605.02971) |
@@ -397,6 +400,7 @@ Papers that are not canonical OPD but matter for understanding or deploying it.
 - [Triplets Better Than Pairs: Towards Stable and Effective Self-Play Fine-Tuning for LLMs](https://arxiv.org/abs/2601.08198) *(2026)* — Replaces SPIN's pairwise objective with a triplet over annotated, current-synthetic, and initial-policy responses to stabilize iterative self-play.
 - [SkillFactory: Self-Distillation for Learning Cognitive Behaviors](https://arxiv.org/abs/2512.04072) *(2025)* — Rearranges the base model's own sampled solutions and reflections into structured retry-verify traces, instilling cognitive skills without a stronger teacher.
 - [The Verifier is the Curriculum: Execution-Gated Self-Distillation for Cross-Family Game Generation](https://arxiv.org/abs/2607.09709) *(2026)* — Iterates rejection-sampling self-distillation gated by a deterministic clean-launch verifier, showing verifier precision drives out-of-family generalization.
+- [Self-Review Reinforcement Learning (SRRL) with Cross-Episode Memory and Policy Distillation](https://arxiv.org/abs/2607.05541) *(2026)* — Bootstraps from feedback-conditioned second attempts, distilling the agent's own successful retries back into its base policy while carrying lessons across episodes.
 
 ### Precursors
 
@@ -444,6 +448,7 @@ OPD applied to non-text-reasoning settings — agents, multimodal models, diffus
 - [UI-MOPD: Multi-Platform On-Policy Distillation for Continual GUI Agent Learning](https://arxiv.org/abs/2607.04425) *(2026)* — Routes student GUI rollouts to platform-specific teachers for on-policy reverse-KL distillation, unifying continual multi-platform agent learning in one policy.
 - [TurnOPD: Making On-Policy Distillation Turn-Aware for Efficient Long-Horizon Agent Training](https://arxiv.org/abs/2607.05804) *(2026)* — Turn-aware on-policy distillation for long-horizon agents, adaptively budgeting rollout depth to concentrate supervision on decision-critical turns.
 - [SEED: Self-Evolving On-Policy Distillation for Agentic Reinforcement Learning](https://arxiv.org/abs/2607.14777) *(2026)* — Converts the policy's own trajectories into hindsight skills whose probability shifts on sampled actions form a self-evolving token-level distillation signal. ([Code](https://github.com/jinyangwu/SEED))
+- [Diagnosing and Calibrating Tool-Call Boundary Drift in Multi-Teacher On-Policy Distillation](https://arxiv.org/abs/2607.07050) *(2026)* — Multi-teacher on-policy distillation for tool-use agents, soft-clamping extreme per-token divergence at tool-call boundaries to curb drift while preserving gradients.
 
 ### Multimodal and Vision-Language
 
@@ -471,6 +476,7 @@ OPD applied to non-text-reasoning settings — agents, multimodal models, diffus
 - [Step-Audio-R1 Technical Report](https://arxiv.org/abs/2511.15848) *(2025)* — Modality-Grounded Reasoning Distillation produces audio reasoning grounded in acoustic features. ([Code](https://github.com/stepfun-ai/Step-Audio-R1))
 - [CORD: Bridging the Audio–Text Reasoning Gap via Weighted On-policy Cross-modal Distillation](https://arxiv.org/abs/2601.16547) *(2026)* — Audio-conditioned rollouts; text-conditioned same model as teacher; importance-weighted reverse KL plus GRPO.
 - [Data-Efficient On-Policy Distillation for Automatic Speech Recognition](https://arxiv.org/abs/2605.28139) *(2026)* — Cross-modal OPD for speech recognition: a compact audio-conditioned student learns from a frozen ASR teacher scoring its own transcript rollouts.
+- [ParaBridge: Bridging Paralinguistic Perception and Dialogue Behavior in Speech Language Models](https://arxiv.org/abs/2606.10581) *(2026)* — Distills a paralinguistic-scaffold-conditioned self-teacher into a scaffold-free speech student along its own dialogue rollouts, internalizing acoustic cues without labels.
 
 ### Diffusion, Flow, and Generative Media
 
@@ -534,6 +540,8 @@ Draft-model training for speculative decoding shares OPD's core loop: the draft 
 - [Draft-OPD: On-Policy Distillation for Speculative Draft Models](https://arxiv.org/abs/2605.29343) *(2026)* — Draft-model OPD that replays drafting from verification-exposed error positions, training on target feedback over both accepted and rejected proposals. ([Code](https://github.com/bingyang-lei/Draft-OPD))
 - [Bridging Draft Policy Misalignment: Group Tree Optimization for Speculative Decoding](https://arxiv.org/abs/2509.22134) *(2025)* — Trains the draft model on its own verified tree rollouts via a group-standardized acceptance-length reward, aligning training with tree-based decoding.
 - [JetSpec: Breaking the Scaling Ceiling of Speculative Decoding with Parallel Tree Drafting](https://arxiv.org/abs/2606.18394) *(2026)* — Trains a causal parallel draft head over the frozen target's hidden states, producing branch-conditioned speculative trees that resolve tree drafting's causality-efficiency dilemma. ([Code](https://github.com/hao-ai-lab/JetSpec))
+- [FastEagle: Cascaded Drafting for Accelerating Speculative Decoding](https://arxiv.org/abs/2509.20416) *(2025)* — Single-pass cascaded drafter trained without teacher forcing, so each layer learns under its own same-pass prediction errors against target supervision.
+- [TIGER: Text-Conditioned Visual Gated Routing with Acceptance Alignment for Multimodal Speculative Decoding](https://arxiv.org/abs/2607.11131) *(2026)* — Trains a multimodal speculative drafter on its own draft blocks using verifier acceptance-length rewards under a distillation-derived KL anchor.
 
 ## Technical Reports and Industrial Recipes
 
@@ -567,6 +575,7 @@ Production training pipelines that use OPD as a post-training stage.
 | 2026 | Mach-Mind-4-Flash | Multi-Teacher OPD (MOPD): routed reverse-KL on student rollouts fuses 10+ specialists, ending mixed-reward see-saw | [arXiv](https://arxiv.org/abs/2607.09375) |
 | 2026 | Agents-A1 | Final-stage multi-teacher OPD: routed teachers supervise student rollouts via salient vocabulary alignment | [arXiv](https://arxiv.org/abs/2606.30616) |
 | 2026 | Audex | Cascade RL + multi-domain OPD (Nemotron-Cascade lineage), preserving text intelligence in unified audio-text model | [arXiv](https://arxiv.org/abs/2607.05196) |
+| 2026 | OvisOCR2 | 0.8B OCR student distilled from a 4B RL teacher via top-k reverse-KL on its own page-output rollouts | [arXiv](https://arxiv.org/abs/2607.13639) |
 
 ## Frameworks and Implementations
 
@@ -592,6 +601,7 @@ Production training pipelines that use OPD as a post-training stage.
 | Tinker Cookbook | Thinking Machines' Tinker SDK recipes for off-policy KD, single/multi-teacher OPD, multi-turn tool use | [recipes](https://github.com/thinking-machines-lab/tinker-cookbook/tree/main/tinker_cookbook/recipes/distillation), [repo](https://github.com/thinking-machines-lab/tinker-cookbook) |
 | ROLL | Alibaba's scalable RL library for LLMs/VLMs with an OPD pipeline | [repo](https://github.com/alibaba/ROLL) |
 | EasyOPD | Unified verl-based OPD with method-local supervision hooks for cross-tokenizer, self-distillation, and step-wise settings | [arXiv](https://arxiv.org/abs/2607.11012), [repo](https://github.com/lds-ustc/EasyOPD) |
+| EasyDeL | JAX/Flax framework whose GKDTrainer distills onto student-generated completions via a generalized Jensen-Shannon objective | [repo](https://github.com/erfanzar/EasyDeL) |
 
 ### Implementations
 
